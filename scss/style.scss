@@ -1,0 +1,84 @@
+.book {
+    &-list {
+        height: 200px;
+        padding: 25px;
+        background: rgb(255, 228, 255);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+
+        img {
+            width: 120px;
+            height: 150px;
+            border: 1px solid #000;
+            flex-shrink: 0;
+            margin-right: 30px;
+        }
+    }
+
+    &-info {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-title {
+        >p {
+            display: inline-block;
+            padding: 3px 5px;
+            background: #ccc;
+            text-align: center;
+            border-radius: 3px;
+        }
+
+        >span {
+            font-size: 13px;
+        }
+
+        div {
+            margin-top: 20px;
+            p {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &-btn {
+        button {
+            width: 130px;
+            height: 40px;
+            border: 1px solid #000;
+            border-radius: 2px;
+        }
+    }
+}
+
+.plus {
+    &-top {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-tab {
+        overflow: hidden;
+        li {
+            float: left;
+            margin-right: 10px;
+            a {
+                display: block;
+                width: 150px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                border: 1px solid #fff;
+            }
+
+            &.active {
+                a {
+                    background: orange;
+                }
+            }
+        }
+    }
+}

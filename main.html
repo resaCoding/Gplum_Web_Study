@@ -7,6 +7,7 @@
         <title>Gplum</title>
         <link rel="stylesheet" href="/css/reset.css" />
         <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/style.css" />
     </head>
     <body>
         <div class="float-left main-left">
@@ -65,20 +66,126 @@
                     <li><a href="tab-2">플러스 학습</a></li>
                 </ul>
                 <div class="contents-tabcon">
-                    <div class="tabcon active" id="tab-1">1</div>
+                    <div class="tabcon active" id="tab-1">
+                        <div class="book-list">
+                            <img src="" alt="교재">
+                            <div class="book-info">
+                                <div class="book-title">
+                                    <p>중2-1 개념서</p>
+                                    <span>76~82쪽</span>
+                                    <div>
+                                        <p>Ⅱ. 일차부등식</p>
+                                        <p>3. 일차부등식의 활용(2)</p>
+                                    </div>
+                                </div>
+                                <div class="book-btn">
+                                    <button>학습 목차</button>
+                                    <button>학습하기</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-list">
+                            <img src="" alt="교재">
+                            <div class="book-info">
+                                <div class="book-title">
+                                    <p>중2-1 개념서</p>
+                                    <span>76~82쪽</span>
+                                    <div>
+                                        <p>Ⅱ. 일차부등식</p>
+                                        <p>3. 일차부등식의 활용(2)</p>
+                                    </div>
+                                </div>
+                                <div class="book-btn">
+                                    <button>학습 목차</button>
+                                    <button>학습하기</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-list">
+                            <img src="" alt="교재">
+                            <div class="book-info">
+                                <div class="book-title">
+                                    <p>중2-1 개념서</p>
+                                    <span>76~82쪽</span>
+                                    <div>
+                                        <p>Ⅱ. 일차부등식</p>
+                                        <p>3. 일차부등식의 활용(2)</p>
+                                    </div>
+                                </div>
+                                <div class="book-btn">
+                                    <button>학습 목차</button>
+                                    <button>학습하기</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-list">
+                            <img src="" alt="교재">
+                            <div class="book-info">
+                                <div class="book-title">
+                                    <p>중2-1 개념서</p>
+                                    <span>76~82쪽</span>
+                                    <div>
+                                        <p>Ⅱ. 일차부등식</p>
+                                        <p>3. 일차부등식의 활용(2)</p>
+                                    </div>
+                                </div>
+                                <div class="book-btn">
+                                    <button>학습 목차</button>
+                                    <button>학습하기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="tabcon" id="tab-2">
-                        2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>
-                        2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>
-                        2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>
-                        2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>
-                        2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>
-                        2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>2<br/>
+                        <div class="plus-top">
+                            <ul class="plus-tab">
+                                <li class="active"><a href="#">서술형 따라잡기</a></li>
+                                <li><a href="#">교과서 적중문제</a></li>
+                            </ul>
+                            <div class="plus-search">
+                                <select name="" id="">
+                                    <option value="" selected>학년-학기</option>
+                                    <option value="">1학년-1학기</option>
+                                    <option value="">1학년-2학기</option>
+                                    <option value="">2학년-1학기</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="" selected>대단원</option>
+                                    <option value="">수와 식의 계산</option>
+                                    <option value="">일차부등식</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="" selected>현황</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                </select>
+                                <button type="submit">조회</button>
+                            </div>
+                        </div>
+                        <div class="plus-bottom">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <script>
-            // 사이드메뉴
+            // 사이드메뉴 슬라이드
             let lnb = document.querySelector('.lnb-sub');
             let lnbBg = document.querySelector('.lnb-bg');
 
@@ -89,6 +196,21 @@
             function hamburgerOut() {
                 lnb.classList.remove('active');
                 lnbBg.classList.remove('active');
+            }
+
+            // 사이드메뉴 클릭
+            let lnbBtn = document.querySelectorAll('.lnb-main li a')
+
+            function lnbOn(tabClick){
+                let clicklnb = tabClick.currentTarget.parentNode
+                for(let i = 0; i < lnbBtn.length; i++) {
+                    lnbBtn[i].parentNode.classList.remove('active')
+                }
+                clicklnb.classList.add('active')
+            }
+
+            for (i = 0; i < lnbBtn.length; i++) {
+                lnbBtn[i].addEventListener("click", lnbOn);
             }
 
             // 탭
