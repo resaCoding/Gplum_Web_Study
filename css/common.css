@@ -2,6 +2,10 @@ body {
   height: 100vh;
 }
 
+body > div {
+  height: 100%;
+}
+
 .float-left {
   float: left;
 }
@@ -154,14 +158,13 @@ body {
 }
 
 .class-header {
-  height: 60px;
   background: #ccc;
   position: relative;
 }
 .class-header p {
   position: absolute;
   left: 10px;
-  top: 50%;
+  top: 30px;
   transform: translateY(-50%);
 }
 .class-header h1 {
@@ -172,12 +175,55 @@ body {
 }
 .class-nav {
   background: #666;
+  display: flex;
+  justify-content: space-between;
 }
-.class-video {
-  width: 1511px;
-  height: 850px;
-  background: #949494;
-  margin: 0 auto;
+.class-nav > ul {
+  clear: both;
+}
+.class-nav > ul > li {
+  float: left;
+}
+.class-nav > ul > li button {
+  width: 150px;
+  height: 40px;
+  border: 1px solid #000;
+  background: #ccc;
+}
+.class-nav > ul > li.playing button {
+  background: orange;
+}
+.class-nav > ul > li.lock button {
+  background: #969696;
+  color: #ccc;
+  cursor: default;
+}
+.class-list {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  background: #666;
+  z-index: 1;
+  border-bottom: 1px solid #fff;
+  display: none;
+}
+.class-list.active {
+  display: block;
+}
+.class-list li a {
+  display: block;
+  padding: 10px 30px 10px 10px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-bottom: none;
+}
+.class-list li.lock a {
+  cursor: default;
+  background: #969696;
+}
+
+.text-left {
+  text-align: left;
 }
 
 /*# sourceMappingURL=common.css.map */

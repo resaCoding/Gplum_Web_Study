@@ -21,16 +21,116 @@
     
             <div class="class-nav">
                 <ul>
-                    <li><a href="">개념 강의 보기</a></li>
-                    <li><a href="">Self-Check</a></li>
-                    <li><a href="">개념 확인하기</a></li>
-                    <li><a href="">오답 클리닉</a></li>
-                    <li><a href="">개념 설명하기</a></li>
+                    <li class="playing">
+                        <button class="btn-list">개념 강의 보기</button>
+                        <ul class="class-list">
+                            <li><a href="#">일차부등식의 활용 - 평균/도형 [개념]</a></li>
+                            <li><a href="#">일차부등식의 활용 - 평균/도형 [예제]</a></li>
+                            <li><a href="#">일차부등식의 활용 – 최대 개수/유리한 방법 [개념]</a></li>
+                            <li class="lock"><a href="#">일차부등식의 활용 – 최대 개수/유리한 방법 [예제]</a></li>
+                            <li class="lock"><a href="#">일차부등식의 활용 – 농도 [개념]</a></li>
+                            <li class="lock"><a href="#">일차부등식의 활용 – 농도 [예제]</a></li>
+                        </ul>
+                    </li>
+                    <li class="lock"><button>Self-Check</button></li>
+                    <li class="lock"><button>개념 확인하기</button></li>
+                    <li class="lock"><button>오답 클리닉</button></li>
+                    <li class="lock"><button>개념 설명하기</button></li>
                 </ul>
                 <a href="main.html">나가기</a>
             </div>
         </div>
-        <div class="class-video"></div>
+        <div class="class-video">
+            <video src=""></video>
+            <div class="class-control">
+                <div class="control-top">
+                    <p>00:00</p>
+                    <div class="control-bar">
+                        <input type="range" name="" id="">
+                        <span class="played"></span>
+                        <span class="playing"></span>
+                    </div>
+                    <p>00:00</p>
+                </div>
+                <div class="control-bottom">
+                    <div>
+                        <button>볼륨</button>
+                        <input type="range">
+                    </div>
+                    <button class="btn-play">play</button>
+                    <button class="btn-speed">
+                        재생속도 <span>1</span>x
+                    </button>
+                    <div class="control-speed">
+                        <p>재생속도</p>
+                        <div>
+                            <div class="dot"></div>
+                            <p>0.8x</p>
+                        </div>
+                        <div>
+                            <div class="dot active"></div>
+                            <p>1x(기본)</p>
+                        </div>
+                        <div>
+                            <div class="dot"></div>
+                            <p>1.2x</p>
+                        </div>
+                        <div>
+                            <div class="dot"></div>
+                            <p>1.5x</p>
+                        </div>
+                        <span class="line"></span>
+                    </div>
+                    <button class="btn-full">전체화면</button>
+                    <button class="btn-favorite">즐겨찾기</button>
+                    <button class="btn-bookmark">북마크</button>
+                    <button>다음 단계</button>
+                </div>
+            </div>
+            <div class="class-bookmark">
+                <button class="btn-open">▶</button>
+                <h1>북마크 목록</h1>
+                <div class="bookmark-list">
+                    <p class="bookmark-title">일차부등식의 활용 - 평균/도형 [개념]
+                    </p>
+                    <p class="bookmark-content">
+                        <span class="bookmark-time">[01:14]</span>
+                        <span>평균</span>
+                        <button class="bookmark-delete">x</button>
+                    </p>
+                    <p class="bookmark-content"></p>
+                </div>
+            </div>
+        </div>
     </div>
+    <script>
+
+        let ListBtn = document.querySelector('.btn-list')
+        function listOn(){
+            let list = document.querySelector('.class-list')
+            list.classList.toggle('active')
+        }
+        ListBtn.addEventListener('click', listOn)
+
+        let speedBtn = document.querySelector('.btn-speed')
+        function speedOn(){
+            let list = document.querySelector('.control-speed')
+            list.classList.toggle('active')
+        }
+        speedBtn.addEventListener('click', speedOn)
+
+        let speedDot = document.querySelectorAll('.dot')
+        function dotOn(dotClick){
+            let clickedDot = dotClick.currentTarget;
+            for (let i = 0; i < speedDot.length; i++) {
+                speedDot[i].classList.remove('active');
+            }
+            clickedDot.classList.add('active')
+        }
+        for(i=0; i<speedDot.length; i++) {
+            speedDot[i].addEventListener('click', dotOn)
+        }
+
+    </script>
 </body>
 </html>

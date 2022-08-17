@@ -2,6 +2,10 @@ body {
     height: 100vh;
 }
 
+body>div {
+    height: 100%;
+}
+
 .float-left {
     float: left;
 }
@@ -175,14 +179,13 @@ body {
 
 .class {
     &-header {
-        height: 60px;
         background: #ccc;
         position: relative;
 
         p {
             position: absolute;
             left: 10px;
-            top: 50%;
+            top: 30px;
             transform: translateY(-50%);
         }
         h1 {
@@ -192,13 +195,72 @@ body {
             line-height: 60px;
         }
     }
+
     &-nav {
         background: #666;
+        display: flex;
+        justify-content: space-between;
+
+        >ul {
+            clear: both;
+            >li {
+                float: left;
+
+                button {
+                    width: 150px;
+                    height: 40px;
+                    border: 1px solid #000;
+                    background: #ccc;
+                }
+
+                &.playing {
+                    button {
+                        background: orange;
+                    }
+                }
+                &.lock {
+                    button {
+                        background: #969696;
+                        color: #ccc;
+                        cursor: default;
+                    }
+                }
+            }
+        }
     }
-    &-video {
-        width: 1511px;
-        height: 850px;
-        background: #949494;
-        margin: 0 auto;
+
+    &-list {
+        position: absolute;
+        left: 0;
+        top: 100px;
+        background: #666;
+        z-index: 1;
+        border-bottom: 1px solid #fff;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+
+        li {
+            a {
+                display: block;
+                padding: 10px 30px 10px 10px;
+                color: #fff;
+                border: 1px solid #fff;
+                border-bottom: none;
+            }
+
+            &.lock {
+                a {
+                    cursor: default;
+                    background: #969696;
+                }
+            }
+        }
     }
+}
+
+.text-left {
+    text-align: left;
 }
