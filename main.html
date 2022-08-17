@@ -10,175 +10,225 @@
         <link rel="stylesheet" href="/css/style.css" />
     </head>
     <body>
-        <div class="float-left main-left">
-            <div class="lnb">
-                <button class="lnb-btn" onclick="hamburgerOn()">=</button>
-                <ul class="lnb-main">
-                    <li class="active"><a href="#">나의 강의실</a></li>
-                    <li><a href="#">나의 교재</a></li>
-                    <li><a href="#">나의 평가</a></li>
-                    <li><a href="#">나의 오답</a></li>
-                    <li><a href="#">학습 달력</a></li>
-                    <li><a href="#">즐겨찾기</a></li>
-                </ul>
-                <div class="lnb-sub">
-                    <ul>
-                        <li><a href="#">로그아웃</a></li>
-                        <li><a href="#">지플럼 이용 가이드</a></li>
-                        <li><a href="#">바탕화면에 바로가기</a></li>
-                        <li><a href="#">패럴랙스 홈페이지</a></li>
-                        <li><a href="#">지플럼 영어</a></li>
+        <div id="root">
+            <div class="float-left main-left">
+                <div class="lnb">
+                    <button class="lnb-btn" onclick="hamburgerOn()">=</button>
+                    <ul class="lnb-main">
+                        <li class="active"><a href="#">나의 강의실</a></li>
+                        <li><a href="#">나의 교재</a></li>
+                        <li><a href="#">나의 평가</a></li>
+                        <li><a href="#">나의 오답</a></li>
+                        <li><a href="#">학습 달력</a></li>
+                        <li><a href="#">즐겨찾기</a></li>
                     </ul>
-                </div>
-                <div class="lnb-bg" onclick="hamburgerOut()"></div>
-            </div>
-        </div>
-        <div class="float-left main-right">
-            <div class="gnb">
-                <a href="#">
-                    <img src="" alt="지플럼 로고" />
-                </a>
-                <div class="timer">
-                    <img src="" alt="타이머" />
-                    <p><span>00</span>:<span>00</span>:<span>00</span></p>
-                </div>
-                <div class="profile">
-                    <div>
-                        <img src="" alt="프로필 사진" />
+                    <div class="lnb-sub">
+                        <ul>
+                            <li><a href="#">로그아웃</a></li>
+                            <li><a href="#">지플럼 이용 가이드</a></li>
+                            <li><a href="#">바탕화면에 바로가기</a></li>
+                            <li><a href="#">패럴랙스 홈페이지</a></li>
+                            <li><a href="#">지플럼 영어</a></li>
+                        </ul>
                     </div>
-                    <div>
-                        <p class="name">김수학</p>
-                        <p class="mem_num">
-                            845CP
-                            <button><img src="" alt="캐럿" /></button>
-                        </p>
-                    </div>
-                    <div class="alarm">
-                        <img src="" alt="알람" />
-                        <span>N</span>
-                    </div>
+                    <div class="lnb-bg" onclick="hamburgerOut()"></div>
                 </div>
             </div>
-            <div class="contents">
-                <h1 class="contents-title">나의 강의실</h1>
-                <ul class="contents-tab">
-                    <li class="active"><a href="tab-1">교재 학습</a></li>
-                    <li><a href="tab-2">플러스 학습</a></li>
-                </ul>
-                <div class="contents-tabcon">
-                    <div class="tabcon active" id="tab-1">
-                        <div class="book-list">
-                            <img src="" alt="교재">
-                            <div class="book-info">
-                                <div class="book-title">
-                                    <p>중2-1 개념서</p>
-                                    <span>76~82쪽</span>
-                                    <div>
-                                        <p>Ⅱ. 일차부등식</p>
-                                        <p>3. 일차부등식의 활용(2)</p>
-                                    </div>
-                                </div>
-                                <div class="book-btn">
-                                    <button>학습 목차</button>
-                                    <button>학습하기</button>
-                                </div>
-                            </div>
+            <div class="float-left main-right">
+                <div class="gnb">
+                    <a href="#">
+                        <img src="" alt="지플럼 로고" />
+                    </a>
+                    <div class="timer">
+                        <img src="" alt="타이머" />
+                        <p><span>00</span>:<span>00</span>:<span>00</span></p>
+                    </div>
+                    <div class="profile">
+                        <div>
+                            <img src="" alt="프로필 사진" />
                         </div>
-                        <div class="book-list">
-                            <img src="" alt="교재">
-                            <div class="book-info">
-                                <div class="book-title">
-                                    <p>중2-1 개념서</p>
-                                    <span>76~82쪽</span>
-                                    <div>
-                                        <p>Ⅱ. 일차부등식</p>
-                                        <p>3. 일차부등식의 활용(2)</p>
-                                    </div>
-                                </div>
-                                <div class="book-btn">
-                                    <button>학습 목차</button>
-                                    <button>학습하기</button>
-                                </div>
-                            </div>
+                        <div>
+                            <p class="name">김수학</p>
+                            <p class="mem_num">
+                                845CP
+                                <button><img src="" alt="캐럿" /></button>
+                            </p>
                         </div>
-                        <div class="book-list">
-                            <img src="" alt="교재">
-                            <div class="book-info">
-                                <div class="book-title">
-                                    <p>중2-1 개념서</p>
-                                    <span>76~82쪽</span>
-                                    <div>
-                                        <p>Ⅱ. 일차부등식</p>
-                                        <p>3. 일차부등식의 활용(2)</p>
-                                    </div>
-                                </div>
-                                <div class="book-btn">
-                                    <button>학습 목차</button>
-                                    <button>학습하기</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="book-list">
-                            <img src="" alt="교재">
-                            <div class="book-info">
-                                <div class="book-title">
-                                    <p>중2-1 개념서</p>
-                                    <span>76~82쪽</span>
-                                    <div>
-                                        <p>Ⅱ. 일차부등식</p>
-                                        <p>3. 일차부등식의 활용(2)</p>
-                                    </div>
-                                </div>
-                                <div class="book-btn">
-                                    <button>학습 목차</button>
-                                    <button>학습하기</button>
-                                </div>
-                            </div>
+                        <div class="alarm">
+                            <img src="" alt="알람" />
+                            <span>N</span>
                         </div>
                     </div>
-                    <div class="tabcon" id="tab-2">
-                        <div class="plus-top">
-                            <ul class="plus-tab">
-                                <li class="active"><a href="#">서술형 따라잡기</a></li>
-                                <li><a href="#">교과서 적중문제</a></li>
-                            </ul>
-                            <div class="plus-search">
-                                <select name="" id="">
-                                    <option value="" selected>학년-학기</option>
-                                    <option value="">1학년-1학기</option>
-                                    <option value="">1학년-2학기</option>
-                                    <option value="">2학년-1학기</option>
-                                </select>
-                                <select name="" id="">
-                                    <option value="" selected>대단원</option>
-                                    <option value="">수와 식의 계산</option>
-                                    <option value="">일차부등식</option>
-                                </select>
-                                <select name="" id="">
-                                    <option value="" selected>현황</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                </select>
-                                <button type="submit">조회</button>
+                </div>
+                <div class="contents">
+                    <h1 class="contents-title">나의 강의실</h1>
+                    <ul class="contents-tab">
+                        <li class="active"><a href="tab-1">교재 학습</a></li>
+                        <li><a href="tab-2">플러스 학습</a></li>
+                    </ul>
+                    <div class="contents-tabcon">
+                        <div class="tabcon active" id="tab-1">
+                            <div class="book-list">
+                                <img src="" alt="교재">
+                                <div class="book-info">
+                                    <div class="book-title">
+                                        <p>중2-1 개념서</p>
+                                        <span>76~82쪽</span>
+                                        <div>
+                                            <p>Ⅱ. 일차부등식</p>
+                                            <p>3. 일차부등식의 활용(2)</p>
+                                        </div>
+                                    </div>
+                                    <div class="book-btn">
+                                        <button>학습 목차</button>
+                                        <button onclick="location.href='class.html';">학습하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="book-list">
+                                <img src="" alt="교재">
+                                <div class="book-info">
+                                    <div class="book-title">
+                                        <p>중2-1 개념서</p>
+                                        <span>76~82쪽</span>
+                                        <div>
+                                            <p>Ⅱ. 일차부등식</p>
+                                            <p>3. 일차부등식의 활용(2)</p>
+                                        </div>
+                                    </div>
+                                    <div class="book-btn">
+                                        <button>학습 목차</button>
+                                        <button>학습하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="book-list">
+                                <img src="" alt="교재">
+                                <div class="book-info">
+                                    <div class="book-title">
+                                        <p>중2-1 개념서</p>
+                                        <span>76~82쪽</span>
+                                        <div>
+                                            <p>Ⅱ. 일차부등식</p>
+                                            <p>3. 일차부등식의 활용(2)</p>
+                                        </div>
+                                    </div>
+                                    <div class="book-btn">
+                                        <button>학습 목차</button>
+                                        <button>학습하기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="book-list">
+                                <img src="" alt="교재">
+                                <div class="book-info">
+                                    <div class="book-title">
+                                        <p>중2-1 개념서</p>
+                                        <span>76~82쪽</span>
+                                        <div>
+                                            <p>Ⅱ. 일차부등식</p>
+                                            <p>3. 일차부등식의 활용(2)</p>
+                                        </div>
+                                    </div>
+                                    <div class="book-btn">
+                                        <button>학습 목차</button>
+                                        <button>학습하기</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="plus-bottom">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                        <th></th>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="tabcon" id="tab-2">
+                            <div class="plus-top">
+                                <ul class="plus-tab">
+                                    <li class="active"><a href="#">서술형 따라잡기</a></li>
+                                    <li><a href="#">교과서 적중문제</a></li>
+                                </ul>
+                                <div class="plus-search">
+                                    <select name="" id="">
+                                        <option value="" selected>학년-학기</option>
+                                        <option value="">1학년-1학기</option>
+                                        <option value="">1학년-2학기</option>
+                                        <option value="">2학년-1학기</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="" selected>대단원</option>
+                                        <option value="">수와 식의 계산</option>
+                                        <option value="">일차부등식</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="" selected>현황</option>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                    </select>
+                                    <button type="submit">조회</button>
+                                </div>
+                            </div>
+                            <div class="plus-bottom">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th>학년-학기</th>
+                                            <th>대단원</th>
+                                            <th>주제</th>
+                                            <th>현황</th>
+                                        </tr>
+                                        <tr>
+                                            <td>중2-1</td>
+                                            <td>Ⅰ. 수와 식의 계산</td>
+                                            <td class="text-left">유한소수 또는 순환소수가 되는 분수의 개수 구하기</td>
+                                            <td>8 / 10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>중2-1</td>
+                                            <td>Ⅰ. 수와 식의 계산</td>
+                                            <td class="text-left">순환소수를 분수로 나타내기</td>
+                                            <td>
+                                                <button class="wait">채점 대기</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>중2-1</td>
+                                            <td>Ⅰ. 수와 식의 계산</td>
+                                            <td class="text-left">유한소수 또는 순환소수가 되는 분수의 개수 구하기</td>
+                                            <td>
+                                                <button class="study">학습하기</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>중2-1</td>
+                                            <td>Ⅰ. 수와 식의 계산</td>
+                                            <td class="text-left">유한소수 또는 순환소수가 되는 분수의 개수 구하기</td>
+                                            <td>
+                                                <button class="study">학습하기</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>중2-1</td>
+                                            <td>Ⅰ. 수와 식의 계산</td>
+                                            <td class="text-left">유한소수 또는 순환소수가 되는 분수의 개수 구하기</td>
+                                            <td>
+                                                <button class="study">학습하기</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>중2-1</td>
+                                            <td>Ⅰ. 수와 식의 계산</td>
+                                            <td class="text-left">유한소수 또는 순환소수가 되는 분수의 개수 구하기</td>
+                                            <td>
+                                                <button class="study">학습하기</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>중2-1</td>
+                                            <td>Ⅰ. 수와 식의 계산</td>
+                                            <td class="text-left">유한소수 또는 순환소수가 되는 분수의 개수 구하기</td>
+                                            <td>
+                                                <button class="study">학습하기</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

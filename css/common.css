@@ -153,4 +153,31 @@ body {
   display: block;
 }
 
+.class-header {
+  height: 60px;
+  background: #ccc;
+  position: relative;
+}
+.class-header p {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.class-header h1 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 60px;
+}
+.class-nav {
+  background: #666;
+}
+.class-video {
+  width: 1511px;
+  height: 850px;
+  background: #949494;
+  margin: 0 auto;
+}
+
 /*# sourceMappingURL=common.css.map */
