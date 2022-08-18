@@ -192,7 +192,7 @@ body > div {
   width: 150px;
   height: 40px;
   border: 1px solid #000;
-  background: #ccc;
+  background: #fdd197;
 }
 .class-nav > ul > li.playing button {
   background: orange;
@@ -231,6 +231,11 @@ body > div {
   text-align: left;
 }
 
+.scroll-y {
+  overflow-y: auto;
+  height: 100%;
+}
+
 .modal {
   position: absolute;
   left: 50%;
@@ -246,6 +251,15 @@ body > div {
   border-radius: 50%;
   right: 5px;
   top: 5px;
+}
+.btn-list.active {
+  transform: rotate(180deg);
+}
+.btn-next {
+  width: 150px;
+  height: 30px;
+  background: yellowgreen;
+  border-radius: 15px;
 }
 
 .concept {

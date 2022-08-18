@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .book-list {
   height: 200px;
   padding: 25px;
@@ -117,7 +118,7 @@
 .class-video {
   background: #000;
   text-align: center;
-  height: calc(100vh - 100px);
+  height: calc(100% - 100px);
   position: relative;
 }
 .class-video > p {
@@ -187,6 +188,47 @@
   width: 100%;
   bottom: 0;
   z-index: 1;
+}
+.class-check {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 100px);
+}
+.class-check > * {
+  margin: 20px 0;
+}
+.class-check h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: orange;
+}
+.class-check > p {
+  font-size: 27px;
+  font-weight: bold;
+}
+.class-check > p span {
+  color: orange;
+}
+.class-check .timer {
+  border: none;
+}
+.class-check .timer p {
+  font-size: 25px;
+  color: #666;
+}
+.class-check .timer p span {
+  margin: 0 10px;
+}
+.class-check .btn-next {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.class-concept {
+  padding: 30px;
+  height: calc(100% - 100px);
 }
 
 .bookmark-list {
@@ -386,6 +428,220 @@
   border-radius: 50%;
   background: #fff;
   font-size: 50px;
+}
+
+.concept-left {
+  width: 500px;
+  text-align: center;
+  height: 100%;
+}
+.concept-left .scroll-y {
+  height: calc(100% - 60px);
+  margin-bottom: 30px;
+}
+.concept-left table {
+  width: 100%;
+  font-size: 20px;
+}
+.concept-left table tr > * {
+  border: 1px solid #000;
+}
+.concept-left table tr.checked {
+  background: #ffe9bf;
+}
+.concept-left table tr th {
+  padding: 15px 0;
+  background: #ccc;
+}
+.concept-left table tr td {
+  padding: 15px;
+}
+.concept-left table tr td button {
+  margin: 0 15px;
+}
+.concept-left table tr td button.checked {
+  color: red;
+}
+.concept-left table tr td input {
+  border: 1px solid #000;
+  margin-right: 5px;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+}
+.concept-left table tr td:first-child {
+  padding: 0;
+}
+.concept-left table tr td:first-child button {
+  width: 100%;
+  height: 50px;
+  margin: 0;
+}
+.concept-submit {
+  width: 150px;
+  height: 30px;
+  background: crimson;
+  color: #fff;
+}
+.concept-right {
+  margin-left: 90px;
+  width: calc(100% - 640px);
+  height: 100%;
+  position: relative;
+}
+.concept-right > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.concept-right > button {
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.concept-right > button:first-child {
+  left: -40px;
+}
+.concept-right > button:nth-child(2) {
+  right: -40px;
+}
+.concept-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+}
+.concept-header .mutiple {
+  flex-shrink: 0;
+  width: 100%;
+  color: crimson;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.concept-header div {
+  display: flex;
+  align-items: flex-end;
+}
+.concept-header .num {
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 5px;
+  color: darkolivegreen;
+}
+.concept-content {
+  width: 100%;
+  height: auto;
+  border: 1px solid #000;
+}
+.concept-content img {
+  width: 100%;
+}
+.concept-answer {
+  margin-top: 20px;
+}
+.concept-answer ul {
+  margin-left: 10px;
+}
+.concept-answer ul li {
+  margin: 15px 0;
+}
+.concept-answer button {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+}
+.concept-answer button.checked {
+  position: relative;
+}
+.concept-answer button.checked::before {
+  content: "✔";
+  position: absolute;
+  color: red;
+  font-size: 30px;
+  top: -7px;
+  left: 3px;
+}
+.concept-answer div {
+  text-align: right;
+}
+.concept-answer div input {
+  border: 1px solid #000;
+}
+.concept-answer .fraction {
+  justify-content: flex-end;
+}
+.concept-video {
+  width: auto;
+  height: 600px;
+  background: #000;
+  position: relative;
+  margin: 20px auto 0;
+}
+.concept-video .title {
+  background: #ccc;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.concept-video .title .btn-close {
+  display: none;
+}
+.concept-video video {
+  height: calc(100% - 20px);
+  aspect-ratio: 16/9;
+}
+.concept-video .class-control {
+  display: none;
+}
+.concept-video.full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.concept-video.full .title {
+  height: 50px;
+  padding: 0 20px;
+}
+.concept-video.full .title .btn-close {
+  display: block;
+}
+.concept-video.full .title .btn-full {
+  display: none;
+}
+.concept-video.full video {
+  height: calc(100% - 130px);
+}
+.concept-video.full .class-control {
+  display: block;
+}
+
+.fraction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fraction input {
+  width: 50px !important;
+  margin: 0 !important;
+}
+.fraction div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5px;
+}
+.fraction div span {
+  display: block;
+  width: 70px;
+  height: 1px;
+  margin: 3px 0;
+  background: #000;
 }
 
 /*# sourceMappingURL=style.css.map */
