@@ -120,19 +120,61 @@
   height: calc(100vh - 100px);
   position: relative;
 }
+.class-video > p {
+  height: 50px;
+  display: none;
+  background: #ccc;
+  text-align: left;
+  line-height: 50px;
+  padding-left: 20px;
+}
 .class-video video {
   height: calc(100% - 80px);
   background: #949494;
+  aspect-ratio: 16/9;
+}
+.class-video.full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.class-video.full p {
+  display: block;
+}
+.class-video.full video {
+  height: calc(100% - 130px);
+}
+.class-video.full .class-bookmark {
+  top: 50px;
 }
 .class-bookmark {
   position: absolute;
-  right: 0;
+  right: -400px;
   top: 0;
   background: #fff;
   width: 400px;
   height: 100%;
   text-align: left;
   padding: 20px 10px;
+  transition: 1s;
+}
+.class-bookmark > button {
+  position: absolute;
+  width: 20px;
+  height: 50px;
+  background: #fff;
+  left: -20px;
+  top: calc(50% - 80px);
+}
+.class-bookmark.active {
+  right: 0;
+}
+.class-bookmark.active > button span {
+  display: block;
+  transform: rotate(180deg);
 }
 .class-bookmark h1 {
   font-size: 25px;
@@ -147,6 +189,9 @@
   z-index: 1;
 }
 
+.bookmark-list {
+  margin-bottom: 10px;
+}
 .bookmark-title {
   font-size: 16px;
   font-weight: bold;
@@ -156,6 +201,33 @@
 }
 .bookmark-time {
   font-weight: bold;
+}
+.bookmark-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: yellowgreen;
+}
+.bookmark-contents {
+  text-align: center;
+  padding: 20px 0 10px;
+}
+.bookmark-contents p {
+  margin: 10px 0;
+}
+.bookmark-contents p input {
+  width: 250px;
+  height: 30px;
+  border: 1px solid #ccc;
+}
+.bookmark-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 30px;
+  background: yellowgreen;
+  margin: 0 auto;
 }
 
 .control-top {
@@ -267,13 +339,53 @@
   border-radius: 50%;
   background: #fff;
 }
-.btn-open {
-  position: absolute;
-  width: 20px;
-  height: 50px;
+
+.modal-bookmark {
+  width: 400px;
+  height: 200px;
   background: #fff;
-  left: -20px;
-  top: calc(50% - 80px);
+  display: none;
+}
+.modal-quiz {
+  width: 500px;
+  height: 420px;
+  background: #c3db94;
+  padding: 50px;
+  display: none;
+}
+
+.quiz-header > * {
+  position: absolute;
+  top: 0;
+}
+.quiz-header img {
+  left: 0;
+}
+.quiz-header button {
+  right: 0;
+}
+.quiz-content {
+  width: 400px;
+  height: 200px;
+  background: #fff;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.quiz-content p, .quiz-content img {
+  width: 100%;
+}
+.quiz-answer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 20px;
+}
+.quiz-answer button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+  font-size: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

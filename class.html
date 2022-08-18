@@ -7,11 +7,41 @@
     <title>Gplum</title>
 
     <link rel="stylesheet" href="/css/reset.css" />
-        <link rel="stylesheet" href="/css/common.css" />
-        <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
     <div id="root">
+        <div class="modal modal-bookmark">
+            <div class="bookmark-header">
+                북마크 저장하기
+                <button>X</button>
+            </div>
+            <div class="bookmark-contents">
+                <p>시간 <input type="text"></p>
+                <p>내용 <input type="text" placeholder="내용을 입력하세요. (최대 20자까지 가능)" maxlength="20"></p>
+            </div>
+            <div class="bookmark-footer">
+                <button>저장하기</button>
+            </div>
+        </div>
+        <div class="modal modal-quiz">
+            <div class="quiz-header">
+                <img src="" alt="퀴즈로고">
+                <button>X</button>
+            </div>
+            <div class="quiz-content">
+                <img src="" alt="이미지 문제">
+                <!-- <p>텍스트 문제</p> -->
+            </div>
+            <div class="quiz-answer">
+                <button>O</button>
+                <button>X</button>
+                <!-- <div>
+                    <input type="text"><span>단위</span>
+                </div> -->
+            </div>
+        </div>
         <div class="class-header">
             <p>
                 <span>중2-1 개념서</span>
@@ -21,8 +51,9 @@
     
             <div class="class-nav">
                 <ul>
-                    <li class="playing">
-                        <button class="btn-list">개념 강의 보기</button>
+                    <li class="playing concept">
+                        <button>개념 강의 보기</button>
+                        <button class="btn-list">▼</button>
                         <ul class="class-list">
                             <li><a href="#">일차부등식의 활용 - 평균/도형 [개념]</a></li>
                             <li><a href="#">일차부등식의 활용 - 평균/도형 [예제]</a></li>
@@ -41,6 +72,7 @@
             </div>
         </div>
         <div class="class-video">
+            <p>영상 제목</p>
             <video src=""></video>
             <div class="class-control">
                 <div class="control-top">
@@ -84,11 +116,13 @@
                     <button class="btn-full">전체화면</button>
                     <button class="btn-favorite">즐겨찾기</button>
                     <button class="btn-bookmark">북마크</button>
-                    <button>다음 단계</button>
+                    <button class="btn-next">다음 단계</button>
                 </div>
             </div>
             <div class="class-bookmark">
-                <button class="btn-open">▶</button>
+                <button>
+                    <span>◀</span>
+                </button>
                 <h1>북마크 목록</h1>
                 <div class="bookmark-list">
                     <p class="bookmark-title">일차부등식의 활용 - 평균/도형 [개념]
@@ -98,7 +132,25 @@
                         <span>평균</span>
                         <button class="bookmark-delete">x</button>
                     </p>
-                    <p class="bookmark-content"></p>
+                    <p class="bookmark-content">
+                        <span class="bookmark-time">[01:14]</span>
+                        <span>평균</span>
+                        <button class="bookmark-delete">x</button>
+                    </p>
+                </div>
+                <div class="bookmark-list">
+                    <p class="bookmark-title">일차부등식의 활용 - 평균/도형 [개념]
+                    </p>
+                    <p class="bookmark-content">
+                        <span class="bookmark-time">[01:14]</span>
+                        <span>평균</span>
+                        <button class="bookmark-delete">x</button>
+                    </p>
+                    <p class="bookmark-content">
+                        <span class="bookmark-time">[01:14]</span>
+                        <span>평균</span>
+                        <button class="bookmark-delete">x</button>
+                    </p>
                 </div>
             </div>
         </div>
@@ -130,6 +182,52 @@
         for(i=0; i<speedDot.length; i++) {
             speedDot[i].addEventListener('click', dotOn)
         }
+
+        //북마크 열기
+        let bookBtn = document.querySelector('.class-bookmark>button')
+        function bookOn(){
+            let bookmark = document.querySelector('.class-bookmark')
+            bookmark.classList.toggle('active')
+        }
+        bookBtn.addEventListener("click", bookOn);
+
+        //북마크 추가 여닫기
+        let bookCloseBtn = document.querySelector('.bookmark-header>button')
+        function bookmarkOut(){
+            let bookmark = document.querySelector('.modal-bookmark')
+            bookmark.style.display = 'none';
+        }
+        bookCloseBtn.addEventListener("click", bookmarkOut);
+
+        let bookOpenBtn = document.querySelector('.btn-bookmark')
+        function bookmarkOn(){
+            let bookmark = document.querySelector('.modal-bookmark')
+            bookmark.style.display = 'block';
+        }
+        bookOpenBtn.addEventListener("click", bookmarkOn);
+
+        //팝업퀴즈 여닫기
+        let quizCloseBtn = document.querySelector('.quiz-header>button')
+        function quizkOut(){
+            let quiz = document.querySelector('.modal-quiz')
+            quiz.style.display = 'none';
+        }
+        quizCloseBtn.addEventListener("click", quizkOut);
+
+        let quizOpenBtn = document.querySelector('.btn-next')
+        function quizOn(){
+            let quiz = document.querySelector('.modal-quiz')
+            quiz.style.display = 'block';
+        }
+        quizOpenBtn.addEventListener("click", quizOn);
+
+        //전체화면
+        let fullBtn = document.querySelector('.btn-full')
+        function fullToggle(){
+            let video = document.querySelector('.class-video')
+            video.classList.toggle('full')
+        }
+        fullBtn.addEventListener("click", fullToggle);
 
     </script>
 </body>

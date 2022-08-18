@@ -4,6 +4,7 @@ body {
 
 body > div {
   height: 100%;
+  overflow: hidden;
 }
 
 .float-left {
@@ -108,6 +109,9 @@ body > div {
   padding: 30px;
   height: calc(100% - 100px);
 }
+.contents > div {
+  height: 100%;
+}
 .contents-title {
   font-size: 30px;
   font-weight: 700;
@@ -201,11 +205,12 @@ body > div {
 .class-list {
   position: absolute;
   left: 0;
-  top: 100px;
+  top: 40px;
   background: #666;
   z-index: 1;
   border-bottom: 1px solid #fff;
   display: none;
+  width: 420px;
 }
 .class-list.active {
   display: block;
@@ -224,6 +229,31 @@ body > div {
 
 .text-left {
   text-align: left;
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 10;
+}
+
+.btn-list {
+  width: 30px !important;
+  height: 30px !important;
+  position: absolute;
+  border-radius: 50%;
+  right: 5px;
+  top: 5px;
+}
+
+.concept {
+  position: relative;
+}
+.concept button:not(.btn-list) {
+  width: 170px !important;
+  padding-right: 20px;
 }
 
 /*# sourceMappingURL=common.css.map */
