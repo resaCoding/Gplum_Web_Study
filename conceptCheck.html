@@ -43,6 +43,10 @@
         </div>
         <div class="class-concept">
             <div class="float-left concept-left">
+                <!-- 문제 맞힌 개수 표시 -->
+                <!-- <div class="correct-count">
+                    맞힌 개수:<span>9</span>/<span>12</span>
+                </div> -->
                 <div class="scroll-y">
                     <table>
                         <tr>
@@ -97,7 +101,8 @@
                                 <button>⑤</button>
                             </td>
                         </tr>
-                        <tr>
+                        <!-- 문제 틀렸을 때 -->
+                        <tr class="wrong">
                             <td>
                                 <button>05</button>
                             </td>
@@ -109,7 +114,8 @@
                                 <button>⑤</button>
                             </td>
                         </tr>
-                        <tr>
+                        <!-- 문제 맞혔을 때 -->
+                        <tr class="correct">
                             <td>
                                 <button>06</button>
                             </td>
@@ -133,6 +139,7 @@
                                 <button>⑤</button>
                             </td>
                         </tr>
+                        <!-- 현재 문제 표시 -->
                         <tr class="checked">
                             <td>
                                 <button>08</button>
@@ -170,6 +177,7 @@
                                 <button>11</button>
                             </td>
                             <td>
+                                <!-- 분수 정답 입력 -->
                                 <div class="fraction">
                                     <input type="text">
                                     <div>
@@ -190,6 +198,24 @@
                             </td>
                         </tr>
                     </table>
+                    
+                    <!-- 정답 확인 테이블 -->
+                    <!-- <table>
+                        <tr>
+                            <th>번호</th>
+                            <th>나의 답</th>
+                            <th>정답</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button>01</button>
+                            </td>
+                            <td>
+                                <button class="checked">①</button>
+                            </td>
+                            <td><button>②</button></td>
+                        </tr>
+                    </table> -->
                 </div>
                 <button type="submit" class="concept-submit">답안 제출</button>
             </div>
@@ -198,6 +224,7 @@
                 <button>›</button>
                 <div>
                     <div class="concept-header">
+                        <!-- 문제 여러개일 때 지문 -->
                         <!-- <p class="mutiple">다음을 계산하시오.</p> -->
                         <div>
                             <p class="num">08</p>
@@ -241,11 +268,22 @@
                                     
                                 </li>
                             </ul>
+
+                            <!-- 주관식 입력 -->
                             <!-- <div>
                                 <input type="text"><span>(m²)</span>
                             </div> -->
+
+                            <!-- 문제 해설 -->
+                            <!-- <div class="concept-explain">
+                                <p>
+                                    <span>정답</span><span>④</span>
+                                </p>
+                                <img src="" alt="해설 이미지">
+                            </div> -->
                         </div>
                     </div>
+
                     <!-- 정답 영상 scroll-y 밑에 추가 -->
                     <!-- <div class="concept-video">
                         <div class="title">
@@ -300,6 +338,8 @@
                     </div> -->
                 </div>
             </div>
+            <!-- 해설 후 다음 단계 버튼 -->
+            <!-- <button class="btn-next">다음 단계</button> -->
         </div>
     </div>
     <script>

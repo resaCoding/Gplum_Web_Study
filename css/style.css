@@ -227,6 +227,31 @@
 .class-concept {
   padding: 30px;
   height: calc(100% - 100px);
+  position: relative;
+}
+.class-concept .btn-next {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.class-record {
+  height: calc(100% - 100px);
+}
+.class-record > div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.class-record > div p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+.class-record .btn-next {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }
 
 .bookmark-list {
@@ -432,10 +457,25 @@
   width: 500px;
   text-align: center;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .concept-left .scroll-y {
-  height: calc(100% - 60px);
+  width: 100%;
   margin-bottom: 30px;
+}
+.concept-left .correct-count {
+  width: 100%;
+  height: 40px;
+  background: olive;
+  line-height: 40px;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.concept-left .correct-count span {
+  margin: 0 5px;
 }
 .concept-left table {
   width: 100%;
@@ -444,12 +484,42 @@
 .concept-left table tr > * {
   border: 1px solid #000;
 }
+.concept-left table tr:first-child {
+  position: sticky;
+  top: 0;
+}
 .concept-left table tr.checked {
   background: #ffe9bf;
+}
+.concept-left table tr.wrong {
+  background: darksalmon;
+  position: relative;
+}
+.concept-left table tr.wrong::after {
+  content: "✔";
+  position: absolute;
+  top: 0;
+  left: 14px;
+  font-size: 40px;
+  color: red;
+}
+.concept-left table tr.correct {
+  position: relative;
+}
+.concept-left table tr.correct::after {
+  content: "○";
+  position: absolute;
+  top: -5px;
+  left: 3px;
+  font-size: 50px;
+  color: red;
 }
 .concept-left table tr th {
   padding: 15px 0;
   background: #ccc;
+}
+.concept-left table tr th:first-child {
+  width: 56px;
 }
 .concept-left table tr td {
   padding: 15px;
@@ -480,6 +550,7 @@
   height: 30px;
   background: crimson;
   color: #fff;
+  flex-shrink: 0;
 }
 .concept-right {
   margin-left: 90px;
@@ -567,6 +638,24 @@
 .concept-answer div input {
   border: 1px solid #000;
 }
+.concept-answer div.concept-explain {
+  text-align: left;
+  margin-top: 50px;
+}
+.concept-answer div.concept-explain span {
+  margin-right: 5px;
+  display: inline-block;
+}
+.concept-answer div.concept-explain span:first-child {
+  background: #666;
+  padding: 5px;
+  border-radius: 3px;
+  color: #fff;
+}
+.concept-answer div.concept-explain img {
+  width: 100%;
+  margin-top: 10px;
+}
 .concept-answer .fraction {
   justify-content: flex-end;
 }
@@ -640,6 +729,157 @@
   height: 1px;
   margin: 3px 0;
   background: #000;
+}
+
+.record-choice div {
+  margin: 50px 0;
+}
+.record-choice div button, .record-choice div label {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+  position: relative;
+}
+.record-choice div button img, .record-choice div label img {
+  width: 100px;
+  height: 100px;
+  background: #ff6;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.record-choice div button span, .record-choice div label span {
+  display: block;
+  width: 150px;
+  height: 30px;
+  background: #ffd0cb;
+  color: red;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+.record-choice div input {
+  display: none;
+}
+.record-recording > * {
+  margin: 20px 0;
+}
+.record-recording .timer {
+  border: none;
+  background: darkkhaki;
+  border-radius: 3px;
+}
+.record-recording div:not(.record-btn) button {
+  width: 100px;
+  height: 100px;
+  margin: 0 20px;
+  border-radius: 50%;
+  position: relative;
+}
+.record-recording div:not(.record-btn) button.pause {
+  border: 7px solid brown;
+}
+.record-recording div:not(.record-btn) button.pause::after {
+  content: "일시정지";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.record-recording div:not(.record-btn) button.stop {
+  border: 7px solid brown;
+}
+.record-recording div:not(.record-btn) button.stop::after {
+  content: "정지";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.record-recording div:not(.record-btn) button.record {
+  background: brown;
+}
+.record-recording div:not(.record-btn) button.record::after {
+  content: "녹음";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.record-recording div:not(.record-btn) button.play {
+  width: 120px;
+  height: 120px;
+  border: 7px solid brown;
+  margin-bottom: 30px;
+}
+.record-recording div:not(.record-btn) button.play::before {
+  content: "들어보기";
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.record-recording div:not(.record-btn) button.play::after {
+  content: "▶";
+  position: absolute;
+  left: 58%;
+  top: 40%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 100px;
+  color: brown;
+}
+.record-wave {
+  position: relative;
+  width: 500px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.record-wave .line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 3px;
+  border-radius: 1.5px;
+  background: salmon;
+}
+.record-wave span {
+  width: 3px;
+  background: salmon;
+  border-radius: 1.5px;
+  margin: 0 1px;
+}
+.record-wave span:nth-child(2) {
+  height: 10px;
+}
+.record-wave span:nth-child(3) {
+  height: 20px;
+}
+.record-wave span:nth-child(4) {
+  height: 30px;
+}
+.record-wave span:nth-child(5) {
+  height: 20px;
+}
+.record-wave span:nth-child(6) {
+  height: 10px;
+}
+.record-btn {
+  display: flex;
+}
+.record-btn > button {
+  display: block;
+  width: 150px;
+  height: 30px;
+  background: #ffd0cb;
+  color: red;
+  line-height: 30px;
+  cursor: pointer;
+  margin: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

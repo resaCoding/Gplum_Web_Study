@@ -272,6 +272,36 @@ $height: calc(100% - 100px);
     &-concept {
         padding: 30px;
         height: $height;
+        position: relative;
+
+        .btn-next {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+    }
+
+    &-record {
+        height: $height;
+
+        > div {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            
+            p {
+                font-size: 20px;
+                line-height: 1.5;
+            }
+        }
+
+        .btn-next {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
     }
 }
 
@@ -516,10 +546,27 @@ $height: calc(100% - 100px);
         width: 500px;
         text-align: center;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         .scroll-y {
-            height: calc(100% - 60px);
+            width: 100%;
             margin-bottom: 30px;
+        }
+
+        .correct-count {
+            width: 100%;
+            height: 40px;
+            background: olive;
+            line-height: 40px;
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 10px;
+
+            span {
+                margin: 0 5px;
+            }
         }
 
         table {
@@ -531,13 +578,49 @@ $height: calc(100% - 100px);
                     border: 1px solid #000;
                 }
 
+                &:first-child {
+                    position: sticky;
+                    top: 0;
+                }
+
                 &.checked {
                     background: #ffe9bf;
+                }
+
+                &.wrong {
+                    background: darksalmon;
+                    position: relative;
+
+                    &::after {
+                        content: '✔';
+                        position: absolute;
+                        top: 0;
+                        left: 14px;
+                        font-size: 40px;
+                        color: red;
+                    }
+                }
+
+                &.correct {
+                    position: relative;
+
+                    &::after {
+                        content: '○';
+                        position: absolute;
+                        top: -5px;
+                        left: 3px;
+                        font-size: 50px;
+                        color: red;
+                    }
                 }
 
                 th {
                     padding: 15px 0;
                     background: #ccc;
+
+                    &:first-child {
+                        width: 56px;
+                    }
                 }
                 
                 td {
@@ -576,6 +659,7 @@ $height: calc(100% - 100px);
         height: 30px;
         background: crimson;
         color: #fff;
+        flex-shrink: 0;
     }
 
     &-right {
@@ -676,6 +760,28 @@ $height: calc(100% - 100px);
             input {
                 border: 1px solid #000;
             }
+
+            &.concept-explain {
+                text-align: left;
+                margin-top: 50px;
+
+                span {
+                    margin-right: 5px;
+                    display: inline-block;
+
+                    &:first-child {
+                        background: #666;
+                        padding: 5px;
+                        border-radius: 3px;
+                        color: #fff;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    margin-top: 10px;
+                }
+            }
         }
 
         .fraction {
@@ -765,6 +871,179 @@ $height: calc(100% - 100px);
             height: 1px;
             margin: 3px 0;
             background: #000;
+        }
+    }
+}
+
+.record {
+    &-choice {
+        div {
+            margin: 50px 0;
+            button, label {
+                display: inline-flex;
+                flex-direction: column;
+                align-items: center;
+                cursor: default;
+                position: relative;
+
+                img {
+                    width: 100px;
+                    height: 100px;
+                    background: #ff6;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                }
+
+                span {
+                    display: block;
+                    width: 150px;
+                    height: 30px;
+                    background: #ffd0cb;
+                    color: red;
+                    line-height: 30px;
+                    text-align: center;
+                    cursor: pointer;
+                }
+            }
+
+            input {
+                display: none;
+            }
+        }
+    }
+
+    &-recording {
+        >* {
+            margin: 20px 0;
+        }
+        .timer {
+            border: none;
+            background: darkkhaki;
+            border-radius: 3px;
+        }
+
+        div:not(.record-btn) {
+            button {
+                width: 100px;
+                height: 100px;
+                margin: 0 20px;
+                border-radius: 50%;
+                position: relative;
+
+                &.pause {
+                    border: 7px solid brown;
+                    &::after {
+                        content: '일시정지';
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translateX(-50%) translateY(-50%);
+                    }
+                }
+
+                &.stop {
+                    border: 7px solid brown;
+                    &::after {
+                        content: '정지';
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translateX(-50%) translateY(-50%);
+                    }
+                }
+
+                &.record {
+                    background: brown;
+                    &::after {
+                        content: '녹음';
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translateX(-50%) translateY(-50%);
+                    }
+                }
+
+                &.play {
+                    width: 120px;
+                    height: 120px;
+                    border: 7px solid brown;
+                    margin-bottom: 30px;
+                    &::before {
+                        content: '들어보기';
+                        width: 100%;
+                        position: absolute;
+                        bottom: -40px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                    &::after {
+                        content: '▶';
+                        position: absolute;
+                        left: 58%;
+                        top: 40%;
+                        transform: translateX(-50%) translateY(-50%);
+                        font-size: 100px;
+                        color: brown;
+                    }
+                }
+            }
+        }
+    }
+
+    &-wave {
+        position: relative;
+        width: 500px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .line {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            height: 3px;
+            border-radius: 1.5px;
+            background: salmon;
+        }
+
+        span {
+            width: 3px;
+            background: salmon;
+            border-radius: 1.5px;
+            margin: 0 1px;
+
+            &:nth-child(2) {
+                height: 10px;
+            }
+            &:nth-child(3) {
+                height: 20px;
+            }
+            &:nth-child(4) {
+                height: 30px;
+            }
+            &:nth-child(5) {
+                height: 20px;
+            }
+            &:nth-child(6) {
+                height: 10px;
+            }
+        }
+    }
+
+    &-btn {
+        display: flex;
+        > button {
+            display: block;
+            width: 150px;
+            height: 30px;
+            background: #ffd0cb;
+            color: red;
+            line-height: 30px;
+            cursor: pointer;
+            margin: 20px;
         }
     }
 }
