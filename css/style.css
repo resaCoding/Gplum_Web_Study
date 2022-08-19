@@ -84,16 +84,36 @@
 }
 .plus-bottom {
   margin-top: 10px;
+  height: 619px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .plus-bottom table {
   width: 100%;
   text-align: center;
 }
+.plus-bottom table tr:first-child {
+  position: sticky;
+  top: 0;
+}
 .plus-bottom table th {
   height: 50px;
   line-height: 50px;
   background: yellowgreen;
+  position: relative;
+}
+.plus-bottom table th::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 0;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
   border: 1px solid #fff;
+  border-right: 0;
+}
+.plus-bottom table th:last-child::after {
+  border-right: 1px solid #fff;
 }
 .plus-bottom table td {
   height: 50px;
@@ -706,6 +726,20 @@
 }
 .concept-video.full .class-control {
   display: block;
+}
+.concept-OX {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 5px;
+}
+.concept-OX button {
+  width: 120px;
+  height: 30px;
+  border: 3px solid skyblue;
+}
+.concept-OX button.checked {
+  background: skyblue;
+  color: #fff;
 }
 
 .fraction {

@@ -101,15 +101,42 @@ $height: calc(100% - 100px);
     }
     &-bottom {
         margin-top: 10px;
+        height: 619px;
+        overflow-y: auto;
+        overflow-x: hidden;
         table {
             width: 100%;
             text-align: center;
+
+            tr {
+                &:first-child {
+                    position: sticky;
+                    top: 0;
+                }
+            }
 
             th {
                 height: 50px;
                 line-height: 50px;
                 background: yellowgreen;
-                border: 1px solid #fff;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: -1px;
+                    top: 0;
+                    width: calc(100% - 1px);
+                    height: calc(100% - 1px);
+                    border: 1px solid #fff;
+                    border-right: 0;
+                }
+
+                &:last-child {
+                    &::after {
+                        border-right: 1px solid #fff;
+                    }
+                }
             }
 
             td {
@@ -845,6 +872,23 @@ $height: calc(100% - 100px);
             }
             .class-control {
                 display: block;
+            }
+        }
+    }
+
+    &-OX {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5px;
+
+        button {
+            width: 120px;
+            height: 30px;
+            border: 3px solid skyblue;
+
+            &.checked {
+                background: skyblue;
+                color: #fff;
             }
         }
     }
