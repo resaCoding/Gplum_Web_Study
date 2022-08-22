@@ -43,6 +43,166 @@
   border: 1px solid #000;
   border-radius: 2px;
 }
+.book-wrap {
+  padding: 30px;
+  height: 100%;
+}
+.book-wrap table {
+  width: 100%;
+}
+.book-wrap table .unit td {
+  height: 20px;
+  line-height: 20px;
+  background-color: #ddd9c3;
+  padding: 10px;
+}
+.book-wrap table th {
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  background: #77933c;
+  position: relative;
+}
+.book-wrap table th::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 0;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  border: 1px solid #fff;
+  border-right: 0;
+}
+.book-wrap table td {
+  border: 1px solid #ccc;
+  padding: 15px 10px;
+  position: relative;
+}
+.book-wrap table td > span {
+  margin: 0 10px;
+}
+.book-wrap table td p {
+  position: relative;
+  z-index: 1;
+}
+.book-wrap table td button {
+  background: #ebf7bf;
+  width: 100%;
+  height: 30px;
+  border: 1px solid #77933c;
+  border-radius: 3px;
+}
+.book-wrap table td button.end {
+  cursor: default;
+  background: #ccc;
+  border-color: #666;
+}
+.book-wrap table td div {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50%;
+}
+.book-wrap table td.green div {
+  background: linear-gradient(to right, yellowgreen, olive);
+}
+.book-wrap table td.blue div {
+  background: linear-gradient(to right, skyblue, blue);
+}
+.book-wrap table td:last-child {
+  padding: 5px 10px;
+}
+.book-wrap table thead tr {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.book-index {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.book-index div {
+  display: flex;
+  align-items: flex-end;
+}
+.book-index div p {
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  line-height: 24px;
+  border: 3px solid #01701d;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+.book-index button {
+  width: 100px;
+  background: #666;
+  color: #fff;
+  border-radius: 5px;
+}
+.book-header {
+  display: flex;
+  padding: 10px 0 20px 20px;
+  border: 1px solid #000;
+  border-bottom: 0;
+}
+.book-header button {
+  width: 50px;
+  height: 25px;
+  border: 1px solid #ccc;
+  margin-left: 5px;
+}
+.book-contents {
+  width: 100%;
+  height: calc(100% - 55px);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  border: 1px solid #000;
+  border-top: 0;
+}
+.book-item {
+  width: 23%;
+  height: 48%;
+  margin-bottom: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.book-item a {
+  cursor: default;
+}
+.book-item img {
+  display: inline-block;
+  width: 200px;
+  height: 260px;
+  background: #ff6;
+  cursor: pointer;
+}
+.book-item p {
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 3px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.book-item p.M2_1 {
+  background: #c3d69b;
+}
+.book-item p.M1_2 {
+  background: #dce6f2;
+}
+.book-item p.M1_1 {
+  background: #fcd5b5;
+}
+.book-item p.end {
+  background: #ccc;
+}
 
 .plus-top {
   display: flex;
@@ -121,18 +281,28 @@
   border: 1px solid #000;
   padding: 0 5px;
 }
+.plus-bottom table td:last-child {
+  padding: 0;
+}
 .plus-bottom table td button {
+  width: 100%;
+  margin: 0 -5px;
+}
+.plus-bottom table td button.wait {
+  background: #e0c3c3;
   width: 120px;
   height: 40px;
   line-height: 38px;
   border: 1px solid #000;
   border-radius: 5px;
 }
-.plus-bottom table td button.wait {
-  background: #e0c3c3;
-}
 .plus-bottom table td button.study {
   background: #c8e6ca;
+  width: 120px;
+  height: 40px;
+  line-height: 38px;
+  border: 1px solid #000;
+  border-radius: 5px;
 }
 
 .class-video {
@@ -485,6 +655,10 @@
   width: 100%;
   margin-bottom: 30px;
 }
+.concept-left .scroll-y > p {
+  margin-top: 20px;
+  text-align: left;
+}
 .concept-left .correct-count {
   width: 100%;
   height: 40px;
@@ -549,6 +723,28 @@
 }
 .concept-left table tr td button.checked {
   color: red;
+}
+.concept-left table tr td button.watch {
+  width: 100px;
+  height: 30px;
+  background: #ffcfc9;
+  border: 1px solid salmon;
+}
+.concept-left table tr td button.fix {
+  width: 100px;
+  height: 30px;
+  background: #c9f9ff;
+  border: 1px solid navy;
+}
+.concept-left table tr td .regist {
+  display: inline-block;
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #000;
+}
+.concept-left table tr td .regist + input[type=file] {
+  display: none;
 }
 .concept-left table tr td input {
   border: 1px solid #000;
@@ -914,6 +1110,70 @@
   line-height: 30px;
   cursor: pointer;
   margin: 20px;
+}
+
+.narrative {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.narrative p {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.narrative p span:not(.color-red) {
+  font-size: 16px;
+}
+.narrative button {
+  width: 130px;
+  height: 30px;
+  background: #6584ab;
+  color: #fff;
+  margin-top: 50px;
+}
+.narrative .timer {
+  border: none;
+  margin-top: 30px;
+}
+.narrative .timer p {
+  font-size: 20px;
+  color: #666;
+}
+.narrative .timer p span {
+  font-size: inherit;
+}
+.narrative-add {
+  text-align: left;
+}
+.narrative-add:first-child {
+  margin-top: 10px;
+}
+.narrative-title {
+  width: 100%;
+  height: 30px;
+  background: yellowgreen;
+  padding: 3px;
+  border: 3px solid #ccc;
+}
+.narrative-title button {
+  width: 18px;
+  height: 18px;
+  background: #fff;
+}
+.narrative-box {
+  height: auto;
+  min-height: 70px;
+  padding: 10px;
+  border: 1px solid #000;
+  border-top: 0;
+  display: none;
+}
+.narrative-box.active {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

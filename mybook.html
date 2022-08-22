@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gplum</title>
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <div id="root">
+            <div class="float-left main-left">
+                <div class="lnb">
+                    <button class="lnb-btn" onclick="hamburgerOn()">=</button>
+                    <ul class="lnb-main">
+                        <li><a href="#">나의 강의실</a></li>
+                        <li class="active"><a href="#">나의 교재</a></li>
+                        <li><a href="#">나의 평가</a></li>
+                        <li><a href="#">나의 오답</a></li>
+                        <li><a href="#">학습 달력</a></li>
+                        <li><a href="#">즐겨찾기</a></li>
+                    </ul>
+                    <div class="lnb-sub">
+                        <ul>
+                            <li><a href="#">로그아웃</a></li>
+                            <li><a href="#">지플럼 이용 가이드</a></li>
+                            <li><a href="#">바탕화면에 바로가기</a></li>
+                            <li><a href="#">패럴랙스 홈페이지</a></li>
+                            <li><a href="#">지플럼 영어</a></li>
+                        </ul>
+                    </div>
+                    <div class="lnb-bg" onclick="hamburgerOut()"></div>
+                </div>
+            </div>
+            <div class="float-left main-right">
+                <div class="gnb">
+                    <a href="#">
+                        <img src="" alt="지플럼 로고" />
+                    </a>
+                    <div class="timer">
+                        <img src="" alt="타이머" />
+                        <p><span>00</span>:<span>00</span>:<span>00</span></p>
+                    </div>
+                    <div class="profile">
+                        <div>
+                            <img src="" alt="프로필 사진" />
+                        </div>
+                        <div>
+                            <p class="name">김수학</p>
+                            <p class="mem_num">
+                                845CP
+                                <button><img src="" alt="캐럿" /></button>
+                            </p>
+                        </div>
+                        <div class="alarm">
+                            <img src="" alt="알람" />
+                            <span>N</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents">
+                    <!-- <div>
+                        <h1 class="contents-title">나의 교재</h1>
+                        <div class="book-wrap">
+                            <div class="book-header">
+                                <select name="" id="">
+                                    <option value="">학년-학기</option>
+                                    <option value="">1학년-1학기</option>
+                                    <option value="">1학년-2학기</option>
+                                </select>
+                                <button>조회</button>
+                            </div>
+                            <div class="book-contents">
+                                <div class="book-item">
+                                    <a href="">
+                                        <img src="" alt="교재 표지">
+                                        <p class="M2_1">중2-1 노벰</p>
+                                    </a>
+                                    <span>2022.05.01~2023.02.28</span>
+                                </div>
+                                <div class="book-item">
+                                    <a href="">
+                                        <img src="" alt="교재 표지">
+                                        <p class="M2_1">중2-1 뜨레스</p>
+                                    </a>
+                                    <span>2022.05.01~2023.02.28</span>
+                                </div>
+                                <div class="book-item">
+                                    <a href="">
+                                        <img src="" alt="교재 표지">
+                                        <p class="M2_1">중2-1 개념서</p>
+                                    </a>
+                                    <span>2022.05.01~2023.02.28</span>
+                                </div>
+                                <div class="book-item">
+                                    <a href="">
+                                        <img src="" alt="교재 표지">
+                                        <p class="M1_2">중1-2 엑사스</p>
+                                    </a>
+                                    <span>2021.11.01~2022.08.31</span>
+                                </div>
+                                <div class="book-item">
+                                    <a href="">
+                                        <img src="" alt="교재 표지">
+                                        <p class="M1_2">중1-2 뜨레스</p>
+                                    </a>
+                                    <span>2021.09.01~2022.08.31</span>
+                                </div>
+                                <div class="book-item">
+                                    <a href="">
+                                        <img src="" alt="교재 표지">
+                                        <p class="M1_2">중1-2 개념서</p>
+                                    </a>
+                                    <span>2021.09.01~2022.08.31</span>
+                                </div>
+                                <div class="book-item">
+                                    <a href="">
+                                        <img src="" alt="교재 표지">
+                                        <p class="M1_1">중1-1 아르케3</p>
+                                    </a>
+                                    <span>2021.03.01~2022.02.28</span>
+                                </div>
+                                <div class="book-item">
+                                    <a href="">
+                                        <img src="" alt="교재 표지">
+                                        <p class="end">중1-1 아르케2</p>
+                                    </a>
+                                    <span>2021.03.01~2022.02.28</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- 교재별 학습 목차(개념서) -->
+                    <div>
+                        <h1 class="contents-title">나의 교재</h1>
+                        <div class="book-wrap">
+                            <div class="book-index">
+                                <div>
+                                    <p>중1-1 아르케2</p>
+                                    <span>2021.03.01~2022.02.28</span>
+                                </div>
+                                <button>교재 목록</button>
+                            </div>
+                            <div class="scroll-y">
+                                <table>
+                                    <colgroup>
+                                        <col width="50%"/>
+                                        <col width="20%"/>
+                                        <col width="20%"/>
+                                        <col width="10%"/>
+                                    </colgroup>
+                                    <thead>
+                                        <th>단원명</th>
+                                        <th>개념 강의</th>
+                                        <th>개념 확인하기</th>
+                                        <th>학습하기</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="unit">
+                                            <td colspan="4">Ⅰ. 수와 식의 계산</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>1</span>
+                                                유한소수와 무한소수
+                                            </td>
+                                            <td class="green">
+                                                <p>100%</p>
+                                                <div></div>
+                                            </td>
+                                            <td class="blue">
+                                                <p><span>10</span> / 12</p>
+                                                <div></div>
+                                            </td>
+                                            <td>
+                                                <button>학습하기</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>2</span>
+                                                유리수와 순환소수
+                                            </td>
+                                            <td class="green">
+                                                <p>95%</p>
+                                                <div></div>
+                                            </td>
+                                            <td class="blue">
+                                                <p><span>12</span> / 12</p>
+                                                <div></div>
+                                            </td>
+                                            <td>
+                                                <button>학습하기</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>3</span>
+                                                단항식의 곱셈과 나눗셈
+                                            </td>
+                                            <td class="green">
+                                                <p>100%</p>
+                                                <div></div>
+                                            </td>
+                                            <td class="blue">
+                                                <p><span>10</span> / 12</p>
+                                                <div></div>
+                                            </td>
+                                            <td>
+                                                <button class="end" disabled>학습하기</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>4</span>
+                                                다항식의 덧셈과 뺄셈
+                                            </td>
+                                            <td class="green">
+                                                <p>92%</p>
+                                                <div></div>
+                                            </td>
+                                            <td class="blue">
+                                                <p><span>12</span> / 12</p>
+                                                <div></div>
+                                            </td>
+                                            <td>
+                                                <button>학습하기</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>5</span>
+                                                단항식과 다항식의 곱셈과 나눗셈
+                                            </td>
+                                            <td class="green">
+                                                <p>88%</p>
+                                                <div></div>
+                                            </td>
+                                            <td class="blue">
+                                                <p><span>12</span> / 12</p>
+                                                <div></div>
+                                            </td>
+                                            <td>
+                                                <button>학습하기</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Ⅰ단원 마무리
+                                            </td>
+                                            <td colspan="2" class="blue">
+                                                <p><span>28</span> / 30</p>
+                                                <div></div>
+                                            </td>
+                                            <td>
+                                                <button>학습하기</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr class="unit">
+                                            <td colspan="4">Ⅱ. 일차부등식</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>1</span>
+                                                일차부등식의 풀이
+                                            </td>
+                                            <td class="green">
+                                                <p>-</p>
+                                                <div></div>
+                                            </td>
+                                            <td class="blue">
+                                                <p><span>-</span> / 12</p>
+                                                <div></div>
+                                            </td>
+                                            <td>
+                                                <button>학습하기</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>2</span>
+                                                일차부등식의 활용(1)
+                                            </td>
+                                            <td class="green">
+                                                <p>-</p>
+                                                <div></div>
+                                            </td>
+                                            <td class="blue">
+                                                <p><span>-</span> / 12</p>
+                                                <div></div>
+                                            </td>
+                                            <td>
+                                                <button>학습하기</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>3</span>
+                                                일차부등식의 활용(2)
+                                            </td>
+                                            <td class="green">
+                                                <p>-</p>
+                                                <div></div>
+                                            </td>
+                                            <td class="blue">
+                                                <p><span>-</span> / 12</p>
+                                                <div></div>
+                                            </td>
+                                            <td>
+                                                <button>학습하기</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>4</span>
+                                                일차부등식의 활용(3)
+                                            </td>
+                                            <td class="green">
+                                                <p>-</p>
+                                                <div></div>
+                                            </td>
+                                            <td class="blue">
+                                                <p><span>-</span> / 12</p>
+                                                <div></div>
+                                            </td>
+                                            <td>
+                                                <button>학습하기</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span>5</span>
+                                                단항식과 다항식의 곱셈과 나눗셈
+                                            </td>
+                                            <td class="green">
+                                                <p>-</p>
+                                                <div></div>
+                                            </td>
+                                            <td class="blue">
+                                                <p><span>-</span> / 12</p>
+                                                <div></div>
+                                            </td>
+                                            <td>
+                                                <button>학습하기</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Ⅱ단원 마무리
+                                            </td>
+                                            <td colspan="2" class="blue">
+                                                <p><span>-</span> / 30</p>
+                                                <div></div>
+                                            </td>
+                                            <td>
+                                                <button>학습하기</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            // 사이드메뉴 슬라이드
+            let lnb = document.querySelector('.lnb-sub');
+            let lnbBg = document.querySelector('.lnb-bg');
+
+            function hamburgerOn() {
+                lnb.classList.add('active');
+                lnbBg.classList.add('active');
+            }
+            function hamburgerOut() {
+                lnb.classList.remove('active');
+                lnbBg.classList.remove('active');
+            }
+
+            // 사이드메뉴 클릭
+            let lnbBtn = document.querySelectorAll('.lnb-main li a')
+
+            function lnbOn(tabClick){
+                let clicklnb = tabClick.currentTarget.parentNode
+                for(let i = 0; i < lnbBtn.length; i++) {
+                    lnbBtn[i].parentNode.classList.remove('active')
+                }
+                clicklnb.classList.add('active')
+            }
+
+            for (i = 0; i < lnbBtn.length; i++) {
+                lnbBtn[i].addEventListener("click", lnbOn);
+            }
+        </script>
+    </body>
+</html>

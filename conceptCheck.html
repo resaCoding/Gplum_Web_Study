@@ -43,7 +43,9 @@
         </div>
         <div class="class-concept">
             <div class="float-left concept-left">
-                <!-- 문제 맞힌 개수 표시 -->
+                <!-- 문제 맞힌 개수 표시 및
+                    채점 대기 중
+                -->
                 <!-- <div class="correct-count">
                     맞힌 개수:<span>9</span>/<span>12</span>
                 </div> -->
@@ -77,11 +79,8 @@
                                 <button>02</button>
                             </td>
                             <td>
-                                <button>①</button>
-                                <button>②</button>
-                                <button>③</button>
-                                <button>④</button>
-                                <button>⑤</button>
+                                <button class="watch">보기</button>
+                                <button class="fix">수정</button>
                             </td>
                         </tr>
                         <tr>
@@ -89,11 +88,8 @@
                                 <button>03</button>
                             </td>
                             <td>
-                                <button>①</button>
-                                <button>②</button>
-                                <button>③</button>
-                                <button>④</button>
-                                <button>⑤</button>
+                                <label class="regist" for="answer-register">답안 등록</label>
+                                <input type="file" id="answer-register">
                             </td>
                         </tr>
                         <tr>
@@ -240,6 +236,29 @@
                             </td>
                         </tr>
                     </table> -->
+
+                    <!-- 플러스 학습 - 서술형 따라잡기 - 결과보기 -->
+                    <!-- <div>
+                        <div class="narrative-add">
+                            <div class="narrative-title">
+                                선생님 의견 <button>+</button>
+                            </div>
+                            <div class="narrative-box">
+                                <p>의견~~</p>
+                            </div>
+                        </div>
+                        <div class="narrative-add">
+                            <div class="narrative-title">
+                                첨부 파일 <button>+</button>
+                            </div>
+                            <ul class="narrative-box active">
+                                <li><button>강수학_서술형01.jpg</button></li>
+                            </ul>
+                        </div>
+                    </div> -->
+
+                    <!-- 플러스 학습 - 서술형 따라잡기 - 채점대기, 결과보기 -->
+                    <!-- <p>* 선생님이 채점을 완료하시면 모범 답안 및 채점 결과를 확인할 수 있습니다.</p> -->
                 </div>
                 <button type="submit" class="concept-submit">답안 제출</button>
             </div>
@@ -359,6 +378,24 @@
                                 <button class="btn-favorite">즐겨찾기</button>
                             </div>
                         </div>
+                    </div> -->
+
+                    <!-- 서술형 따라잡기 - 학습하기, 채점대기, 결과 보기 / .timer 없이 -->
+                    <!-- 교과서 적중문제 - 학습하기 / .timer 추가 -->
+                    <!-- <div class="narrative">
+                        <p>
+                            선생님께 받은<br/>
+                            <span class="color-red">서술형 따라잡기</span> 학습지를 풀고<br/>
+                            답안을 등록하세요.<br/><br/>
+    
+                            <span>(선생님께 학습지를 제출해도 됩니다.)</span>
+                        </p>
+                        <div class="timer">
+                            <p>
+                                <span>00</span>:<span>00</span>
+                            </p>
+                        </div>
+                        <button>학습지 보기</button>
                     </div> -->
                 </div>
             </div>
