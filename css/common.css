@@ -116,6 +116,16 @@ body > div {
   font-size: 30px;
   font-weight: 700;
 }
+.contents-title span {
+  font-size: 15px;
+  font-weight: normal;
+}
+.contents-title > div {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 .contents-tab {
   display: flex;
   flex-wrap: wrap;
@@ -312,6 +322,29 @@ body > div {
 
 .color-red {
   color: red;
+}
+
+.position-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.position-sticky th {
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  background: #77933c;
+  position: relative;
+}
+.position-sticky th::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 0;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  border: 1px solid #fff;
+  border-right: 0;
 }
 
 /*# sourceMappingURL=common.css.map */

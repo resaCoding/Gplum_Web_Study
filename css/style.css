@@ -56,23 +56,6 @@
   background-color: #ddd9c3;
   padding: 10px;
 }
-.book-wrap table th {
-  height: 40px;
-  line-height: 40px;
-  color: #fff;
-  background: #77933c;
-  position: relative;
-}
-.book-wrap table th::after {
-  content: "";
-  position: absolute;
-  left: -1px;
-  top: 0;
-  width: calc(100% - 1px);
-  height: calc(100% - 1px);
-  border: 1px solid #fff;
-  border-right: 0;
-}
 .book-wrap table td {
   border: 1px solid #ccc;
   padding: 15px 10px;
@@ -112,11 +95,6 @@
 }
 .book-wrap table td:last-child {
   padding: 5px 10px;
-}
-.book-wrap table thead tr {
-  position: sticky;
-  top: 0;
-  z-index: 2;
 }
 .book-index {
   display: flex;
@@ -158,14 +136,14 @@
   width: 100%;
   height: calc(100% - 55px);
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   overflow-y: auto;
   border: 1px solid #000;
   border-top: 0;
 }
 .book-item {
-  width: 23%;
+  width: 25%;
   height: 48%;
   margin-bottom: 30px;
   text-align: center;
@@ -286,7 +264,6 @@
 }
 .plus-bottom table td button {
   width: 100%;
-  margin: 0 -5px;
 }
 .plus-bottom table td button.wait {
   background: #e0c3c3;
@@ -1174,6 +1151,104 @@
 }
 .narrative-box.active {
   display: block;
+}
+
+.evaluation-wrap {
+  height: calc(100% - 100px);
+  margin: 30px;
+}
+.evaluation-wrap table {
+  width: 100%;
+}
+.evaluation-wrap table td {
+  vertical-align: middle;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #000;
+}
+.evaluation-wrap table td button {
+  height: 30px;
+}
+.evaluation-wrap table td button.test, .evaluation-wrap table td button.grade {
+  width: 150px;
+  background: #ff6;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+.evaluation-wrap table td button.grade {
+  background: #e4e4e4;
+  border-color: #77933c;
+  margin-left: 30px;
+}
+.evaluation-wrap table td button.score {
+  width: 120px;
+}
+.evaluation-header {
+  height: 20px;
+  display: flex;
+  margin-bottom: 10px;
+}
+.evaluation-header > * {
+  margin-right: 5px;
+}
+.evaluation-header button {
+  border: 1px solid #000;
+}
+
+.wrong-wrap {
+  margin: 30px;
+  height: calc(100% - 100px);
+}
+.wrong-wrap table {
+  width: 100%;
+}
+.wrong-wrap table td {
+  border: 1px solid #ccc;
+  vertical-align: middle;
+  padding: 10px;
+  text-align: center;
+}
+.wrong-wrap table td p {
+  text-align: left;
+  line-height: 1.5;
+}
+.wrong-header {
+  display: flex;
+  margin-bottom: 10px;
+}
+.wrong-header > * {
+  margin-right: 5px;
+}
+.wrong-header input {
+  margin-left: 5px;
+  border: 1px solid #000;
+}
+
+.favorite-contents {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.contents-title select {
+  height: 23px;
+}
+.contents-title button {
+  font-size: 15px;
+  font-weight: normal;
+  padding: 3px;
+  border: 1px solid #000;
+}
+.contents-title button.clear {
+  margin-left: 30px;
+  padding: 5px;
+}
+.contents-title .filter {
+  display: flex;
+  align-items: flex-end;
+}
+.contents-title .filter > * {
+  margin-left: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gplum</title>
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <div id="root">
+            <div class="float-left main-left">
+                <div class="lnb">
+                    <button class="lnb-btn" onclick="hamburgerOn()">=</button>
+                    <ul class="lnb-main">
+                        <li><a href="#">나의 강의실</a></li>
+                        <li><a href="#">나의 교재</a></li>
+                        <li class="active"><a href="#">나의 평가</a></li>
+                        <li><a href="#">나의 오답</a></li>
+                        <li><a href="#">학습 달력</a></li>
+                        <li><a href="#">즐겨찾기</a></li>
+                    </ul>
+                    <div class="lnb-sub">
+                        <ul>
+                            <li><a href="#">로그아웃</a></li>
+                            <li><a href="#">지플럼 이용 가이드</a></li>
+                            <li><a href="#">바탕화면에 바로가기</a></li>
+                            <li><a href="#">패럴랙스 홈페이지</a></li>
+                            <li><a href="#">지플럼 영어</a></li>
+                        </ul>
+                    </div>
+                    <div class="lnb-bg" onclick="hamburgerOut()"></div>
+                </div>
+            </div>
+            <div class="float-left main-right">
+                <div class="gnb">
+                    <a href="#">
+                        <img src="" alt="지플럼 로고" />
+                    </a>
+                    <div class="timer">
+                        <img src="" alt="타이머" />
+                        <p><span>00</span>:<span>00</span>:<span>00</span></p>
+                    </div>
+                    <div class="profile">
+                        <div>
+                            <img src="" alt="프로필 사진" />
+                        </div>
+                        <div>
+                            <p class="name">김수학</p>
+                            <p class="mem_num">
+                                845CP
+                                <button><img src="" alt="캐럿" /></button>
+                            </p>
+                        </div>
+                        <div class="alarm">
+                            <img src="" alt="알람" />
+                            <span>N</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents">
+                    <div>
+                        <h1 class="contents-title">나의 평가</h1>
+                        <div class="evaluation-wrap">
+                            <div class="evaluation-header">
+                                <select name="" id="">
+                                    <option value="" selected>학년-학기</option>
+                                    <option value="">1학년-1학기</option>
+                                    <option value="">1학년-2학기</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="" selected>교재</option>
+                                    <option value="">노벰</option>
+                                    <option value="">뜨레스</option>
+                                    <option value="">엑사스</option>
+                                </select>
+                                <button>조회</button>
+                            </div>
+                            <div class="scroll-y">
+                                <table>
+                                    <thead>
+                                        <tr class="position-sticky">
+                                            <th>학년-학기</th>
+                                            <th>교재</th>
+                                            <th>평가명</th>
+                                            <th>응시일</th>
+                                            <th>결과</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                중2-1
+                                            </td>
+                                            <td>
+                                                노벰
+                                            </td>
+                                            <td>
+                                                단원 평가(Ⅱ단원)
+                                            </td>
+                                            <td>
+                                                <button class="test">응시하기</button>
+                                            </td>
+                                            <td>
+                                                -
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                중2-1
+                                            </td>
+                                            <td>
+                                                노벰
+                                            </td>
+                                            <td>
+                                                단원 평가(Ⅰ단원)
+                                            </td>
+                                            <td>
+                                                2022-04-28
+                                            </td>
+                                            <td>
+                                                <button class="score">
+                                                    <span>83</span>점(<span>25</span>/30)
+                                                </button>
+                                                <button class="grade">성적표</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                중2-1
+                                            </td>
+                                            <td>
+                                                뜨레스
+                                            </td>
+                                            <td>
+                                                총괄 평가
+                                            </td>
+                                            <td>
+                                                2022-04-05
+                                            </td>
+                                            <td>
+                                                <button class="score">
+                                                    <span>93</span>점(<span>28</span>/30)
+                                                </button>
+                                                <button class="grade">성적표</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                중2-1
+                                            </td>
+                                            <td>
+                                                뜨레스
+                                            </td>
+                                            <td>
+                                                단원 평가(Ⅳ단원)
+                                            </td>
+                                            <td>
+                                                2022-04-01
+                                            </td>
+                                            <td>
+                                                <button class="score">
+                                                    <span>100</span>점(<span>30</span>/30)
+                                                </button>
+                                                <button class="grade">성적표</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                중2-1
+                                            </td>
+                                            <td>
+                                                뜨레스
+                                            </td>
+                                            <td>
+                                                단원 평가(Ⅱ단원)
+                                            </td>
+                                            <td>
+                                                2022-03-08
+                                            </td>
+                                            <td>
+                                                <button class="score">
+                                                    <span>90</span>점(<span>27</span>/30)
+                                                </button>
+                                                <button class="grade">성적표</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                중2-1
+                                            </td>
+                                            <td>
+                                                뜨레스
+                                            </td>
+                                            <td>
+                                                단원 평가(Ⅰ단원)
+                                            </td>
+                                            <td>
+                                                2022-02-20
+                                            </td>
+                                            <td>
+                                                <button class="score">
+                                                    <span>97</span>점(<span>29</span>/30)
+                                                </button>
+                                                <button class="grade">성적표</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                중1-2
+                                            </td>
+                                            <td>
+                                                엑사스
+                                            </td>
+                                            <td>
+                                                총괄 평가
+                                            </td>
+                                            <td>
+                                                2022-02-01
+                                            </td>
+                                            <td>
+                                                <button class="score">
+                                                    <span>80</span>점(<span>24</span>/30)
+                                                </button>
+                                                <button class="grade">성적표</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                중1-2
+                                            </td>
+                                            <td>
+                                                엑사스
+                                            </td>
+                                            <td>
+                                                단원 평가(Ⅳ단원)
+                                            </td>
+                                            <td>
+                                                2022-01-25
+                                            </td>
+                                            <td>
+                                                <button class="score">
+                                                    <span>93</span>점(<span>28</span>/30)
+                                                </button>
+                                                <button class="grade">성적표</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                중1-2
+                                            </td>
+                                            <td>
+                                                엑사스
+                                            </td>
+                                            <td>
+                                                단원 평가(Ⅲ단원)
+                                            </td>
+                                            <td>
+                                                2022-01-04
+                                            </td>
+                                            <td>
+                                                <button class="score">
+                                                    <span>83</span>점(<span>25</span>/30)
+                                                </button>
+                                                <button class="grade">성적표</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                중1-2
+                                            </td>
+                                            <td>
+                                                엑사스
+                                            </td>
+                                            <td>
+                                                단원 평가(Ⅱ단원)
+                                            </td>
+                                            <td>
+                                                2021-12-18
+                                            </td>
+                                            <td>
+                                                <button class="score">
+                                                    <span>87</span>점(<span>26</span>/30)
+                                                </button>
+                                                <button class="grade">성적표</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                중1-2
+                                            </td>
+                                            <td>
+                                                뜨레스
+                                            </td>
+                                            <td>
+                                                총괄 평가
+                                            </td>
+                                            <td>
+                                                2021-11-15
+                                            </td>
+                                            <td>
+                                                <button class="score">
+                                                    <span>90</span>점(<span>27</span>/30)
+                                                </button>
+                                                <button class="grade">성적표</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            // 사이드메뉴 슬라이드
+            let lnb = document.querySelector('.lnb-sub');
+            let lnbBg = document.querySelector('.lnb-bg');
+
+            function hamburgerOn() {
+                lnb.classList.add('active');
+                lnbBg.classList.add('active');
+            }
+            function hamburgerOut() {
+                lnb.classList.remove('active');
+                lnbBg.classList.remove('active');
+            }
+
+            // 사이드메뉴 클릭
+            let lnbBtn = document.querySelectorAll('.lnb-main li a')
+
+            function lnbOn(tabClick){
+                let clicklnb = tabClick.currentTarget.parentNode
+                for(let i = 0; i < lnbBtn.length; i++) {
+                    lnbBtn[i].parentNode.classList.remove('active')
+                }
+                clicklnb.classList.add('active')
+            }
+
+            for (i = 0; i < lnbBtn.length; i++) {
+                lnbBtn[i].addEventListener("click", lnbOn);
+            }
+        </script>
+    </body>
+</html>

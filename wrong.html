@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gplum</title>
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <div id="root">
+            <div class="float-left main-left">
+                <div class="lnb">
+                    <button class="lnb-btn" onclick="hamburgerOn()">=</button>
+                    <ul class="lnb-main">
+                        <li><a href="#">나의 강의실</a></li>
+                        <li><a href="#">나의 교재</a></li>
+                        <li><a href="#">나의 평가</a></li>
+                        <li class="active"><a href="#">나의 오답</a></li>
+                        <li><a href="#">학습 달력</a></li>
+                        <li><a href="#">즐겨찾기</a></li>
+                    </ul>
+                    <div class="lnb-sub">
+                        <ul>
+                            <li><a href="#">로그아웃</a></li>
+                            <li><a href="#">지플럼 이용 가이드</a></li>
+                            <li><a href="#">바탕화면에 바로가기</a></li>
+                            <li><a href="#">패럴랙스 홈페이지</a></li>
+                            <li><a href="#">지플럼 영어</a></li>
+                        </ul>
+                    </div>
+                    <div class="lnb-bg" onclick="hamburgerOut()"></div>
+                </div>
+            </div>
+            <div class="float-left main-right">
+                <div class="gnb">
+                    <a href="#">
+                        <img src="" alt="지플럼 로고" />
+                    </a>
+                    <div class="timer">
+                        <img src="" alt="타이머" />
+                        <p><span>00</span>:<span>00</span>:<span>00</span></p>
+                    </div>
+                    <div class="profile">
+                        <div>
+                            <img src="" alt="프로필 사진" />
+                        </div>
+                        <div>
+                            <p class="name">김수학</p>
+                            <p class="mem_num">
+                                845CP
+                                <button><img src="" alt="캐럿" /></button>
+                            </p>
+                        </div>
+                        <div class="alarm">
+                            <img src="" alt="알람" />
+                            <span>N</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents">
+                    <div>
+                        <h1 class="contents-title">
+                            나의 오답
+                            <span>선생님께 받은 오답 정복하기 학습지로 틀렸던 문제를 다시 풀면서 약점을 정봅합니다.</span>
+                        </h1>
+                        <div class="wrong-wrap">
+                            <div class="wrong-header">
+                                <select name="" id="">
+                                    <option value="" selected>학년-학기</option>
+                                    <option value="">1학년-1학기</option>
+                                    <option value="">1학년-2학기</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="" selected>교재</option>
+                                    <option value="">노벰</option>
+                                    <option value="">뜨레스</option>
+                                    <option value="">엑사스</option>
+                                </select>
+                                <div>
+                                    <input type="text"><button>달력</button> ~ 
+                                    <input type="text"><button>달력</button>
+                                </div>
+                                <button>조회</button>
+                            </div>
+                            <div class="scroll-y">
+                                <table>
+                                    <thead>
+                                        <tr class="position-sticky">
+                                            <th>교재</th>
+                                            <th>제목</th>
+                                            <th>범위</th>
+                                            <th>문항수</th>
+                                            <th>상태</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                중2-1 뜨레스
+                                            </td>
+                                            <td>
+                                                <button>중2-1뜨레스_오답정복하기_220510</button>
+                                            </td>
+                                            <td>
+                                                <p>
+                                                    I-1. 소인수분해
+                                                </p>
+                                                <p>
+                                                    I-2. 최대공약수
+                                                </p>
+                                                <p>
+                                                    I-3. 최소공배수
+                                                </p>
+                                            </td>
+                                            <td>
+                                                25
+                                            </td>
+                                            <td>
+                                                학습 완료
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                중2-1 노벰
+                                            </td>
+                                            <td>
+                                                <button>중2-1노벰_김수학 오답정복하기</button>
+                                            </td>
+                                            <td>
+                                                <p>
+                                                    I-2. 최대공약수
+                                                </p>
+                                                <p>
+                                                    I-3. 최소공배수
+                                                </p>
+                                            </td>
+                                            <td>
+                                                20
+                                            </td>
+                                            <td>
+                                                학습 완료
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                중2-1 노벰
+                                            </td>
+                                            <td>
+                                                <button>중2-1노벰_김수학 오답_220412</button>
+                                            </td>
+                                            <td>
+                                                <p>
+                                                    I-3. 최소공배수
+                                                </p>
+                                            </td>
+                                            <td>
+                                                11
+                                            </td>
+                                            <td>
+                                                학습 완료
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                중2-1 뜨레스
+                                            </td>
+                                            <td>
+                                                <button>중2-1뜨레스_김수학220404 오답정복</button>
+                                            </td>
+                                            <td>
+                                                <p>
+                                                    I-2. 최대공약수
+                                                </p>
+                                                <p>
+                                                    I-3. 최소공배수
+                                                </p>
+                                            </td>
+                                            <td>
+                                                15
+                                            </td>
+                                            <td>
+                                                학습 중
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                중2-1 뜨레스
+                                            </td>
+                                            <td>
+                                                <button>중2-1뜨레스_김수학220404 오답정복</button>
+                                            </td>
+                                            <td>
+                                                <p>
+                                                    I-1. 소인수분해
+                                                </p>
+                                            </td>
+                                            <td>
+                                                22
+                                            </td>
+                                            <td>
+                                                학습 완료
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                중1-2 노벰
+                                            </td>
+                                            <td>
+                                                <button>중1-2 김수학 노벰 4단원 오답정복하기</button>
+                                            </td>
+                                            <td>
+                                                <p>
+                                                    Ⅳ-1. 줄기와 잎그림, 도수분포표
+                                                </p>
+                                                <p>
+                                                    Ⅳ-2. 히스토그램과 도수분포다각형
+                                                </p>
+                                                <p>
+                                                    Ⅳ-3. 상대도수와 그 그래프
+                                                </p>
+                                            </td>
+                                            <td>
+                                                55
+                                            </td>
+                                            <td>
+                                                학습 완료
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                중1-2 노벰
+                                            </td>
+                                            <td>
+                                                <button>중1-2 김수학 노벰 3단원 오답정복하기</button>
+                                            </td>
+                                            <td>
+                                                <p>
+                                                    Ⅲ-1. 다면체
+                                                </p>
+                                                <p>
+                                                    Ⅲ-2. 회전체
+                                                </p>
+                                                <p>
+                                                    Ⅲ-3. 입체도형의 겉넓이
+                                                </p>
+                                            </td>
+                                            <td>
+                                                60
+                                            </td>
+                                            <td>
+                                                학습 완료
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            // 사이드메뉴 슬라이드
+            let lnb = document.querySelector('.lnb-sub');
+            let lnbBg = document.querySelector('.lnb-bg');
+
+            function hamburgerOn() {
+                lnb.classList.add('active');
+                lnbBg.classList.add('active');
+            }
+            function hamburgerOut() {
+                lnb.classList.remove('active');
+                lnbBg.classList.remove('active');
+            }
+
+            // 사이드메뉴 클릭
+            let lnbBtn = document.querySelectorAll('.lnb-main li a')
+
+            function lnbOn(tabClick){
+                let clicklnb = tabClick.currentTarget.parentNode
+                for(let i = 0; i < lnbBtn.length; i++) {
+                    lnbBtn[i].parentNode.classList.remove('active')
+                }
+                clicklnb.classList.add('active')
+            }
+
+            for (i = 0; i < lnbBtn.length; i++) {
+                lnbBtn[i].addEventListener("click", lnbOn);
+            }
+        </script>
+    </body>
+</html>

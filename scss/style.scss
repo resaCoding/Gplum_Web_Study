@@ -72,25 +72,6 @@ $height: calc(100% - 100px);
                 }
             }
 
-            th {
-                height: 40px;
-                line-height: 40px;
-                color: #fff;
-                background: #77933c;
-                position: relative;
-
-                &::after {
-                    content: '';
-                    position: absolute;
-                    left: -1px;
-                    top: 0;
-                    width: calc(100% - 1px);
-                    height: calc(100% - 1px);
-                    border: 1px solid #fff;
-                    border-right: 0;
-                }
-            }
-
             td {
                 border: 1px solid #ccc;
                 padding: 15px 10px;
@@ -142,14 +123,6 @@ $height: calc(100% - 100px);
                     padding: 5px 10px;
                 }
             }
-
-            thead {
-                tr {
-                    position: sticky;
-                    top: 0;
-                    z-index: 2;
-                }
-            }
         }
     }
 
@@ -199,7 +172,7 @@ $height: calc(100% - 100px);
         width: 100%;
         height: calc(100% - 55px);
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         flex-wrap: wrap;
         overflow-y: auto;
         border: 1px solid #000;
@@ -207,7 +180,7 @@ $height: calc(100% - 100px);
     }
 
     &-item {
-        width: 23%;
+        width: 25%;
         height: 48%;
         margin-bottom: 30px;
         text-align: center;
@@ -345,7 +318,6 @@ $height: calc(100% - 100px);
 
                 button {
                     width: 100%;
-                    margin: 0 -5px;
 
                     &.wait {
                         background: #e0c3c3;
@@ -1400,6 +1372,127 @@ $height: calc(100% - 100px);
 
         &.active {
             display: block;
+        }
+    }
+}
+
+.evaluation {
+    &-wrap {
+        height: $height;
+        margin: 30px;
+
+        table {
+            width: 100%;
+
+            td {
+                vertical-align: middle;
+                text-align: center;
+                padding: 5px;
+                border: 1px solid #000;
+
+                button {
+                    height: 30px;
+
+                    &.test, &.grade {
+                        width: 150px;
+                        background: #ff6;
+                        border: 1px solid #000;
+                        border-radius: 5px;
+                    }
+
+                    &.grade {
+                        background: #e4e4e4;
+                        border-color: #77933c;
+                        margin-left: 30px;
+                    }
+
+                    &.score {
+                        width: 120px;
+                    }
+                }
+            }
+        }
+    }
+    &-header {
+        height: 20px;
+        display: flex;
+        margin-bottom: 10px;
+
+        >* {
+            margin-right: 5px;
+        }
+
+        button {
+            border: 1px solid #000;
+        }
+    }
+}
+
+.wrong {
+    &-wrap {
+        margin: 30px;
+        height: $height;
+
+        table {
+            width: 100%;
+
+            td {
+                border: 1px solid #ccc;
+                vertical-align: middle;
+                padding: 10px;
+                text-align: center;
+
+                p {
+                    text-align: left;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+
+    &-header {
+        display: flex;
+        margin-bottom: 10px;
+
+        >* {
+            margin-right: 5px;
+        }
+        input {
+            margin-left: 5px;
+            border: 1px solid #000;
+        }
+    }
+}
+
+.favorite {
+    &-contents {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+}
+
+.contents-title {
+    select {
+        height: 23px;
+    }
+    button {
+        font-size: 15px;
+        font-weight: normal;
+        padding: 3px;
+        border: 1px solid #000;
+
+        &.clear {
+            margin-left: 30px;
+            padding: 5px;
+        }
+    }
+    .filter {
+        display: flex;
+        align-items: flex-end;
+
+        >* {
+            margin-left: 5px;
         }
     }
 }
