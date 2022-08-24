@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gplum</title>
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <div id="root">
+            <div class="float-left main-left">
+                <div class="lnb">
+                    <button class="lnb-btn" onclick="hamburgerOn()">=</button>
+                    <ul class="lnb-main">
+                        <li><a href="#">나의 강의실</a></li>
+                        <li><a href="#">나의 교재</a></li>
+                        <li><a href="#">나의 평가</a></li>
+                        <li><a href="#">나의 오답</a></li>
+                        <li><a href="#">학습 달력</a></li>
+                        <li class="active"><a href="#">즐겨찾기</a></li>
+                    </ul>
+                    <div class="lnb-sub">
+                        <ul>
+                            <li><a href="#">로그아웃</a></li>
+                            <li><a href="#">지플럼 이용 가이드</a></li>
+                            <li><a href="#">바탕화면에 바로가기</a></li>
+                            <li><a href="#">패럴랙스 홈페이지</a></li>
+                            <li><a href="#">지플럼 영어</a></li>
+                        </ul>
+                    </div>
+                    <div class="lnb-bg" onclick="hamburgerOut()"></div>
+                </div>
+            </div>
+            <div class="float-left main-right">
+                <div class="gnb">
+                    <a href="#">
+                        <img src="" alt="지플럼 로고" />
+                    </a>
+                    <div class="timer">
+                        <img src="" alt="타이머" />
+                        <p><span>00</span>:<span>00</span>:<span>00</span></p>
+                    </div>
+                    <div class="profile">
+                        <div>
+                            <img src="" alt="프로필 사진" />
+                        </div>
+                        <div>
+                            <p class="name">김수학</p>
+                            <p class="mem_num">
+                                845CP
+                                <button><img src="" alt="캐럿" /></button>
+                            </p>
+                        </div>
+                        <div class="alarm">
+                            <img src="" alt="알람" />
+                            <span>N</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents">
+                    <div>
+                        <div class="contents-title flex">
+                            <div class="area-tab">
+                                학습 알림
+                                <ul>
+                                    <li class="active">
+                                        <button>받은 메시지</button>
+                                    </li>
+                                    <li>
+                                        <button>보낸 메시지</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="area-btn">
+                                <button class="delete">선택 삭제</button>
+                                <button class="send">메시지 보내기</button>
+                            </div>
+                        </div>
+                        <div class="alarm-list">
+                            <div class="alarm-item">
+                                <div>
+                                    <input type="checkbox" name="" id="">
+                                    <label for=""></label>
+                                </div>
+                                <div class="alarm-contents">
+                                    <div class="alarm-top">
+                                        <p class="new">
+                                            <span>4월 11일 오늘의 과제</span>
+                                            <button><img src="" alt="첨부파일"></button>
+                                        </p>
+                                    </div>
+                                    <div class="alarm-bottom">
+                                        <p>
+                                            뜨레스 Ⅰ-2. 최대공약수와 그 활용 맞춤 클리닉 풀어오기
+                                        </p>
+                                    </div>
+                                </div>
+                                <button><img src="" alt="삭제"></button>
+                                <div class="alarm-detail">
+                                    <p>2022년 4월 11일 월요일 15:24</p>
+                                    <button>▶ 메시지 상세 보기</button>
+                                </div>
+                            </div>
+                            <div class="alarm-item">
+                                <div>
+                                    <input type="checkbox" name="" id="">
+                                    <label for=""></label>
+                                </div>
+                                <div class="alarm-contents">
+                                    <div class="alarm-top">
+                                        <p class="new">
+                                            <span>다음 주 수업 일정</span>
+                                        </p>
+                                    </div>
+                                    <div class="alarm-bottom">
+                                        <p>
+                                            4/11 16:00~17:50 Ⅰ-2 개념 설명하기, 뜨레스Ⅰ-2 유형학습
+                                        </p>
+                                    </div>
+                                </div>
+                                <button><img src="" alt="삭제"></button>
+                                <div class="alarm-detail">
+                                    <p>2022년 4월 8일 금요일 14:54</p>
+                                    <button>▶ 메시지 상세 보기</button>
+                                </div>
+                            </div>
+                            <div class="alarm-item">
+                                <div>
+                                    <input type="checkbox" name="" id="">
+                                    <label for=""></label>
+                                </div>
+                                <div class="alarm-contents">
+                                    <div class="alarm-top">
+                                        <p>
+                                            <span>4월 6일 오늘의 과제</span>
+                                        </p>
+                                    </div>
+                                    <div class="alarm-bottom">
+                                        <p>
+                                            뜨레스 틀린 문제 오답 정리하기(오답노트 작성)
+                                        </p>
+                                    </div>
+                                </div>
+                                <button><img src="" alt="삭제"></button>
+                                <div class="alarm-detail">
+                                    <p>2022년 4월 6일 수요일 17:54</p>
+                                    <button>▶ 메시지 상세 보기</button>
+                                </div>
+                            </div>
+                            <div class="alarm-item">
+                                <div>
+                                    <input type="checkbox" name="" id="">
+                                    <label for=""></label>
+                                </div>
+                                <div class="alarm-contents">
+                                    <div class="alarm-top">
+                                        <p>
+                                            <span>4월 3일 오늘의 과제</span>
+                                            <button><img src="" alt="첨부파일"></button>
+                                        </p>
+                                    </div>
+                                    <div class="alarm-bottom">
+                                        <p>
+                                            [이미지]
+                                        </p>
+                                    </div>
+                                </div>
+                                <button><img src="" alt="삭제"></button>
+                                <div class="alarm-detail">
+                                    <p>2022년 4월 3일 일요일 17:54</p>
+                                    <button>▶ 메시지 상세 보기</button>
+                                </div>
+                            </div>
+                            <div class="alarm-item">
+                                <div>
+                                    <input type="checkbox" name="" id="">
+                                    <label for=""></label>
+                                </div>
+                                <div class="alarm-contents">
+                                    <div class="alarm-top">
+                                        <p>
+                                            <span>3월 31일 학습 알림</span>
+                                            <button><img src="" alt="첨부파일"></button>
+                                        </p>
+                                    </div>
+                                    <div class="alarm-bottom">
+                                        <p>
+                                            -
+                                        </p>
+                                    </div>
+                                </div>
+                                <button><img src="" alt="삭제"></button>
+                                <div class="alarm-detail">
+                                    <p>2022년 3월 31일 목요일 17:54</p>
+                                    <button>▶ 메시지 상세 보기</button>
+                                </div>
+                            </div>
+                            <div class="alarm-item">
+                                <div>
+                                    <input type="checkbox" name="" id="">
+                                    <label for=""></label>
+                                </div>
+                                <div class="alarm-contents">
+                                    <div class="alarm-top">
+                                        <p>
+                                            <span>3월 6일 오늘의 과제</span>
+                                        </p>
+                                    </div>
+                                    <div class="alarm-bottom">
+                                        <p>
+                                            뜨레스 틀린 문제 오답 정리하기(오답노트 작성) 뜨레스 틀린 문제 오답 정리하기(오답노트 작성) 뜨레스 틀린 문제 오답 정리하기(오답노트 작성) 뜨레스 틀린 문제 오답 정리하기(오답노트 작성)
+                                        </p>
+                                    </div>
+                                </div>
+                                <button><img src="" alt="삭제"></button>
+                                <div class="alarm-detail">
+                                    <p>2022년 3월 6일 수요일 17:54</p>
+                                    <button>▶ 메시지 상세 보기</button>
+                                </div>
+                            </div>
+                            <div class="alarm-item">
+                                <div>
+                                    <input type="checkbox" name="" id="">
+                                    <label for=""></label>
+                                </div>
+                                <div class="alarm-contents">
+                                    <div class="alarm-top">
+                                        <p>
+                                            <span>2월 3일 오늘의 과제</span>
+                                            <button><img src="" alt="첨부파일"></button>
+                                        </p>
+                                    </div>
+                                    <div class="alarm-bottom">
+                                        <p>
+                                            [이미지]
+                                        </p>
+                                    </div>
+                                </div>
+                                <button><img src="" alt="삭제"></button>
+                                <div class="alarm-detail">
+                                    <p>2022년 2월 3일 일요일 17:54</p>
+                                    <button>▶ 메시지 상세 보기</button>
+                                </div>
+                            </div>
+                            <div class="alarm-item">
+                                <div>
+                                    <input type="checkbox" name="" id="">
+                                    <label for=""></label>
+                                </div>
+                                <div class="alarm-contents">
+                                    <div class="alarm-top">
+                                        <p>
+                                            <span>1월 31일 학습 알림</span>
+                                            <button><img src="" alt="첨부파일"></button>
+                                        </p>
+                                    </div>
+                                    <div class="alarm-bottom">
+                                        <p>
+                                            -
+                                        </p>
+                                    </div>
+                                </div>
+                                <button><img src="" alt="삭제"></button>
+                                <div class="alarm-detail">
+                                    <p>2022년 1월 31일 목요일 17:54</p>
+                                    <button>▶ 메시지 상세 보기</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal modal-message">
+                            <div class="message-header">
+                                <p>메시지 보내기</p>
+                                <button>X</button>
+                            </div>
+                            <div class="message-contents">
+                                <!-- 메시지 보내기 -->
+                                <form action="" method="">
+                                    <table>
+                                        <tr>
+                                            <th>받는 사람</th>
+                                            <td>
+                                                <select name="" id="" required>
+                                                    <option value="">선생님 선택</option>
+                                                    <option value="">김윤경 선생님</option>
+                                                    <option value="">채성아 선생님</option>
+                                                    <option value="">나미리 선생님</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>제목</th>
+                                            <td>
+                                                <input type="text" name="" id="" required placeholder="제목을 입력하세요.">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>내용</th>
+                                            <td>
+                                                <textarea name="text" id="editor"></textarea>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <input type="submit" value="발송하기">
+                                    <button>취소</button>
+                                </form>
+
+                                <!-- 메시지 보기 -->
+                                <!-- <form action="" method="">
+                                    <table>
+                                        <tr>
+                                            <th>보낸 사람</th>
+                                            <td>
+                                                <p>김윤경 선생님</p>
+                                            </td>
+                                            <th>받은 시각</th>
+                                            <td>
+                                                <p>2022-04-27 14:34:25</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>제목</th>
+                                            <td colspan="3">
+                                                <p>
+                                                    [과제] 1. 오늘의 과제: 뜨레스 1-2단원 문제 풀고, 오답노트 정리해 오기
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>내용</th>
+                                            <td colspan="3" class="content">
+                                                <div class="scroll-y">
+                                                    <p>개념서 학습 후에 뜨레스 1-2단원 문제 풀고,</p>
+                                                    <p>틀린 문제는 동영상으로 반드시 풀이 과정 학습한 뒤</p>
+                                                    <p>오답노트에 정리해 오세요.</p>
+                                                    <p>학원에 오면 개념 설명 후에 틀린 문제 다시 풀어보기할 예정입니다.</p>
+                                                    <p>파이팅~!</p>
+                                                    <p><img src="" alt="삽입 이미지"></p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>첨부파일</th>
+                                            <td colspan="3">
+                                                <button>오답노트 작성 잘 하는 법.pdf</button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <button>확인</button>
+                                    <button>답장 쓰기</button>
+                                </form> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>
+        <script>
+            ClassicEditor.create( document.querySelector( '#editor' ) );
+            // 사이드메뉴 슬라이드
+            let lnb = document.querySelector('.lnb-sub');
+            let lnbBg = document.querySelector('.lnb-bg');
+
+            function hamburgerOn() {
+                lnb.classList.add('active');
+                lnbBg.classList.add('active');
+            }
+            function hamburgerOut() {
+                lnb.classList.remove('active');
+                lnbBg.classList.remove('active');
+            }
+
+            // 사이드메뉴 클릭
+            let lnbBtn = document.querySelectorAll('.lnb-main li a')
+
+            function lnbOn(tabClick){
+                let clicklnb = tabClick.currentTarget.parentNode
+                for(let i = 0; i < lnbBtn.length; i++) {
+                    lnbBtn[i].parentNode.classList.remove('active')
+                }
+                clicklnb.classList.add('active')
+            }
+
+            for (i = 0; i < lnbBtn.length; i++) {
+                lnbBtn[i].addEventListener("click", lnbOn);
+            }
+
+            //모달
+
+            let modalOpen = document.querySelectorAll('.alarm-detail button')
+            let modalClose = document.querySelector('.message-header button')
+            let modal = document.querySelector('.modal')
+
+            function modalOn() {
+                modal.style.display = 'block';
+            }
+            function modalOut() {
+                modal.style.display = 'none';
+            }
+
+            for (i = 0; i < modalOpen.length; i++) {
+                modalOpen[i].addEventListener("click", modalOn);
+            }
+            modalClose.addEventListener("click", modalOut);
+        </script>
+    </body>
+</html>

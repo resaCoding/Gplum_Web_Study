@@ -2,7 +2,7 @@ body {
   height: 100vh;
 }
 
-body > div {
+#root {
   height: 100%;
   overflow: hidden;
 }
@@ -120,12 +120,6 @@ body > div {
   font-size: 15px;
   font-weight: normal;
 }
-.contents-title > div {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
 .contents-tab {
   display: flex;
   flex-wrap: wrap;
@@ -240,6 +234,9 @@ body > div {
 .text-left {
   text-align: left;
 }
+.text-center {
+  text-align: center;
+}
 
 .scroll-y {
   overflow-y: auto;
@@ -252,6 +249,7 @@ body > div {
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
   z-index: 10;
+  display: none;
 }
 
 .btn-list {

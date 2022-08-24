@@ -2,7 +2,7 @@ body {
     height: 100vh;
 }
 
-body>div {
+#root {
     height: 100%;
     overflow: hidden;
 }
@@ -132,13 +132,6 @@ body>div {
         span {
             font-size: 15px;
             font-weight: normal;
-        }
-
-        >div {
-            margin-top: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
         }
     }
 
@@ -280,8 +273,13 @@ body>div {
     }
 }
 
-.text-left {
-    text-align: left;
+.text {
+    &-left {
+        text-align: left;
+    }
+    &-center {
+        text-align: center;
+    }
 }
 
 .scroll-y {

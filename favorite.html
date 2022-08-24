@@ -98,8 +98,8 @@
                     <div>
                         <h1 class="contents-title">
                             즐겨찾기
-                            <div>
-                                <span>교재를 선택하여 즐겨찾기 영상 목록을 확인하세요.</span>
+                            <div class="filter-wrap">
+                                <span>★를 눌러 ☆로 바꾼 뒤, 해제 버튼을 클릭하면 즐겨찾기 목록에서 제외할 수 있습니다. </span>
                                 <div class="filter">
                                     <select name="" id="">
                                         <option value="" selected>학년-학기</option>
@@ -116,7 +116,170 @@
                                 </div>
                             </div>
                         </h1>
-                        <div class="favorite-wrap"></div>
+                        <div class="favorite-wrap">
+                            <div class="scroll-y">
+                                <table>
+                                    <thead>
+                                        <tr class="position-sticky">
+                                            <th colspan="2">단원명</th>
+                                            <th colspan="2">영상 제목</th>
+                                            <th>즐겨찾기</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="unit">
+                                            <td colspan="5">Ⅰ. 수와 식의 계산</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3" class="text-center">1</td>
+                                            <td rowspan="3">유한소수와 무한소수</td>
+                                            <td>유리수와 소수 [개념]</td>
+                                            <td class="text-center">
+                                                <button>
+                                                    <img src="" alt=" ">
+                                                </button>
+                                            </td>
+                                            <td class="text-center">
+                                                <!-- 별은 추후에 백그라운드 이미지로 대체 예정 -->
+                                                <button class="star on">★</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>개념 확인하기 8번</td>
+                                            <td class="text-center">
+                                                <button>
+                                                    <img src="" alt=" ">
+                                                </button>
+                                            </td>
+                                            <td class="text-center">
+                                                <button class="star off">☆</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>개념 확인하기 12번</td>
+                                            <td class="text-center">
+                                                <button>
+                                                    <img src="" alt=" ">
+                                                </button>
+                                            </td>
+                                            <td class="text-center">
+                                                <button class="star">★</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3" class="text-center">2</td>
+                                            <td rowspan="3">유리수와 순환소수</td>
+                                            <td>순환소수를 분수로 나타내기(1) [개념]</td>
+                                            <td class="text-center">
+                                                <button>
+                                                    <img src="" alt=" ">
+                                                </button>
+                                            </td>
+                                            <td class="text-center">
+                                                <button class="star on">★</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>순환소수를 분수로 나타내기(1) [예제]</td>
+                                            <td class="text-center">
+                                                <button>
+                                                    <img src="" alt=" ">
+                                                </button>
+                                            </td>
+                                            <td class="text-center">
+                                                <button class="star off">☆</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>개념 확인하기 10번</td>
+                                            <td class="text-center">
+                                                <button>
+                                                    <img src="" alt=" ">
+                                                </button>
+                                            </td>
+                                            <td class="text-center">
+                                                <button class="star">★</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr class="unit">
+                                            <td colspan="5">Ⅱ. 수와 식의 계산</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3" class="text-center">1</td>
+                                            <td rowspan="3">유한소수와 무한소수</td>
+                                            <td>유리수와 소수 [개념]</td>
+                                            <td class="text-center">
+                                                <button>
+                                                    <img src="" alt=" ">
+                                                </button>
+                                            </td>
+                                            <td class="text-center">
+                                                <button class="star on">★</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>개념 확인하기 8번</td>
+                                            <td class="text-center">
+                                                <button>
+                                                    <img src="" alt=" ">
+                                                </button>
+                                            </td>
+                                            <td class="text-center">
+                                                <button class="star off">☆</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>개념 확인하기 12번</td>
+                                            <td class="text-center">
+                                                <button>
+                                                    <img src="" alt=" ">
+                                                </button>
+                                            </td>
+                                            <td class="text-center">
+                                                <button class="star">★</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3" class="text-center">2</td>
+                                            <td rowspan="3">유리수와 순환소수</td>
+                                            <td>순환소수를 분수로 나타내기(1) [개념]</td>
+                                            <td class="text-center">
+                                                <button>
+                                                    <img src="" alt=" ">
+                                                </button>
+                                            </td>
+                                            <td class="text-center">
+                                                <button class="star on">★</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>순환소수를 분수로 나타내기(1) [예제]</td>
+                                            <td class="text-center">
+                                                <button>
+                                                    <img src="" alt=" ">
+                                                </button>
+                                            </td>
+                                            <td class="text-center">
+                                                <button class="star off">☆</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>개념 확인하기 10번</td>
+                                            <td class="text-center">
+                                                <button>
+                                                    <img src="" alt=" ">
+                                                </button>
+                                            </td>
+                                            <td class="text-center">
+                                                <button class="star">★</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -50,12 +50,6 @@
 .book-wrap table {
   width: 100%;
 }
-.book-wrap table .unit td {
-  height: 20px;
-  line-height: 20px;
-  background-color: #ddd9c3;
-  padding: 10px;
-}
 .book-wrap table td {
   border: 1px solid #ccc;
   padding: 15px 10px;
@@ -576,14 +570,18 @@
   width: 400px;
   height: 200px;
   background: #fff;
-  display: none;
 }
 .modal-quiz {
   width: 500px;
   height: 420px;
   background: #c3db94;
   padding: 50px;
-  display: none;
+}
+.modal-message {
+  background: #fff;
+  width: 1300px;
+  height: auto;
+  border: 1px solid #000;
 }
 
 .quiz-header > * {
@@ -1229,7 +1227,55 @@
   justify-content: flex-start;
   flex-wrap: wrap;
 }
+.favorite-wrap {
+  height: calc(100% - 77px);
+}
+.favorite-wrap table {
+  width: 100%;
+}
+.favorite-wrap table td {
+  border: 1px solid #ccc;
+  vertical-align: middle;
+  padding: 10px;
+}
+.favorite-wrap table td button {
+  width: 30px;
+  height: 30px;
+}
+.favorite-wrap table td .star {
+  font-size: 30px;
+  color: #ffc000;
+  margin-top: -10px;
+}
 
+.contents-title.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.contents-title.flex button {
+  padding: 5px 15px;
+  height: 30px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+.contents-title ul {
+  overflow: hidden;
+  margin-left: 10px;
+}
+.contents-title ul li {
+  float: left;
+}
+.contents-title ul li.active button {
+  background: #ffe0b8;
+  border-color: salmon;
+  color: #000;
+  font-weight: bold;
+}
+.contents-title ul li button {
+  background: #f4f4f4;
+  color: #666;
+  border-color: #01701d;
+}
 .contents-title select {
   height: 23px;
 }
@@ -1247,8 +1293,161 @@
   display: flex;
   align-items: flex-end;
 }
+.contents-title .filter-wrap {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 .contents-title .filter > * {
   margin-left: 5px;
+}
+
+.area-tab {
+  display: flex;
+}
+.area-btn .delete {
+  background: #ccc;
+  border-color: #01701d;
+}
+.area-btn .send {
+  border-color: red;
+  background-color: #ffcccc;
+  font-weight: bold;
+}
+
+.unit td {
+  height: 20px;
+  line-height: 20px;
+  background-color: #ddd9c3;
+  padding: 10px;
+}
+
+.alarm-list {
+  width: 100%;
+  margin: 10px 0 0;
+  border: 3px solid #ccc;
+  height: calc(100% - 47.5px);
+  overflow-y: auto;
+  padding: 10px 30px 30px;
+}
+.alarm-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 10px;
+  position: relative;
+}
+.alarm-contents {
+  width: 93%;
+}
+.alarm-top {
+  margin-bottom: 10px;
+}
+.alarm-top p {
+  font-weight: bold;
+}
+.alarm-top p button {
+  margin-left: 10px;
+}
+.alarm-top p.new {
+  color: red;
+}
+.alarm-top p.new span {
+  position: relative;
+}
+.alarm-top p.new span::after {
+  content: "N";
+  color: #fff;
+  font-size: 10px;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: red;
+  right: -12px;
+  top: 0;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.alarm-top p.new button {
+  margin-left: 20px;
+}
+.alarm-bottom p {
+  max-width: 1180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.alarm-detail {
+  position: absolute;
+  right: 200px;
+  text-align: right;
+  font-weight: bold;
+}
+.alarm-detail p {
+  margin-bottom: 10px;
+  color: #6584ab;
+}
+.alarm-detail button {
+  color: #a3a3a3;
+}
+
+.ck-editor__editable {
+  height: 500px;
+}
+
+.message-header {
+  height: 40px;
+  background: #a31f24;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.message-contents {
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+}
+.message-contents table {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.message-contents table th {
+  border: 1px solid #666;
+  vertical-align: middle;
+  background: #ccc;
+  text-align: center;
+}
+.message-contents table td {
+  padding: 10px;
+  border: 1px solid #666;
+  border-right: 0;
+}
+.message-contents table td.content {
+  height: 520px;
+}
+.message-contents table input {
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 5px;
+}
+.message-contents table select {
+  padding: 5px;
+}
+.message-contents form > input[type=submit], .message-contents form > button {
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+.message-contents form > input[type=submit] {
+  background: #ccc;
+}
+.message-contents form > button {
+  border: 1px solid #000;
 }
 
 /*# sourceMappingURL=style.css.map */
