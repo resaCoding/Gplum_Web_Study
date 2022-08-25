@@ -284,7 +284,6 @@
 }
 .class-video > p {
   height: 50px;
-  display: none;
   background: #ccc;
   text-align: left;
   line-height: 50px;
@@ -861,15 +860,9 @@
   justify-content: space-between;
   align-items: center;
 }
-.concept-video .title .btn-close {
-  display: none;
-}
 .concept-video video {
   height: calc(100% - 20px);
   aspect-ratio: 16/9;
-}
-.concept-video .class-control {
-  display: none;
 }
 .concept-video.full {
   position: fixed;
@@ -883,17 +876,8 @@
   height: 50px;
   padding: 0 20px;
 }
-.concept-video.full .title .btn-close {
-  display: block;
-}
-.concept-video.full .title .btn-full {
-  display: none;
-}
 .concept-video.full video {
   height: calc(100% - 130px);
-}
-.concept-video.full .class-control {
-  display: block;
 }
 .concept-OX {
   width: 100%;
