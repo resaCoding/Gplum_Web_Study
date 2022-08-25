@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gplum</title>
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <div id="root">
+            <div class="float-left main-left">
+                <div class="lnb">
+                    <button class="lnb-btn" onclick="hamburgerOn()">=</button>
+                    <ul class="lnb-main">
+                        <li><a href="#">나의 강의실</a></li>
+                        <li><a href="#">나의 교재</a></li>
+                        <li><a href="#">나의 평가</a></li>
+                        <li><a href="#">나의 오답</a></li>
+                        <li><a href="#">학습 달력</a></li>
+                        <li class="active"><a href="#">즐겨찾기</a></li>
+                    </ul>
+                    <div class="lnb-sub">
+                        <ul>
+                            <li><a href="#">로그아웃</a></li>
+                            <li><a href="#">지플럼 이용 가이드</a></li>
+                            <li><a href="#">바탕화면에 바로가기</a></li>
+                            <li><a href="#">패럴랙스 홈페이지</a></li>
+                            <li><a href="#">지플럼 영어</a></li>
+                        </ul>
+                    </div>
+                    <div class="lnb-bg" onclick="hamburgerOut()"></div>
+                </div>
+            </div>
+            <div class="float-left main-right">
+                <div class="gnb">
+                    <a href="#">
+                        <img src="" alt="지플럼 로고" />
+                    </a>
+                    <div class="timer">
+                        <img src="" alt="타이머" />
+                        <p><span>00</span>:<span>00</span>:<span>00</span></p>
+                    </div>
+                    <div class="profile">
+                        <div>
+                            <img src="" alt="프로필 사진" />
+                        </div>
+                        <div>
+                            <p class="name">김수학</p>
+                            <p class="mem_num">
+                                845CP
+                                <button><img src="" alt="캐럿" /></button>
+                            </p>
+                        </div>
+                        <div class="alarm">
+                            <img src="" alt="알람" />
+                            <span>N</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents">
+                    <div>
+                        <div class="contents-title">
+                            학습 포인트
+                        </div>
+                        <div class="point-contents">
+                            <div class="point-header">
+                                <p>나의 캐럿 포인트: 총 <span>845</span>CP(<img src="" alt="캐럿"> <span>68</span>개 <img src="" alt="미네랄"> <span>33</span>개)</p>
+                            </div>
+                            <div class="point-filter">
+                                <div class="date">
+                                    <input type="text"><button><img src="" alt="달력"></button> ~ 
+                                    <input type="text"><button><img src="" alt="달력"></button>
+                                </div>
+                                <button>조회</button>
+                            </div>
+                            <div class="point-list scroll-y">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="4">획득 캐럿 포인트: <span>270</span>CP</th>
+                                            <th>
+                                                <img src="" alt="캐럿"><span>23</span>개<br/>
+                                                <img src="" alt="미네랄"><span>8</span>개
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th>학습일</th>
+                                            <th colspan="2">교재</th>
+                                            <th>학습 내용</th>
+                                            <th>학습 포인트</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2021.08.31</td>
+                                            <td>중1-1</td>
+                                            <td class="text-left">교과서 적중문제</td>
+                                            <td class="text-left">교학사 I – 1. 소인수분해</td>
+                                            <td><img src="" alt="미네랄"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021.08.31</td>
+                                            <td>중1-1</td>
+                                            <td class="text-left">개념서</td>
+                                            <td class="text-left">I – 3. 개념 학습</td>
+                                            <td><img src="" alt="캐럿"><img src="" alt="캐럿"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021.08.31</td>
+                                            <td>중1-1</td>
+                                            <td class="text-left">뜨레스</td>
+                                            <td class="text-left">I – 3. 유형 학습</td>
+                                            <td><img src="" alt="캐럿"><img src="" alt="캐럿"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021.08.31</td>
+                                            <td>중1-1</td>
+                                            <td class="text-left">뜨레스</td>
+                                            <td class="text-left">I – 2. 유형 학습 만점 보너스</td>
+                                            <td><img src="" alt="캐럿"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021.08.30</td>
+                                            <td>중1-1</td>
+                                            <td class="text-left">뜨레스</td>
+                                            <td class="text-left">I – 2. 유형 학습</td>
+                                            <td><img src="" alt="캐럿"><img src="" alt="캐럿"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021.08.30</td>
+                                            <td>중1-1</td>
+                                            <td class="text-left">개념서</td>
+                                            <td class="text-left">I – 2. 개념 학습</td>
+                                            <td><img src="" alt="캐럿"><img src="" alt="캐럿"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021.08.27</td>
+                                            <td>중1-1</td>
+                                            <td class="text-left">교과서 적중문제</td>
+                                            <td class="text-left">신사고 I – 1. 소인수분해</td>
+                                            <td><img src="" alt="미네랄"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021.08.27</td>
+                                            <td>중1-1</td>
+                                            <td class="text-left">서술형 따라잡기</td>
+                                            <td class="text-left">소인수분해</td>
+                                            <td><img src="" alt="미네랄"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021.08.24</td>
+                                            <td>중1-1</td>
+                                            <td class="text-left">뜨레스</td>
+                                            <td class="text-left">I – 1. 유형 학습</td>
+                                            <td><img src="" alt="캐럿"><img src="" alt="캐럿"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021.08.22</td>
+                                            <td>중1-1</td>
+                                            <td class="text-left">개념서</td>
+                                            <td class="text-left">I – 1. 개념 학습</td>
+                                            <td><img src="" alt="캐럿"><img src="" alt="캐럿"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2021.08.22</td>
+                                            <td>중1-1</td>
+                                            <td class="text-left">개념서</td>
+                                            <td class="text-left">I – 1. 개념 학습 퀴즈 통과</td>
+                                            <td><img src="" alt="미네랄"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            // 사이드메뉴 슬라이드
+            let lnb = document.querySelector('.lnb-sub');
+            let lnbBg = document.querySelector('.lnb-bg');
+
+            function hamburgerOn() {
+                lnb.classList.add('active');
+                lnbBg.classList.add('active');
+            }
+            function hamburgerOut() {
+                lnb.classList.remove('active');
+                lnbBg.classList.remove('active');
+            }
+
+            // 사이드메뉴 클릭
+            let lnbBtn = document.querySelectorAll('.lnb-main li a')
+
+            function lnbOn(tabClick){
+                let clicklnb = tabClick.currentTarget.parentNode
+                for(let i = 0; i < lnbBtn.length; i++) {
+                    lnbBtn[i].parentNode.classList.remove('active')
+                }
+                clicklnb.classList.add('active')
+            }
+
+            for (i = 0; i < lnbBtn.length; i++) {
+                lnbBtn[i].addEventListener("click", lnbOn);
+            }
+        </script>
+    </body>
+</html>

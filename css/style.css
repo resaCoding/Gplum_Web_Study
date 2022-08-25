@@ -506,7 +506,6 @@
 }
 .control-speed {
   position: absolute;
-  display: none;
   background: rgba(0, 0, 0, 0.5);
   width: 300px;
   height: 170px;
@@ -516,8 +515,6 @@
   justify-content: center;
   left: 30%;
   top: -170px;
-}
-.control-speed.active {
   display: flex;
 }
 .control-speed > p {
@@ -1145,10 +1142,6 @@
   padding: 10px;
   border: 1px solid #000;
   border-top: 0;
-  display: none;
-}
-.narrative-box.active {
-  display: block;
 }
 
 .evaluation-wrap {
@@ -1216,10 +1209,6 @@
 }
 .wrong-header > * {
   margin-right: 5px;
-}
-.wrong-header input {
-  margin-left: 5px;
-  border: 1px solid #000;
 }
 
 .favorite-contents {
@@ -1448,6 +1437,71 @@
 }
 .message-contents form > button {
   border: 1px solid #000;
+}
+
+.point-contents {
+  margin: 30px;
+  height: calc(100% - 60px);
+}
+.point-header {
+  height: 50px;
+  background: #77933c;
+  color: #fff;
+  padding: 10px;
+  line-height: 30px;
+  font-size: 20px;
+}
+.point-filter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px 0;
+}
+.point-filter > button {
+  margin-left: 10px;
+  background: #ccc;
+  padding: 2px 5px;
+}
+.point-list {
+  height: calc(100% - 95px);
+}
+.point-list table {
+  width: 100%;
+}
+.point-list table thead {
+  position: sticky;
+  top: 0;
+}
+.point-list table th {
+  padding: 7px;
+  background: #fdeada;
+  vertical-align: middle;
+  position: relative;
+  line-height: 1.5;
+}
+.point-list table th::after {
+  content: "";
+  width: 100%;
+  height: calc(100% - 2px);
+  position: absolute;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  border-right: 1px solid #ccc;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.point-list table th:last-child::after {
+  border-right: 0;
+}
+.point-list table td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  text-align: center;
+}
+.point-list table td:last-child {
+  border-right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
