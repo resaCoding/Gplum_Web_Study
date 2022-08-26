@@ -151,6 +151,10 @@ body {
 .tabcon.active {
   display: block;
 }
+.tabcon > p {
+  text-align: center;
+  line-height: 69vh;
+}
 
 .class-header {
   background: #ccc;

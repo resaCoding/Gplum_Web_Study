@@ -644,7 +644,14 @@
 }
 .concept-left table {
   width: 100%;
+  height: 100%;
   font-size: 20px;
+}
+.concept-left table tbody {
+  height: 100%;
+}
+.concept-left table tr {
+  height: 100%;
 }
 .concept-left table tr > * {
   border: 1px solid #000;
@@ -658,26 +665,36 @@
 }
 .concept-left table tr.wrong {
   background: darksalmon;
+}
+.concept-left table tr.wrong td:first-child button {
   position: relative;
 }
-.concept-left table tr.wrong::after {
+.concept-left table tr.wrong td:first-child button::after {
   content: "✔";
   position: absolute;
   top: 0;
   left: 14px;
   font-size: 40px;
   color: red;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.concept-left table tr.correct {
+.concept-left table tr.correct td:first-child button {
   position: relative;
 }
-.concept-left table tr.correct::after {
+.concept-left table tr.correct td:first-child button::after {
   content: "○";
   position: absolute;
-  top: -5px;
-  left: 3px;
-  font-size: 50px;
+  top: -1px;
+  left: 4px;
+  font-size: 78px;
   color: red;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .concept-left table tr th {
   padding: 15px 0;
@@ -725,11 +742,12 @@
   text-align: center;
 }
 .concept-left table tr td:first-child {
+  height: 100%;
   padding: 0;
 }
 .concept-left table tr td:first-child button {
   width: 100%;
-  height: 50px;
+  height: 100%;
   margin: 0;
 }
 .concept-submit {
@@ -772,8 +790,6 @@
 .concept-header .mutiple {
   flex-shrink: 0;
   width: 100%;
-  color: crimson;
-  font-size: 18px;
   margin-bottom: 10px;
 }
 .concept-header div {
