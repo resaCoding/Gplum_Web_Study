@@ -139,6 +139,7 @@
 .book-item {
   width: 25%;
   height: 48%;
+  min-height: 315px;
   margin-bottom: 30px;
   text-align: center;
   display: flex;
@@ -653,12 +654,10 @@
 .concept-left table tr {
   height: 100%;
 }
-.concept-left table tr > * {
-  border: 1px solid #000;
-}
 .concept-left table tr:first-child {
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 .concept-left table tr.checked {
   background: #ffe9bf;
@@ -687,7 +686,7 @@
 .concept-left table tr.correct td:first-child button::after {
   content: "○";
   position: absolute;
-  top: -1px;
+  top: 2px;
   left: 4px;
   font-size: 78px;
   color: red;
@@ -699,12 +698,23 @@
 .concept-left table tr th {
   padding: 15px 0;
   background: #ccc;
+  position: relative;
 }
 .concept-left table tr th:first-child {
   width: 56px;
 }
+.concept-left table tr th::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 0;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  border: 1px solid #000;
+}
 .concept-left table tr td {
   padding: 15px;
+  border: 1px solid #000;
 }
 .concept-left table tr td button {
   margin: 0 15px;
