@@ -250,7 +250,7 @@
 }
 .plus-bottom table td {
   height: 50px;
-  line-height: 50px;
+  line-height: 1.5;
   border: 1px solid #000;
   padding: 0 5px;
 }

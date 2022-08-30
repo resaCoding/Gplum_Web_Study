@@ -287,8 +287,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  word-break: break-all;
+  word-break: keep-all;
   flex-direction: column;
+  text-align: center;
 }
 .popup p span {
   line-height: 1.5;
@@ -301,6 +302,7 @@ body {
 .popup div button {
   width: 100%;
   height: 100%;
+  word-break: keep-all;
   border-top: 1px solid yellowgreen;
 }
 .popup div button:last-child {
