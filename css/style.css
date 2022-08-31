@@ -389,6 +389,7 @@
   padding: 30px;
   height: calc(100% - 100px);
   position: relative;
+  overflow: hidden;
 }
 .class-concept .btn-next {
   position: absolute;
