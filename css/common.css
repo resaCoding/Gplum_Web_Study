@@ -26,7 +26,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 50px;
   background: #ccc;
 }
 
@@ -94,24 +94,44 @@ body {
 
 .contents {
   padding: 30px;
-  height: calc(100% - 100px);
+  height: 100%;
+  background: #f0f7fa;
 }
 .contents > div {
   height: 100%;
 }
 .contents-title {
-  font-size: 30px;
+  position: relative;
+  height: auto;
+  min-height: 80px;
+  line-height: 50px;
+}
+.contents-title p {
   font-weight: 700;
+  font-size: 30px;
 }
 .contents-title span {
   font-size: 15px;
   font-weight: normal;
+}
+.contents-wrap {
+  height: 616px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 .contents-tab {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  margin: 0 !important;
+  width: 300px;
 }
 .contents-tab li {
   width: 50%;
@@ -156,21 +176,22 @@ body {
   line-height: 69vh;
 }
 
-.class-header {
+.class-title {
   background: #ccc;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
 }
-.class-header p {
-  position: absolute;
-  left: 10px;
-  top: 30px;
-  transform: translateY(-50%);
-}
-.class-header h1 {
+.class-title h1 {
   text-align: center;
   font-size: 25px;
   font-weight: 700;
   line-height: 60px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .class-nav {
   background: #666;
@@ -316,7 +337,7 @@ body {
 .position-sticky {
   position: sticky;
   top: 0;
-  z-index: 2;
+  z-index: 3;
 }
 .position-sticky th {
   height: 40px;
@@ -339,6 +360,43 @@ body {
 .date input {
   margin-left: 5px;
   border: 1px solid #000;
+}
+
+.info span:not(.unit) {
+  display: inline-block;
+  padding: 3px 10px;
+  color: #fff;
+}
+.info .grade {
+  background: orange;
+  border-radius: 4px 0 0 4px;
+}
+.info .book {
+  background: navy;
+  border-radius: 0 4px 4px 0;
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.filter > * {
+  height: 40px;
+  border-radius: 5px;
+}
+.filter select {
+  width: 120px;
+  margin-left: 5px;
+}
+.filter select:first-child {
+  margin: 0;
+}
+.filter button {
+  width: 70px;
+  color: #fff;
+  background: darkslategray;
+  margin-left: 10px;
 }
 
 /*# sourceMappingURL=common.css.map */

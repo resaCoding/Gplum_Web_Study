@@ -23,10 +23,6 @@
 }
 .book-title > p {
   display: inline-block;
-  padding: 3px 5px;
-  background: #ccc;
-  text-align: center;
-  border-radius: 3px;
 }
 .book-title > span {
   font-size: 13px;
@@ -43,10 +39,6 @@
   border: 1px solid #000;
   border-radius: 2px;
 }
-.book-wrap {
-  padding: 30px;
-  height: 100%;
-}
 .book-wrap table {
   width: 100%;
 }
@@ -58,9 +50,31 @@
 .book-wrap table td > span {
   margin: 0 10px;
 }
-.book-wrap table td p {
-  position: relative;
+.book-wrap table td .gauge {
+  height: 30px;
+  border-radius: 15px;
+  position: absolute;
   z-index: 1;
+  top: -30px;
+  min-width: 30px;
+  border: 2px solid;
+}
+.book-wrap table td .gauge-bg {
+  height: 30px;
+  border: 2px solid #666;
+  border-radius: 15px;
+  background: #ccc;
+  position: relative;
+}
+.book-wrap table td .gauge-bg p {
+  line-height: 26px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.book-wrap table td .gauge-wrap {
+  width: 100%;
+  position: relative;
 }
 .book-wrap table td button {
   background: #ebf7bf;
@@ -74,18 +88,13 @@
   background: #ccc;
   border-color: #666;
 }
-.book-wrap table td div {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 50%;
+.book-wrap table td.skyblue .gauge {
+  background: skyblue;
+  border-color: blue;
 }
-.book-wrap table td.green div {
-  background: linear-gradient(to right, yellowgreen, olive);
-}
-.book-wrap table td.blue div {
-  background: linear-gradient(to right, skyblue, blue);
+.book-wrap table td.blue .gauge {
+  background: blue;
+  border-color: navy;
 }
 .book-wrap table td:last-child {
   padding: 5px 10px;
@@ -93,48 +102,35 @@
 .book-index {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
 }
-.book-index div {
-  display: flex;
-  align-items: flex-end;
+.book-index div > * {
+  float: left;
+}
+.book-index div img {
+  width: 80px;
+  height: 100px;
+  background: #ff6;
+  margin-right: 20px;
 }
 .book-index div p {
-  width: 150px;
-  height: 30px;
-  text-align: center;
-  line-height: 24px;
-  border: 3px solid #01701d;
-  margin-right: 5px;
-  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  width: calc(100% - 100px);
+  margin: 30px 0 10px;
 }
 .book-index button {
   width: 100px;
+  height: 40px;
   background: #666;
   color: #fff;
   border-radius: 5px;
 }
-.book-header {
-  display: flex;
-  padding: 10px 0 20px 20px;
-  border: 1px solid #000;
-  border-bottom: 0;
-}
-.book-header button {
-  width: 50px;
-  height: 25px;
-  border: 1px solid #ccc;
-  margin-left: 5px;
-}
 .book-contents {
-  width: 100%;
-  height: calc(100% - 55px);
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  overflow-y: auto;
-  border: 1px solid #000;
-  border-top: 0;
 }
 .book-item {
   width: 25%;
@@ -253,9 +249,12 @@
   line-height: 1.5;
   border: 1px solid #000;
   padding: 0 5px;
+  vertical-align: middle;
+  text-align: left;
 }
 .plus-bottom table td:last-child {
   padding: 0;
+  text-align: center;
 }
 .plus-bottom table td button {
   width: 100%;
@@ -1104,12 +1103,22 @@
   text-align: center;
 }
 .narrative p {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 30px;
   line-height: 1.5;
 }
-.narrative p span:not(.color-red) {
-  font-size: 16px;
+.narrative p span {
+  font-weight: bold;
+}
+.narrative p .blue {
+  color: skyblue;
+}
+.narrative > span {
+  display: block;
+  padding: 10px 20px;
+  background: #d8f4ff;
+  color: darkcyan;
+  border: 1px solid darkcyan;
+  border-radius: 10px;
 }
 .narrative button {
   width: 130px;
@@ -1155,10 +1164,6 @@
   border-top: 0;
 }
 
-.evaluation-wrap {
-  height: calc(100% - 100px);
-  margin: 30px;
-}
 .evaluation-wrap table {
   width: 100%;
 }
@@ -1185,41 +1190,66 @@
 .evaluation-wrap table td button.score {
   width: 120px;
 }
-.evaluation-header {
-  height: 20px;
-  display: flex;
-  margin-bottom: 10px;
-}
-.evaluation-header > * {
-  margin-right: 5px;
-}
-.evaluation-header button {
-  border: 1px solid #000;
-}
 
-.wrong-wrap {
-  margin: 30px;
-  height: calc(100% - 100px);
-}
-.wrong-wrap table {
+.wrong-item {
   width: 100%;
-}
-.wrong-wrap table td {
   border: 1px solid #ccc;
-  vertical-align: middle;
-  padding: 10px;
-  text-align: center;
-}
-.wrong-wrap table td p {
-  text-align: left;
-  line-height: 1.5;
-}
-.wrong-header {
+  border-radius: 10px;
+  padding: 30px 50px 20px 20px;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
   margin-bottom: 10px;
 }
-.wrong-header > * {
-  margin-right: 5px;
+.wrong-item button {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 35px;
+  border-radius: 5px;
+}
+.wrong-item button.complete {
+  background: #ddf5ff;
+  color: #24bceb;
+}
+.wrong-item button.learning {
+  background: #ffe5e5;
+  color: red;
+}
+.wrong-item h1 {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.wrong-item ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 20px;
+}
+.wrong-item ul li {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.wrong-item ul li > * {
+  display: inline-block;
+}
+.wrong-item ul li p {
+  background: #ececec;
+  color: #666;
+  width: 60px;
+  text-align: center;
+  border-radius: 3px;
+  padding: 5px 0;
+}
+.wrong-item ul li span {
+  padding-right: 10px;
+  border-right: 1px solid #ccc;
+}
+.wrong-item ul li span:last-child {
+  border-right: 0;
 }
 
 .favorite-contents {

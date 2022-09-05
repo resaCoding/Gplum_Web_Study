@@ -26,7 +26,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 50px;
     background: #ccc;
 }
 
@@ -104,20 +104,34 @@ body {
 
 .contents {
     padding: 30px;
-    height: calc(100% - 100px);
+    height: 100%;
+    background: #f0f7fa;
 
     >div {
         height: 100%;
     }
 
     &-title {
-        font-size: 30px;
-        font-weight: 700;
-
+        position: relative;
+        height: auto;
+        min-height: 80px;
+        line-height: 50px;
+        p {
+            font-weight: 700;
+            font-size: 30px;
+        }
         span {
             font-size: 15px;
             font-weight: normal;
         }
+    }
+
+    &-wrap {
+        height: 616px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 20px;
+        overflow: hidden;
     }
 
     &-tab {
@@ -125,6 +139,12 @@ body {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        margin: 0 !important;
+        width: 300px;
 
         li {
             width: 50%;
@@ -179,21 +199,21 @@ body {
 }
 
 .class {
-    &-header {
+    &-title {
         background: #ccc;
         position: relative;
-
-        p {
-            position: absolute;
-            left: 10px;
-            top: 30px;
-            transform: translateY(-50%);
-        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
         h1 {
             text-align: center;
             font-size: 25px;
             font-weight: 700;
             line-height: 60px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 
@@ -368,7 +388,7 @@ body {
 .position-sticky {
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: 3;
 
     th {
         height: 40px;
@@ -394,5 +414,46 @@ body {
     input {
         margin-left: 5px;
         border: 1px solid #000;;
+    }
+}
+
+.info {
+    span:not(.unit) {
+        display: inline-block;
+        padding: 3px 10px;
+        color: #fff;
+    }
+    .grade {
+        background: orange;
+        border-radius: 4px 0 0 4px;
+    }
+    .book {
+        background: navy;
+        border-radius: 0 4px 4px 0;
+    }
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    >* {
+        height: 40px;
+        border-radius: 5px;
+    }
+    select {
+        width: 120px;
+        margin-left: 5px;
+
+        &:first-child {
+            margin: 0;
+        }
+    }
+    button {
+        width: 70px;
+        color: #fff;
+        background: darkslategray;
+        margin-left: 10px;
     }
 }
