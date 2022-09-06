@@ -206,6 +206,7 @@ body {
         justify-content: space-between;
         align-items: center;
         height: 60px;
+        padding: 0 20px;
         h1 {
             text-align: center;
             font-size: 25px;
@@ -221,6 +222,7 @@ body {
         background: #666;
         display: flex;
         justify-content: space-between;
+        width: 100%;
 
         >ul {
             clear: both;
@@ -320,10 +322,12 @@ body {
     }
 
     &-next {
-        width: 150px;
-        height: 30px;
-        background: yellowgreen;
-        border-radius: 15px;
+        width: 120px;
+        height: 50px;
+        background: #ff5656;
+        border: 2px solid red;
+        color: #fff;
+        border-radius: 5px;
     }
 }
 
@@ -349,6 +353,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
     flex-direction: column;
+    display: flex;
 
     p {
         height: 100%;

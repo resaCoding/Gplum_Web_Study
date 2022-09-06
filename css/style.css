@@ -42,6 +42,20 @@
 .book-wrap table {
   width: 100%;
 }
+.book-wrap table tbody::before {
+  content: "";
+  display: block;
+  height: 10px;
+}
+.book-wrap table tbody tr:not(.unit) {
+  display: none;
+}
+.book-wrap table tbody.active tr:not(.unit) {
+  display: table-row;
+}
+.book-wrap table tbody.active .unit button {
+  transform: rotate(180deg);
+}
 .book-wrap table td {
   border: 1px solid #ccc;
   padding: 15px 10px;
@@ -144,6 +158,17 @@
 }
 .book-item a {
   cursor: default;
+  position: relative;
+}
+.book-item a span {
+  position: absolute;
+  display: flex;
+  width: 70px;
+  height: 20px;
+  background: orange;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
 }
 .book-item img {
   display: inline-block;
@@ -151,6 +176,7 @@
   height: 260px;
   background: #ff6;
   cursor: pointer;
+  border-radius: 5px;
 }
 .book-item p {
   width: 200px;
@@ -289,8 +315,22 @@
   line-height: 50px;
   padding-left: 20px;
 }
+.class-video > button {
+  position: absolute;
+  font-size: 60px;
+  width: 90px;
+  height: 90px;
+  line-height: 70px;
+  color: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  z-index: 1;
+}
 .class-video video {
-  height: calc(100% - 80px);
+  height: 100%;
   background: #949494;
   aspect-ratio: 16/9;
 }
@@ -306,9 +346,6 @@
 .class-video.full p {
   display: block;
 }
-.class-video.full video {
-  height: calc(100% - 130px);
-}
 .class-bookmark {
   position: fixed;
   right: -400px;
@@ -317,8 +354,10 @@
   width: 400px;
   height: calc(100% - 100px);
   text-align: left;
-  padding: 20px 10px;
-  transition: 1s;
+  padding: 40px 20px;
+  transition: 0.5s;
+  z-index: 1;
+  border-radius: 30px 0 0 30px;
 }
 .class-bookmark > button {
   position: absolute;
@@ -338,10 +377,15 @@
 .class-bookmark h1 {
   font-size: 25px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.class-bookmark h1 span {
+  font-size: 15px;
 }
 .class-control {
   height: 80px;
-  background: #ccc;
+  background: linear-gradient(transparent, #000);
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -374,7 +418,6 @@
 }
 .class-check .timer p {
   font-size: 25px;
-  color: #666;
 }
 .class-check .timer p span {
   margin: 0 10px;
@@ -416,7 +459,14 @@
 }
 
 .bookmark-list {
+  height: calc(100% - 85px);
+  overflow-y: auto;
+}
+.bookmark-item {
   margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
 }
 .bookmark-title {
   font-size: 16px;
@@ -454,6 +504,33 @@
   height: 30px;
   background: yellowgreen;
   margin: 0 auto;
+}
+.bookmark-bottom {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #efefef;
+  border-radius: 0 0 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bookmark-bottom button {
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+.bookmark-bottom .reset {
+  background: #fff;
+}
+.bookmark-bottom .delete {
+  background: coral;
+}
+.bookmark-bottom .delete.disabled {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .control-top {
@@ -504,6 +581,14 @@
   align-items: center;
   padding: 0 20px;
 }
+.control-bottom > div {
+  display: flex;
+  align-items: center;
+}
+.control-bottom > div > * {
+  margin: 0 5px;
+  color: #fff;
+}
 .control-speed {
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
@@ -513,7 +598,7 @@
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  left: 30%;
+  left: 10%;
   top: -170px;
   display: flex;
 }
@@ -560,9 +645,24 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #fff;
+  background: #ccc;
+}
+.btn-recommon {
+  display: block;
+  width: 100px !important;
+  height: 40px !important;
+  border: 2px solid #ccc;
+  line-height: 30px;
+  cursor: pointer;
+  border-radius: 5px !important;
+  margin: 0 !important;
 }
 
+.modal-wrap {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
 .modal-bookmark {
   width: 400px;
   height: 200px;
@@ -902,9 +1002,6 @@
   height: 50px;
   padding: 0 20px;
 }
-.concept-video.full video {
-  height: calc(100% - 130px);
-}
 .concept-OX {
   width: 100%;
   text-align: left;
@@ -945,6 +1042,9 @@
 
 .record-choice div {
   margin: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .record-choice div button, .record-choice div label {
   display: inline-flex;
@@ -978,68 +1078,65 @@
 }
 .record-recording .timer {
   border: none;
-  background: darkkhaki;
+  background: #e0feff;
   border-radius: 3px;
+  height: 50px;
+  border-radius: 25px;
 }
-.record-recording div:not(.record-btn) button {
+.record-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.record-area button {
   width: 100px;
   height: 100px;
   margin: 0 20px;
   border-radius: 50%;
   position: relative;
 }
-.record-recording div:not(.record-btn) button.pause {
-  border: 7px solid brown;
+.record-area button.pause {
+  border: 3px solid skyblue;
 }
-.record-recording div:not(.record-btn) button.pause::after {
+.record-area button.pause::after {
   content: "일시정지";
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
-.record-recording div:not(.record-btn) button.stop {
-  border: 7px solid brown;
+.record-area button.stop {
+  border: 3px solid skyblue;
 }
-.record-recording div:not(.record-btn) button.stop::after {
+.record-area button.stop::after {
   content: "정지";
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
-.record-recording div:not(.record-btn) button.record {
-  background: brown;
+.record-area button.record {
+  background: skyblue;
 }
-.record-recording div:not(.record-btn) button.record::after {
+.record-area button.record::after {
   content: "녹음";
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
-.record-recording div:not(.record-btn) button.play {
-  width: 120px;
-  height: 120px;
-  border: 7px solid brown;
-  margin-bottom: 30px;
+.record-area button.play {
+  border: 3px solid skyblue;
+  margin-bottom: 10px;
 }
-.record-recording div:not(.record-btn) button.play::before {
-  content: "들어보기";
-  width: 100%;
-  position: absolute;
-  bottom: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.record-recording div:not(.record-btn) button.play::after {
+.record-area button.play::after {
   content: "▶";
   position: absolute;
   left: 58%;
   top: 40%;
   transform: translateX(-50%) translateY(-50%);
-  font-size: 100px;
-  color: brown;
+  font-size: 70px;
+  color: skyblue;
 }
 .record-wave {
   position: relative;
@@ -1048,6 +1145,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 50px 0 !important;
 }
 .record-wave .line {
   position: absolute;
@@ -1082,16 +1180,28 @@
 }
 .record-btn {
   display: flex;
+  justify-content: center;
 }
-.record-btn > button {
-  display: block;
-  width: 150px;
-  height: 30px;
-  background: #ffd0cb;
-  color: red;
-  line-height: 30px;
-  cursor: pointer;
-  margin: 20px;
+.record-btn button:not(.btn-recommon) {
+  width: 170px;
+  height: 50px;
+  border-radius: 25px;
+  margin: 0 5px;
+}
+.record-btn .restart {
+  background: #ccc;
+  border: 2px solid #a5a5a5;
+}
+.record-btn .submit {
+  background: #255a7a;
+  color: #fff;
+}
+.record-bottom {
+  height: 290px;
+  text-align: center;
+}
+.record-bottom > * {
+  margin-bottom: 20px;
 }
 
 .narrative {
@@ -1102,14 +1212,14 @@
   flex-direction: column;
   text-align: center;
 }
-.narrative p {
+.narrative > p {
   font-size: 30px;
   line-height: 1.5;
 }
-.narrative p span {
+.narrative > p span {
   font-weight: bold;
 }
-.narrative p .blue {
+.narrative > p .blue {
   color: skyblue;
 }
 .narrative > span {
@@ -1120,7 +1230,7 @@
   border: 1px solid darkcyan;
   border-radius: 10px;
 }
-.narrative button {
+.narrative > button {
   width: 130px;
   height: 30px;
   background: #6584ab;
@@ -1351,6 +1461,15 @@
   line-height: 20px;
   background-color: #ddd9c3;
   padding: 10px;
+  position: relative;
+}
+.unit td button {
+  position: absolute;
+  width: auto !important;
+  height: auto !important;
+  background: none !important;
+  border: none !important;
+  right: 10px;
 }
 
 .alarm-list {

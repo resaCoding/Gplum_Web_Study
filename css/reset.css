@@ -51,3 +51,7 @@ button {
 	background: none;
 	cursor: pointer;
 }
+
+button:disabled {
+	cursor: default;
+}

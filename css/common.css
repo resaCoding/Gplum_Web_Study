@@ -183,6 +183,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 60px;
+  padding: 0 20px;
 }
 .class-title h1 {
   text-align: center;
@@ -197,6 +198,7 @@ body {
   background: #666;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 .class-nav > ul {
   clear: both;
@@ -275,10 +277,12 @@ body {
   transform: rotate(180deg);
 }
 .btn-next {
-  width: 150px;
-  height: 30px;
-  background: yellowgreen;
-  border-radius: 15px;
+  width: 120px;
+  height: 50px;
+  background: #ff5656;
+  border: 2px solid red;
+  color: #fff;
+  border-radius: 5px;
 }
 
 .concept {
@@ -302,6 +306,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
   flex-direction: column;
+  display: flex;
 }
 .popup p {
   height: 100%;
