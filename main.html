@@ -22,16 +22,6 @@
                         <li><a href="#">학습 달력</a></li>
                         <li><a href="#">즐겨찾기</a></li>
                     </ul>
-                    <div class="lnb-sub">
-                        <ul>
-                            <li><a href="#">로그아웃</a></li>
-                            <li><a href="#">지플럼 이용 가이드</a></li>
-                            <li><a href="#">바탕화면에 바로가기</a></li>
-                            <li><a href="#">패럴랙스 홈페이지</a></li>
-                            <li><a href="#">지플럼 영어</a></li>
-                        </ul>
-                    </div>
-                    <div class="lnb-bg" onclick="hamburgerOut()"></div>
                 </div>
             </div>
             <div class="float-left main-right">
@@ -255,18 +245,13 @@
         </div>
         <script>
             // 사이드메뉴 슬라이드
-            let lnb = document.querySelector('.lnb-sub');
-            let lnbBg = document.querySelector('.lnb-bg');
+            let lnb = document.querySelectorAll('#root>.float-left');
 
             function hamburgerOn() {
-                lnb.classList.add('active');
-                lnbBg.classList.add('active');
+                for(let i = 0; i < lnb.length; i++) {
+                    lnb[i].classList.toggle('none');
+                }
             }
-            function hamburgerOut() {
-                lnb.classList.remove('active');
-                lnbBg.classList.remove('active');
-            }
-
             // 사이드메뉴 클릭
             let lnbBtn = document.querySelectorAll('.lnb-main li a')
 

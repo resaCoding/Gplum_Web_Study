@@ -10,16 +10,35 @@ body {
 .float-left {
     float: left;
 }
-
-.main-left {
-    width: 200px;
-    height: 100%;
-    background: #666;
+.scroll-y::-webkit-scrollbar {
+    display: none;
 }
+.main {
+    &-left {
+        width: 200px;
+        height: 100%;
+        background: #666;
+        flex-shrink: 0;
+        transition: 0.2s;
 
-.main-right {
-    width: calc(100% - 200px);
-    height: 100%;
+        &.none {
+            width: 100px;
+            
+            .lnb-main {
+                display: none;
+            }
+        }
+    }
+    
+    &-right {
+        height: 100%;
+        width: calc(100% - 200px);
+        transition: 0.2s;
+
+        &.none {
+            width: calc(100% - 100px);
+        }
+    }
 }
 
 .gnb {

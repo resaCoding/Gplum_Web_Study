@@ -11,15 +11,30 @@ body {
   float: left;
 }
 
+.scroll-y::-webkit-scrollbar {
+  display: none;
+}
+
 .main-left {
   width: 200px;
   height: 100%;
   background: #666;
+  flex-shrink: 0;
+  transition: 0.2s;
 }
-
+.main-left.none {
+  width: 100px;
+}
+.main-left.none .lnb-main {
+  display: none;
+}
 .main-right {
-  width: calc(100% - 200px);
   height: 100%;
+  width: calc(100% - 200px);
+  transition: 0.2s;
+}
+.main-right.none {
+  width: calc(100% - 100px);
 }
 
 .gnb {
