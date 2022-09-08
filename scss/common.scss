@@ -219,13 +219,14 @@ body {
 
 .class {
     &-title {
-        background: #ccc;
+        background: #0087b8;
         position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 60px;
         padding: 0 20px;
+        color: #fff;
         h1 {
             text-align: center;
             font-size: 25px;
@@ -238,7 +239,7 @@ body {
     }
 
     &-nav {
-        background: #666;
+        background: #173e52;
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -252,18 +253,19 @@ body {
                     width: 150px;
                     height: 40px;
                     border: 1px solid #000;
-                    background: #fdd197;
+                    background: #0f567a;
+                    color: #fff;
                 }
 
                 &.playing {
                     button {
-                        background: orange;
+                        background: #ff595a;
                     }
                 }
                 &.lock {
                     button {
-                        background: #969696;
-                        color: #ccc;
+                        background: #153749;
+                        color: #4c6674;
                         cursor: default;
                     }
                 }
@@ -276,7 +278,7 @@ body {
         left: 0;
         top: 40px;
         background: #666;
-        z-index: 1;
+        z-index: 2;
         border-bottom: 1px solid #fff;
         display: none;
         width: 420px;
@@ -448,11 +450,11 @@ body {
         color: #fff;
     }
     .grade {
-        background: orange;
+        background: #ff7847;
         border-radius: 4px 0 0 4px;
     }
     .book {
-        background: navy;
+        background: #173e52;
         border-radius: 0 4px 4px 0;
     }
 }
