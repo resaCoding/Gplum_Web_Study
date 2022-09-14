@@ -204,7 +204,7 @@
   justify-content: space-between;
 }
 .plus-tab {
-  overflow: hidden;
+  clear: both;
 }
 .plus-tab li {
   float: left;
@@ -212,34 +212,45 @@
 }
 .plus-tab li a {
   display: block;
-  width: 150px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  border: 1px solid #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 20px;
+  color: #ccc;
 }
 .plus-tab li.active a {
-  background: orange;
+  position: relative;
+  color: #000;
+}
+.plus-tab li.active a::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #ff5656;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
 }
 .plus-search {
   display: flex;
   align-items: center;
 }
 .plus-search select {
-  height: 30px;
+  height: 35px;
   width: 120px;
 }
 .plus-search button {
-  width: 40px;
-  height: 28px;
-  background: #fff;
+  width: 70px;
+  height: 35px;
+  background: #255a7a;
+  color: #fff;
+  border-radius: 5px;
 }
 .plus-search > * {
   margin-left: 5px;
 }
 .plus-bottom {
   margin-top: 10px;
-  height: 619px;
+  height: 520px;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -252,54 +263,63 @@
   top: 0;
 }
 .plus-bottom table th {
-  height: 50px;
-  line-height: 50px;
-  background: yellowgreen;
+  height: 40px;
+  line-height: 40px;
+  background: #eee;
   position: relative;
+  border-left: 1px solid #eee;
+  color: #666;
 }
 .plus-bottom table th::after {
   content: "";
   position: absolute;
   left: -1px;
   top: 0;
-  width: calc(100% - 1px);
-  height: calc(100% - 1px);
-  border: 1px solid #fff;
-  border-right: 0;
-}
-.plus-bottom table th:last-child::after {
-  border-right: 1px solid #fff;
+  width: calc(100% + 1px);
+  height: 100%;
+  border-top: 3px solid #000;
 }
 .plus-bottom table td {
   height: 50px;
   line-height: 1.5;
-  border: 1px solid #000;
+  border: 1px solid #eee;
   padding: 0 5px;
   vertical-align: middle;
   text-align: left;
+}
+.plus-bottom table td > span {
+  display: block;
+  text-align: center;
+  width: 70px;
+  border-radius: 5px;
+  margin: 0 auto;
+  color: #fff;
+}
+.plus-bottom table td > span.M_1_2 {
+  background: #87cc39;
+}
+.plus-bottom table td > span.M_2_1 {
+  background: #ff7847;
 }
 .plus-bottom table td:last-child {
   padding: 0;
   text-align: center;
 }
 .plus-bottom table td button {
-  width: 100%;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  line-height: 41px;
+  background: #dff7ff;
 }
 .plus-bottom table td button.wait {
-  background: #e0c3c3;
-  width: 120px;
-  height: 40px;
-  line-height: 38px;
-  border: 1px solid #000;
-  border-radius: 5px;
+  background: #ffdfdf;
 }
 .plus-bottom table td button.study {
-  background: #c8e6ca;
-  width: 120px;
-  height: 40px;
-  line-height: 38px;
-  border: 1px solid #000;
-  border-radius: 5px;
+  background: #ff5656;
+}
+.plus-bottom table td button span {
+  font-weight: bold;
 }
 
 .class-video {
@@ -391,27 +411,11 @@
   z-index: 1;
   padding-bottom: 10px;
 }
-.class-check {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: calc(100% - 100px);
-}
 .class-check > * {
   margin: 20px 0;
 }
-.class-check h1 {
-  font-size: 40px;
-  font-weight: bold;
-  color: orange;
-}
 .class-check > p {
   font-size: 27px;
-  font-weight: bold;
-}
-.class-check > p span {
-  color: orange;
 }
 .class-check .timer {
   border: none;
@@ -653,7 +657,7 @@
   width: 100px !important;
   height: 40px !important;
   border: 2px solid #ccc;
-  line-height: 30px;
+  line-height: 35px;
   cursor: pointer;
   border-radius: 5px !important;
   margin: 0 !important;
@@ -1091,16 +1095,6 @@
   height: 100px;
   background: #ff6;
   margin-bottom: 10px;
-  cursor: pointer;
-}
-.record-choice div button span, .record-choice div label span {
-  display: block;
-  width: 150px;
-  height: 30px;
-  background: #ffd0cb;
-  color: red;
-  line-height: 30px;
-  text-align: center;
   cursor: pointer;
 }
 .record-choice div input {
@@ -1695,6 +1689,10 @@
 }
 .point-list table td:last-child {
   border-right: 0;
+}
+
+.display-block {
+  display: block !important;
 }
 
 /*# sourceMappingURL=style.css.map */

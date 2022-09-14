@@ -51,11 +51,11 @@
                     <div>
                         <button>
                             <img src="" alt="녹음 시작">
-                            <span>녹음 시작</span>
+                            <span class="btn-recommon">녹음 시작</span>
                         </button>
                         <label for="record-file">
                             <img src="" alt="파일 제출">
-                            <span>파일 제출</span>
+                            <span class="btn-recommon">파일 제출</span>
                         </label>
                         <input type="file" accept="image/*" capture="camera" name="파일 제출" id="record-file">
                     </div>
@@ -70,7 +70,10 @@
                 <div class="record-bottom">
                     <div class="record-area">
                         <!-- 일시정지를 클릭할 경우 class record로 변경 -->
-                        <!-- 들어보기 버튼 class play -->
+                        <!-- 
+                            들어보기 버튼 class play 
+                            pause stop 버튼 활성화할 때 record-area에 클래스 display-block 추가
+                        -->
                         <!-- <button class="pause"></button>
                         <button class="stop"></button> -->
                         <button class="play"></button>

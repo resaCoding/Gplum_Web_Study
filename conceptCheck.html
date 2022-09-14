@@ -471,23 +471,33 @@
             let btn = clicked.currentTarget;
             for(let i = 0; i < rightBtn.length; i++) {
                 rightBtn[i].classList.remove('checked')
-                }
+            }
             btn.classList.add('checked')
+
+            //클릭한 버튼의 index값
+            Array.from(rightBtn).indexOf(btn)
 
             checkTogether()
         }
 
+        //보류.........
         function checkTogether() {
-
             let rightNum = document.querySelector('.num').innerText;
-
             let leftNum = document.querySelectorAll('.number');
             let leftValue = [];
+
             for (let i = 0; i < leftNum.length; i++) {
                 leftValue.push(leftNum[i].value)
             }
-            console.log(leftNum);
-            console.log(leftValue);
+            for (let i = 0; i < leftNum.length; i++) {
+                if (leftValue[i] == rightNum) {
+                    leftNum[i].parentNode.parentNode.classList.add('checked')
+                } else {
+                    leftNum[i].parentNode.parentNode.classList.remove('checked')
+                }
+            }
+
+
         }
 
         for(let i = 0; i < rightBtn.length; i++) {
