@@ -61,183 +61,195 @@
 
                 <div class="scroll-y">
                     <table>
-                        <tr>
-                            <th>번호</th>
-                            <th>나의 답</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button class="number" value="01">01</button>
-                            </td>
-                            <td>
-                                <button class="checked">①</button>
-                                <button>②</button>
-                                <button>③</button>
-                                <button>④</button>
-                                <button>⑤</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button class="number" value="02">02</button>
-                            </td>
-                            <td>
-                                <button class="watch">보기</button>
-                                <button class="fix">수정</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button class="number" value="03">03</button>
-                            </td>
-                            <td>
-                                <label class="regist" for="answer-register">답안 등록</label>
-                                <input type="file" accept="image/*" capture="camera" id="answer-register">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button class="number" value="04">04</button>
-                            </td>
-                            <td>
-                                <button>①</button>
-                                <button>②</button>
-                                <button>③</button>
-                                <button>④</button>
-                                <button>⑤</button>
-                            </td>
-                        </tr>
-                        <!-- 문제 틀렸을 때 -->
-                        <tr class="wrong">
-                            <td>
-                                <button class="number" value="05">05</button>
-                            </td>
-                            <td>
-                                <button>①</button>
-                                <button>②</button>
-                                <button>③</button>
-                                <button>④</button>
-                                <button>⑤</button>
-                            </td>
-                        </tr>
-                        <!-- 문제 맞혔을 때 -->
-                        <tr class="correct">
-                            <td>
-                                <button class="number" value="06">06</button>
-                            </td>
-                            <td>
-                                <button>①</button>
-                                <button>②</button>
-                                <button>③</button>
-                                <button>④</button>
-                                <button>⑤</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button class="number" value="07">07</button>
-                            </td>
-                            <td>
-                                <button>①</button>
-                                <button>②</button>
-                                <button>③</button>
-                                <button>④</button>
-                                <button>⑤</button>
-                            </td>
-                        </tr>
-                        <!-- 현재 문제 표시 -->
-                        <tr class="checked">
-                            <td>
-                                <button class="number" value="08">08</button>
-                            </td>
-                            <td>
-                                <button>①</button>
-                                <button>②</button>
-                                <button>③</button>
-                                <button>④</button>
-                                <button>⑤</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button class="number" value="09">09</button>
-                            </td>
-                            <td>
-                                <input type="text"><span>(m²)</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button class="number" value="10">10</button>
-                            </td>
-                            <td>
-                                <button>①</button>
-                                <button>②</button>
-                                <button>③</button>
-                                <button>④</button>
-                                <button>⑤</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button class="number" value="11">11</button>
-                            </td>
-                            <td>
-                                <!-- 분수 정답 입력 -->
-                                <div class="fraction">
-                                    <input type="text">
-                                    <div>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>나의 답</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <button class="number" value="01">01</button>
+                                </td>
+                                <td>
+                                    <button class="checked">①</button>
+                                    <button>②</button>
+                                    <button>③</button>
+                                    <button>④</button>
+                                    <button>⑤</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="number" value="02">02</button>
+                                </td>
+                                <td>
+                                    <button class="watch">보기</button>
+                                    <button class="fix">수정</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="number" value="03">03</button>
+                                </td>
+                                <td>
+                                    <label class="regist" for="answer-register">답안 등록</label>
+                                    <input type="file" accept="image/*" capture="camera" id="answer-register">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="number" value="04">04</button>
+                                </td>
+                                <td>
+                                    <button>①</button>
+                                    <button>②</button>
+                                    <button>③</button>
+                                    <button>④</button>
+                                    <button>⑤</button>
+                                </td>
+                            </tr>
+                            <!-- 문제 틀렸을 때 -->
+                            <tr class="wrong">
+                                <td>
+                                    <button class="number" value="05">05</button>
+                                </td>
+                                <td>
+                                    <button>①</button>
+                                    <button>②</button>
+                                    <button>③</button>
+                                    <button>④</button>
+                                    <button>⑤</button>
+                                </td>
+                            </tr>
+                            <!-- 문제 맞혔을 때 -->
+                            <tr class="correct">
+                                <td>
+                                    <button class="number" value="06">06</button>
+                                </td>
+                                <td>
+                                    <button>①</button>
+                                    <button>②</button>
+                                    <button>③</button>
+                                    <button>④</button>
+                                    <button>⑤</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="number" value="07">07</button>
+                                </td>
+                                <td>
+                                    <button>①</button>
+                                    <button>②</button>
+                                    <button>③</button>
+                                    <button>④</button>
+                                    <button>⑤</button>
+                                </td>
+                            </tr>
+                            <!-- 현재 문제 표시 -->
+                            <tr class="checked">
+                                <td>
+                                    <button class="number" value="08">08</button>
+                                </td>
+                                <td>
+                                    <button>①</button>
+                                    <button>②</button>
+                                    <button>③</button>
+                                    <button>④</button>
+                                    <button>⑤</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="number" value="09">09</button>
+                                </td>
+                                <td>
+                                    <input type="text"><span>(m²)</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="number" value="10">10</button>
+                                </td>
+                                <td>
+                                    <button>①</button>
+                                    <button>②</button>
+                                    <button>③</button>
+                                    <button>④</button>
+                                    <button>⑤</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="number" value="11">11</button>
+                                </td>
+                                <td>
+                                    <!-- 분수 정답 입력 -->
+                                    <div class="fraction">
                                         <input type="text">
-                                        <span class="line"></span>
-                                        <input type="text">
+                                        <div>
+                                            <input type="text">
+                                            <span class="line"></span>
+                                            <input type="text">
+                                        </div>
+                                        <p>단위</p>
                                     </div>
-                                    <p>단위</p>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button class="number" value="12">12</button>
-                            </td>
-                            <td>
-                                <input type="text"><span>(km)</span>
-                            </td>
-                        </tr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button class="number" value="12">12</button>
+                                </td>
+                                <td>
+                                    <input type="text"><span>(km)</span>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
 
                     <!-- 정답 확인 테이블 -->
                     <!-- <table>
-                        <tr>
-                            <th>번호</th>
-                            <th>나의 답</th>
-                            <th>정답</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button>01</button>
-                            </td>
-                            <td>
-                                <button class="checked">①</button>
-                            </td>
-                            <td><button>②</button></td>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>나의 답</th>
+                                <th>정답</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <button>01</button>
+                                </td>
+                                <td>
+                                    <button class="checked">①</button>
+                                </td>
+                                <td><button>②</button></td>
+                            </tr>
+                        </tbody>
                     </table> -->
 
                     <!-- OX 테이블 -->
                     <!-- <table>
-                        <tr>
-                            <th>번호</th>
-                            <th>채점 결과</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button>01</button>
-                            </td>
-                            <td>
-                                <button class="checked">O</button>
-                                <button>X</button>
-                            </td>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>채점 결과</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <button>01</button>
+                                </td>
+                                <td>
+                                    <button class="checked">O</button>
+                                    <button>X</button>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table> -->
 
                     <!-- 플러스 학습 - 서술형 따라잡기 - 결과보기 -->
@@ -248,26 +260,30 @@
                             <col width="28%"/>
                             <col width="28%"/>
                         </colgroup>
-                        <tr>
-                            <th>번호</th>
-                            <th>나의 답</th>
-                            <th>모범 답안</th>
-                            <th>채점 결과</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button>01</button>
-                            </td>
-                            <td>
-                                <button class="watch">보기</button>
-                            </td>
-                            <td>
-                                <button class="watch">보기</button>
-                            </td>
-                            <td>
-                                <button>4</button>
-                            </td>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>나의 답</th>
+                                <th>모범 답안</th>
+                                <th>채점 결과</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <button>01</button>
+                                </td>
+                                <td>
+                                    <button class="watch">보기</button>
+                                </td>
+                                <td>
+                                    <button class="watch">보기</button>
+                                </td>
+                                <td>
+                                    <button>4</button>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table> -->
 
                     <!-- 플러스 학습 - 서술형 따라잡기 - 결과보기 -->
@@ -448,6 +464,10 @@
 
         let answerBtn = document.querySelectorAll('.class-concept td button')
 
+        for(let i = 0; i < answerBtn.length; i++) {
+            answerBtn[i].addEventListener('click', checkOn)
+        }
+
         function checkOn(clicked) {
             let btn = clicked.currentTarget;
             let tr = btn.parentNode.parentNode;
@@ -458,11 +478,9 @@
                 }
                 btn.classList.add('checked')
             }
-        }
-        for(let i = 0; i < answerBtn.length; i++) {
-            answerBtn[i].addEventListener('click', checkOn)
-        }
 
+            leftToRight(clicked);
+        }
         // 오른쪽 눌렀을 때
 
         let rightBtn = document.querySelectorAll('.concept-answer button')
@@ -474,14 +492,12 @@
             }
             btn.classList.add('checked')
 
-            //클릭한 버튼의 index값
-            Array.from(rightBtn).indexOf(btn)
-
-            checkTogether()
+            checkTogether(clicked)
         }
 
-        //보류.........
-        function checkTogether() {
+        function checkTogether(clicked) {
+            let btn = clicked.currentTarget;
+            let btnIndex = Array.from(rightBtn).indexOf(btn);
             let rightNum = document.querySelector('.num').innerText;
             let leftNum = document.querySelectorAll('.number');
             let leftValue = [];
@@ -490,18 +506,41 @@
                 leftValue.push(leftNum[i].value)
             }
             for (let i = 0; i < leftNum.length; i++) {
+                let tr = leftNum[i].parentNode.parentNode;
+                let tdBtn = leftNum[i].parentNode.nextElementSibling.children;
+                
                 if (leftValue[i] == rightNum) {
-                    leftNum[i].parentNode.parentNode.classList.add('checked')
+                    tr.classList.add('checked')
+
+                    for(let j = 0; j < tdBtn.length; j++) {
+                        tdBtn[j].classList.remove('checked')
+                    }
+                    tdBtn[btnIndex].classList.add('checked')
+
                 } else {
-                    leftNum[i].parentNode.parentNode.classList.remove('checked')
+                    tr.classList.remove('checked')
                 }
             }
-
-
         }
 
         for(let i = 0; i < rightBtn.length; i++) {
             rightBtn[i].addEventListener('click', rightCheck)
+        }
+
+        // 왼쪽 누르면 오른쪽
+
+        function leftToRight(clicked) {
+            let btn = clicked.currentTarget;
+            let sibBtn = btn.parentNode.children;
+            let btnIndex = Array.from(sibBtn).indexOf(btn);
+            let rightNum = document.querySelector('.num').innerText;
+            
+            if (!btn.classList.contains('watch') && !btn.classList.contains('fix') && !btn.classList.contains('number') && btn.parentNode.previousElementSibling.firstElementChild.innerText == rightNum) {
+                for(let j = 0; j < rightBtn.length; j++) {
+                    rightBtn[j].classList.remove('checked')
+                }
+                rightBtn[btnIndex].classList.add('checked')
+            }
         }
     </script>
 </body>
