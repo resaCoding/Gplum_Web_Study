@@ -308,6 +308,25 @@
             for (i = 0; i < tabBtn.length; i++) {
                 tabBtn[i].addEventListener("click", tabOn);
             }
+
+            //플러스 학습 탭
+
+            let plusBtn = document.querySelectorAll('.plus-tab li a')
+
+            function plusTab(tabClick) {
+                let clickedTab = tabClick.currentTarget.parentNode;
+                let tabList = document.querySelectorAll('.plus-tab li')
+
+                for(let i = 0; i < tabList.length; i++) {
+                    tabList[i].classList.remove('active')
+                }
+                clickedTab.classList.add('active')
+            }
+
+            for (i = 0; i < plusBtn.length; i++) {
+                plusBtn[i].addEventListener("click", plusTab);
+            }
+
         </script>
     </body>
 </html>

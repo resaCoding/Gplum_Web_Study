@@ -536,8 +536,8 @@
             let rightNum = document.querySelector('.num').innerText;
             
             if (!btn.classList.contains('watch') && !btn.classList.contains('fix') && !btn.classList.contains('number') && btn.parentNode.previousElementSibling.firstElementChild.innerText == rightNum) {
-                for(let j = 0; j < rightBtn.length; j++) {
-                    rightBtn[j].classList.remove('checked')
+                for(let i = 0; i < rightBtn.length; i++) {
+                    rightBtn[i].classList.remove('checked')
                 }
                 rightBtn[btnIndex].classList.add('checked')
             }
