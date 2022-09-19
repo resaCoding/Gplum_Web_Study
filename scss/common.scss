@@ -47,11 +47,15 @@ body {
     align-items: center;
     height: 50px;
     background: #ccc;
+
+    >*:not(.timer) {
+        width: 326px;
+    }
 }
 
 .timer {
     position: relative;
-    width: 250px;
+    width: 200px;
     height: 30px;
     text-align: center;
     border: 1px solid #000;
@@ -387,6 +391,12 @@ body {
     overflow: hidden;
     flex-direction: column;
     display: flex;
+
+    &-wrap {
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #000000, $alpha: 0.5);
+    }
 
     p {
         height: 100%;

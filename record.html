@@ -96,17 +96,15 @@
             </div>
             <button class="btn-next">학습 완료</button>
         </div>
-        <!-- 팝업창(다른 페이지 공통) 
-            버튼 없는 버전 / 하나인 버전 포함 
-            display flex로 열어주세요!
-        -->
-        <div class="popup">
-            <p>
-                <span>녹음을 취소하시겠습니까?</span>
-            </p>
-            <div>
-                <button>아니오</button>
-                <button>예</button>
+        <div class="modal popup-wrap">
+            <div class="popup">
+                <p>
+                    <span>녹음을 취소하시겠습니까?</span>
+                </p>
+                <div>
+                    <button>아니오</button>
+                    <button>예</button>
+                </div>
             </div>
         </div>
     </div>
@@ -121,9 +119,9 @@
         ListBtn.addEventListener('click', listOn)
 
         let recordBtn = document.querySelectorAll('.record-choice div button>*')
-        let popup = document.querySelector('.popup')
+        let popup = document.querySelector('.popup-wrap')
         function popupOn(){
-            popup.style.display = 'flex';
+            popup.style.display = 'block';
         }
         for(i=0; i<recordBtn.length; i++) {
             recordBtn[i].addEventListener('click', popupOn)
