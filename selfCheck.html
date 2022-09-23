@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gplum</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gplum</title>
 
-    <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" href="/css/common.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-</head>
-<body>
-    <div id="root">
-        <div class="class-header">
-            <div class="class-title">
-                <p class="info">
-                    <span class="grade">중2-1</span><span class="book">개념서</span>
-                    <span class="unit">Ⅱ. 일차부등식</span>
-                </p>
-                <h1>3. 일차부등식의 활용(2)</h1>
-                <a href="main.html">나가기</a>
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <div id="root">
+            <div class="class-header">
+                <div class="class-title">
+                    <p class="info">
+                        <span class="grade">중2-1</span><span class="book">개념서</span>
+                        <span class="unit">Ⅱ. 일차부등식</span>
+                    </p>
+                    <h1>3. 일차부등식의 활용(2)</h1>
+                    <a href="main.html">나가기</a>
+                </div>
+        
+                <div class="class-nav">
+                    <ul>
+                        <li class="concept">
+                            <button>개념 강의 보기</button>
+                            <button class="btn-list">▼</button>
+                            <ul class="class-list">
+                                <li><a href="#">일차부등식의 활용 - 평균/도형 [개념]</a></li>
+                                <li><a href="#">일차부등식의 활용 - 평균/도형 [예제]</a></li>
+                                <li><a href="#">일차부등식의 활용 – 최대 개수/유리한 방법 [개념]</a></li>
+                                <li class="lock"><a href="#">일차부등식의 활용 – 최대 개수/유리한 방법 [예제]</a></li>
+                                <li class="lock"><a href="#">일차부등식의 활용 – 농도 [개념]</a></li>
+                                <li class="lock"><a href="#">일차부등식의 활용 – 농도 [예제]</a></li>
+                            </ul>
+                        </li>
+                        <li class="playing"><button>Self-Check</button></li>
+                        <li class="lock"><button>개념 확인하기</button></li>
+                        <li class="lock"><button>오답 클리닉</button></li>
+                        <li class="lock"><button>개념 설명하기</button></li>
+                    </ul>
+                </div>
             </div>
-    
-            <div class="class-nav">
-                <ul>
-                    <li class="concept">
-                        <button>개념 강의 보기</button>
-                        <button class="btn-list">▼</button>
-                        <ul class="class-list">
-                            <li><a href="#">일차부등식의 활용 - 평균/도형 [개념]</a></li>
-                            <li><a href="#">일차부등식의 활용 - 평균/도형 [예제]</a></li>
-                            <li><a href="#">일차부등식의 활용 – 최대 개수/유리한 방법 [개념]</a></li>
-                            <li class="lock"><a href="#">일차부등식의 활용 – 최대 개수/유리한 방법 [예제]</a></li>
-                            <li class="lock"><a href="#">일차부등식의 활용 – 농도 [개념]</a></li>
-                            <li class="lock"><a href="#">일차부등식의 활용 – 농도 [예제]</a></li>
-                        </ul>
-                    </li>
-                    <li class="playing"><button>Self-Check</button></li>
-                    <li class="lock"><button>개념 확인하기</button></li>
-                    <li class="lock"><button>오답 클리닉</button></li>
-                    <li class="lock"><button>개념 설명하기</button></li>
-                </ul>
+            <div class="class-check narrative">
+                <p>교재를 보며 오늘의 <span class="blue">핵심 개념</span><span>을 스스로 정리</span>하세요.</p>
+                <div class="timer">
+                    <p><span>00</span>:<span>00</span></p>
+                </div>
+                <button class="btn-next">다음 단계</button>
             </div>
         </div>
-        <div class="class-check narrative">
-            <p>교재를 보며 오늘의 <span class="blue">핵심 개념</span><span>을 스스로 정리</span>하세요.</p>
-            <div class="timer">
-                <p><span>00</span>:<span>00</span></p>
-            </div>
-            <button class="btn-next">다음 단계</button>
-        </div>
-    </div>
-    <script>
+        <script>
 
-        let ListBtn = document.querySelector('.btn-list')
-        function listOn(){
-            let list = document.querySelector('.class-list')
-            list.classList.toggle('active')
-            ListBtn.classList.toggle('active')
-        }
-        ListBtn.addEventListener('click', listOn)
+            let ListBtn = document.querySelector('.btn-list')
+            function listOn(){
+                let list = document.querySelector('.class-list')
+                list.classList.toggle('active')
+                ListBtn.classList.toggle('active')
+            }
+            ListBtn.addEventListener('click', listOn)
 
-    </script>
-</body>
+        </script>
+    </body>
 </html>

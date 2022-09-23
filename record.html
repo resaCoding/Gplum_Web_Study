@@ -1,140 +1,140 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gplum</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gplum</title>
 
-    <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" href="/css/common.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-</head>
-<body>
-    <div id="root">
-        <div class="class-header">
-            <div class="class-title">
-                <p class="info">
-                    <span class="grade">중2-1</span><span class="book">개념서</span>
-                    <span class="unit">Ⅱ. 일차부등식</span>
-                </p>
-                <h1>3. 일차부등식의 활용(2)</h1>
-                <a href="main.html">나가기</a>
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <div id="root">
+            <div class="class-header">
+                <div class="class-title">
+                    <p class="info">
+                        <span class="grade">중2-1</span><span class="book">개념서</span>
+                        <span class="unit">Ⅱ. 일차부등식</span>
+                    </p>
+                    <h1>3. 일차부등식의 활용(2)</h1>
+                    <a href="main.html">나가기</a>
+                </div>
+        
+                <div class="class-nav">
+                    <ul>
+                        <li class="concept">
+                            <button>개념 강의 보기</button>
+                            <button class="btn-list">▼</button>
+                            <ul class="class-list">
+                                <li><a href="#">일차부등식의 활용 - 평균/도형 [개념]</a></li>
+                                <li><a href="#">일차부등식의 활용 - 평균/도형 [예제]</a></li>
+                                <li><a href="#">일차부등식의 활용 – 최대 개수/유리한 방법 [개념]</a></li>
+                                <li class="lock"><a href="#">일차부등식의 활용 – 최대 개수/유리한 방법 [예제]</a></li>
+                                <li class="lock"><a href="#">일차부등식의 활용 – 농도 [개념]</a></li>
+                                <li class="lock"><a href="#">일차부등식의 활용 – 농도 [예제]</a></li>
+                            </ul>
+                        </li>
+                        <li><button>Self-Check</button></li>
+                        <li><button>개념 확인하기</button></li>
+                        <li><button>오답 클리닉</button></li>
+                        <li class="playing"><button>개념 설명하기</button></li>
+                    </ul>
+                </div>
             </div>
-    
-            <div class="class-nav">
-                <ul>
-                    <li class="concept">
-                        <button>개념 강의 보기</button>
-                        <button class="btn-list">▼</button>
-                        <ul class="class-list">
-                            <li><a href="#">일차부등식의 활용 - 평균/도형 [개념]</a></li>
-                            <li><a href="#">일차부등식의 활용 - 평균/도형 [예제]</a></li>
-                            <li><a href="#">일차부등식의 활용 – 최대 개수/유리한 방법 [개념]</a></li>
-                            <li class="lock"><a href="#">일차부등식의 활용 – 최대 개수/유리한 방법 [예제]</a></li>
-                            <li class="lock"><a href="#">일차부등식의 활용 – 농도 [개념]</a></li>
-                            <li class="lock"><a href="#">일차부등식의 활용 – 농도 [예제]</a></li>
-                        </ul>
-                    </li>
-                    <li><button>Self-Check</button></li>
-                    <li><button>개념 확인하기</button></li>
-                    <li><button>오답 클리닉</button></li>
-                    <li class="playing"><button>개념 설명하기</button></li>
-                </ul>
+            <div class="class-record">
+                <!-- <div class="narrative">
+                    <p><span>녹음을 시작</span>하여 <span class="blue">학습한 개념을 설명</span>해보세요.</p>
+                    <p>녹음한 내용을 선생님께 제출할 수 있습니다.</p>
+                    <div class="record-choice">
+                        <div>
+                            <button>
+                                <img src="" alt="녹음 시작">
+                                <span class="btn-recommon">녹음 시작</span>
+                            </button>
+                            <label for="record-file">
+                                <img src="" alt="파일 제출">
+                                <span class="btn-recommon">파일 제출</span>
+                            </label>
+                            <input type="file" accept="image/*" capture="camera" name="파일 제출" id="record-file">
+                        </div>
+                        <span>◎ 녹음을 하지 않고 학습을 완료할 수 있습니다.</span>
+                    </div>
+                </div> -->
+                <div class="record-recording narrative">
+                    <p><span>개념 설명 녹음</span>이 <span class="blue">진행중</span>입니다.</p>
+                    <div class="timer">
+                        <p><span>00</span>:<span>00</span></p>
+                    </div>
+                    <div class="record-bottom">
+                        <div class="record-area">
+                            <!-- 일시정지를 클릭할 경우 class record로 변경 -->
+                            <!-- 
+                                들어보기 버튼 class play 
+                                pause stop 버튼 활성화할 때 record-area에 클래스 display-block 추가
+                            -->
+                            <!-- <button class="pause"></button>
+                            <button class="stop"></button> -->
+                            <button class="play"></button>
+                            <button class="btn-recommon">들어보기</button>
+                        </div>
+                        <!-- <div class="record-wave">
+                            <span class="line"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div> -->
+                        <div class="record-btn">
+                            <!-- <button class="btn-recommon">녹음 취소</button> -->
+                            <button class="restart">다시 녹음</button>
+                            <button class="submit">제출 완료</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-next">학습 완료</button>
             </div>
-        </div>
-        <div class="class-record">
-            <!-- <div class="narrative">
-                <p><span>녹음을 시작</span>하여 <span class="blue">학습한 개념을 설명</span>해보세요.</p>
-                <p>녹음한 내용을 선생님께 제출할 수 있습니다.</p>
-                <div class="record-choice">
+            <div class="modal popup-wrap">
+                <div class="popup">
+                    <p>
+                        <span>녹음을 취소하시겠습니까?</span>
+                    </p>
                     <div>
-                        <button>
-                            <img src="" alt="녹음 시작">
-                            <span class="btn-recommon">녹음 시작</span>
-                        </button>
-                        <label for="record-file">
-                            <img src="" alt="파일 제출">
-                            <span class="btn-recommon">파일 제출</span>
-                        </label>
-                        <input type="file" accept="image/*" capture="camera" name="파일 제출" id="record-file">
-                    </div>
-                    <span>◎ 녹음을 하지 않고 학습을 완료할 수 있습니다.</span>
-                </div>
-            </div> -->
-            <div class="record-recording narrative">
-                <p><span>개념 설명 녹음</span>이 <span class="blue">진행중</span>입니다.</p>
-                <div class="timer">
-                    <p><span>00</span>:<span>00</span></p>
-                </div>
-                <div class="record-bottom">
-                    <div class="record-area">
-                        <!-- 일시정지를 클릭할 경우 class record로 변경 -->
-                        <!-- 
-                            들어보기 버튼 class play 
-                            pause stop 버튼 활성화할 때 record-area에 클래스 display-block 추가
-                        -->
-                        <!-- <button class="pause"></button>
-                        <button class="stop"></button> -->
-                        <button class="play"></button>
-                        <button class="btn-recommon">들어보기</button>
-                    </div>
-                    <!-- <div class="record-wave">
-                        <span class="line"></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div> -->
-                    <div class="record-btn">
-                        <!-- <button class="btn-recommon">녹음 취소</button> -->
-                        <button class="restart">다시 녹음</button>
-                        <button class="submit">제출 완료</button>
+                        <button>아니오</button>
+                        <button>예</button>
                     </div>
                 </div>
             </div>
-            <button class="btn-next">학습 완료</button>
         </div>
-        <div class="modal popup-wrap">
-            <div class="popup">
-                <p>
-                    <span>녹음을 취소하시겠습니까?</span>
-                </p>
-                <div>
-                    <button>아니오</button>
-                    <button>예</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
+        <script>
 
-        let ListBtn = document.querySelector('.btn-list')
-        function listOn(){
-            let list = document.querySelector('.class-list')
-            list.classList.toggle('active')
-            ListBtn.classList.toggle('active')
-        }
-        ListBtn.addEventListener('click', listOn)
+            let ListBtn = document.querySelector('.btn-list')
+            function listOn(){
+                let list = document.querySelector('.class-list')
+                list.classList.toggle('active')
+                ListBtn.classList.toggle('active')
+            }
+            ListBtn.addEventListener('click', listOn)
 
-        let recordBtn = document.querySelectorAll('.record-choice div button>*')
-        let popup = document.querySelector('.popup-wrap')
-        function popupOn(){
-            popup.style.display = 'block';
-        }
-        for(i=0; i<recordBtn.length; i++) {
-            recordBtn[i].addEventListener('click', popupOn)
-        }
+            let recordBtn = document.querySelectorAll('.record-choice div button>*')
+            let popup = document.querySelector('.popup-wrap')
+            function popupOn(){
+                popup.style.display = 'block';
+            }
+            for(i=0; i<recordBtn.length; i++) {
+                recordBtn[i].addEventListener('click', popupOn)
+            }
 
-        let popupBtn = document.querySelectorAll('.popup div button')
-        function popupOut(){
-            popup.style.display = 'none';
-        }
-        for(i=0; i<popupBtn.length; i++) {
-            popupBtn[i].addEventListener('click', popupOut)
-        }
+            let popupBtn = document.querySelectorAll('.popup div button')
+            function popupOut(){
+                popup.style.display = 'none';
+            }
+            for(i=0; i<popupBtn.length; i++) {
+                popupBtn[i].addEventListener('click', popupOut)
+            }
 
-    </script>
-</body>
+        </script>
+    </body>
 </html>
