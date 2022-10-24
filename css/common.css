@@ -1,5 +1,6 @@
 body {
   height: 100vh;
+  background: #f7f3f0;
 }
 
 #root {
@@ -16,23 +17,78 @@ body {
 }
 
 .main-left {
-  width: 200px;
+  width: 240px;
   height: 100%;
-  background: #666;
+  background:#be9e7f;
   flex-shrink: 0;
   transition: 0.2s;
+  border-radius: 0 43px 43px 0;
+  box-shadow: 0 0 8px rgba(20, 0, 0, 0.2);
 }
+
 .main-left.none {
   width: 100px;
 }
-.main-left.none .lnb-main {
-  display: none;
+
+.main-left.none .lnb-main li {
+  padding: 0;
+  margin: 0 auto;
+  width: 64px;
+  border-radius: 50%;
 }
+
+.main-left.none .lnb-main li a {
+  justify-content: center;
+  position: relative;
+}
+
+.main-left.none .lnb-main li a div {
+  margin-right: 0;
+}
+
+.main-left.none .lnb-main span  {
+  display: none;
+  position: absolute;
+  font-size: 18px;
+  color: #664e3d;
+  letter-spacing: -0.72px;
+  right: -100px;
+  width: 96px;
+  background: url(/img/balloon_middle.png) no-repeat;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 17.4px;
+  z-index: 1;
+  font-weight: 500;
+}
+
+.main-left.none .lnb-main span.long {
+  right: -112px;
+  width: 108px;
+  background: url(/img/balloon_long.png) no-repeat;
+}
+
+.main-left.none .lnb-main span.short {
+  right: -96px;
+  width: 92px;
+  background: url(/img/balloon_short.png) no-repeat;
+}
+
+.main-left.none .lnb-main li:hover span {
+  display: block;
+}
+
+.main-left.none .lnb-arrow {
+  right: -24px;
+  transform: rotate(180deg) translateY(50%);
+}
+
 .main-right {
   height: 100%;
-  width: calc(100% - 200px);
+  width: calc(100% - 240px);
   transition: 0.2s;
 }
+
 .main-right.none {
   width: calc(100% - 100px);
 }
@@ -41,27 +97,30 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
-  background: #ccc;
-}
-.gnb > *:not(.timer) {
-  width: 326px;
+  height: 80px;
+  padding: 0 30px;
+  border-bottom: 1px solid rgba(239, 232, 228, 0.7);
+  position: relative;
 }
 
 .timer {
-  position: relative;
-  width: 200px;
-  height: 30px;
-  text-align: center;
-  border: 1px solid #000;
-  border-radius: 15px;
+  position: absolute;
+  width: 188px;
+  height: 48px;
+  border-radius: 24px;
+  background: #fff;
   display: flex;
   align-items: center;
-  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  padding-left: 51px;
+  font-weight: 600;
 }
+
 .timer img {
   position: absolute;
-  left: 0;
+  left: 15px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -70,72 +129,156 @@ body {
   display: flex;
   align-items: center;
 }
+
 .profile div {
+  margin-left: 20px;
+}
+
+.profile div button {
   display: flex;
   align-items: center;
 }
 
-.lnb-btn {
-  display: block;
-  width: 50px;
-  height: 50px;
-  font-size: 50px;
-  margin: 0 auto;
+.profile div button img {
+  margin-right: 8px;
 }
-.lnb-main {
-  margin-left: 90px;
+
+.profile div span, .name {
+  font-size: 18px;
+  color: #5d5955;
+  font-weight: 600;
 }
-.lnb-main li {
-  padding: 5px 10px 5px 5px;
-  margin: 10px 0;
-}
-.lnb-main li.active {
-  background: green;
-}
-.lnb-main li.active a {
-  color: #fff;
-}
-.lnb-sub {
-  position: absolute;
-  left: -300px;
-  top: 0;
-  width: 300px;
-  height: 100%;
-  transition: 0.5s;
-}
-.lnb-sub ul {
-  z-index: 5;
-  background: #ff6;
-  width: 300px;
-  height: 100%;
+
+.alarm.new button {
   position: relative;
 }
-.lnb-sub.active {
-  left: 0;
+
+.alarm.new button::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #ea7851;
+  border-radius: 50%;
+  position: absolute;
+  right: 41px;
+  top: 0;
+}
+
+.lnb {
+  padding-top: 48px;
+  position: relative;
+  height: 100%;
+}
+
+.lnb-btn {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  border-radius: 16px;
+  background: #a17a59;
+  align-items: center;
+  justify-content: center;
+}
+
+.lnb-main {
+  max-width: 200px;
+  margin-top: 40px;
+}
+
+.lnb-main li {
+  padding: 0 0 0 30px;
+  border-radius: 0 32px 32px 0;
+}
+
+.lnb-main li a {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  font-size: 22px;
+  letter-spacing: -0.88px;
+}
+
+.lnb-main li a div {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.lnb-main li a span {
+  color: #fff;
+}
+
+.lnb-main li .on {
+  display: none;
+}
+
+/* 메인 페이지 왼쪽 네비게이션 클릭 시 색 */
+.lnb-main li.active {
+  background: #057064;
+}
+/* ----------------------------------- */
+
+.lnb-main li.active .on {
+  display: block;
+}
+
+.lnb-main li.active .off {
+  display: none;
+}
+
+.lnb-arrow {
+  width: 24px;
+  height: 120px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url(/img/nav_arrow.png) no-repeat center #a17a59;
+  border-radius: 10px 0 0 7px;
 }
 
 .contents {
-  padding: 30px;
+  padding: 30px 20px;
   height: 100%;
-  background: #f0f7fa;
 }
+
 .contents > div {
   height: 100%;
 }
+
 .contents-title {
   position: relative;
   height: auto;
-  min-height: 80px;
+  min-height: 78px;
   line-height: 50px;
 }
+
 .contents-title p {
   font-weight: 700;
-  font-size: 30px;
+  font-size: 36px;
+  letter-spacing: -1.44px;
+  display: flex;
+  align-items: center;
 }
+
+.contents-title p .img-box {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
 .contents-title span {
   font-size: 15px;
   font-weight: normal;
 }
+
 .contents-wrap {
   height: 616px;
   background: #fff;
@@ -143,6 +286,7 @@ body {
   border-radius: 20px;
   overflow: hidden;
 }
+
 .contents-tab {
   display: flex;
   flex-wrap: wrap;
@@ -153,53 +297,72 @@ body {
   top: 0;
   transform: translateX(-50%);
   margin: 0 !important;
-  width: 350px;
-  background: #fff;
-  border-radius: 20px;
+  width: 320px;
+  background:#dfd8d4;
+  border-radius: 24px;
   overflow: visible !important;
 }
+
 .contents-tab li {
   width: 50%;
-  height: 40px;
+  height: 48px;
 }
+
 .contents-tab li a {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
-  color: #ccc;
 }
+
+.contents-tab li a span {
+  color: #888;
+  font-size: 20px;
+  letter-spacing: -0.8px;
+  font-weight: 500;
+}
+
 .contents-tab li.active a {
   position: relative;
-  color: #000;
 }
+
+.contents-tab li.active a span {
+  color: #fff;
+  z-index: 1;
+}
+
 .contents-tab li.active a::before {
   content: "";
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
+  width: 100%;
+  height: 100%;
   position: absolute;
   left: 0;
   bottom: 0;
-  border: 3px solid #ff5656;
-  border-radius: 20px;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+  /* 나의 강의실 활성화 시 배경 색 */
+  background: #057064;
+  /*-----------------------------*/
+  border-radius: 24px;
 }
+
 .contents-tabcon {
-  height: calc(100% - 110px);
-  overflow-y: auto;
+  height: 592px;
   background: #fff;
-  padding: 30px;
+  overflow: hidden;
+  border-radius: 16px;
 }
 
 .tabcon {
-  width: 100%;
-  height: auto;
+  width: calc(100% - 40px);
+  height: calc(100% - 60px);
   display: none;
+  margin: 30px 20px;
 }
+
 .tabcon.active {
   display: block;
 }
+
 .tabcon > p {
   text-align: center;
   line-height: 69vh;
@@ -215,6 +378,7 @@ body {
   padding: 0 20px;
   color: #fff;
 }
+
 .class-title h1 {
   text-align: center;
   font-size: 25px;
@@ -224,18 +388,21 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
+
 .class-nav {
   background: #173e52;
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
+
 .class-nav > ul {
   clear: both;
 }
 .class-nav > ul > li {
   float: left;
 }
+
 .class-nav > ul > li button {
   width: 150px;
   height: 40px;
@@ -243,14 +410,17 @@ body {
   background: #0f567a;
   color: #fff;
 }
+
 .class-nav > ul > li.playing button {
   background: #ff595a;
 }
+
 .class-nav > ul > li.lock button {
   background: #153749;
   color: #4c6674;
   cursor: default;
 }
+
 .class-list {
   position: absolute;
   left: 0;
@@ -261,9 +431,11 @@ body {
   display: none;
   width: 420px;
 }
+
 .class-list.active {
   display: block;
 }
+
 .class-list li a {
   display: block;
   padding: 10px 30px 10px 10px;
@@ -271,6 +443,7 @@ body {
   border: 1px solid #fff;
   border-bottom: none;
 }
+
 .class-list li.lock a {
   cursor: default;
   background: #969696;
@@ -279,6 +452,7 @@ body {
 .text-left {
   text-align: left !important;
 }
+
 .text-center {
   text-align: center;
 }
@@ -304,9 +478,11 @@ body {
   right: 5px;
   top: 5px;
 }
+
 .btn-list.active {
   transform: rotate(180deg);
 }
+
 .btn-next {
   width: 120px !important;
   height: 50px !important;
@@ -319,6 +495,7 @@ body {
 .concept {
   position: relative;
 }
+
 .concept button:not(.btn-list) {
   width: 170px !important;
   padding-right: 20px;
@@ -339,11 +516,13 @@ body {
   flex-direction: column;
   display: flex;
 }
+
 .popup-wrap {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
 }
+
 .popup p {
   height: 100%;
   display: flex;
@@ -353,20 +532,24 @@ body {
   flex-direction: column;
   text-align: center;
 }
+
 .popup p span {
   line-height: 1.5;
 }
+
 .popup div {
   display: flex;
   height: 25%;
   flex-shrink: 0;
 }
+
 .popup div button {
   width: 100%;
   height: 100%;
   word-break: keep-all;
   border-top: 1px solid yellowgreen;
 }
+
 .popup div button:last-child {
   background: yellowgreen;
 }
@@ -387,6 +570,7 @@ body {
   background: #77933c;
   position: relative;
 }
+
 .position-sticky th::after {
   content: "";
   position: absolute;
@@ -405,16 +589,22 @@ body {
 
 .info span:not(.unit) {
   display: inline-block;
-  padding: 3px 10px;
+  padding: 0 10px;
   color: #fff;
+  line-height: 26px;
+  font-size: 18px;
+  letter-spacing: -0.72px;
 }
+
 .info .grade {
-  background: #ff7847;
   border-radius: 4px 0 0 4px;
 }
+
 .info .book {
-  background: #173e52;
   border-radius: 0 4px 4px 0;
+  /*나의 강의실 교재 학습 교재 뱃지 배경색*/
+  background: #034037;
+  /*-----------------------------------*/
 }
 
 .filter {
@@ -422,22 +612,162 @@ body {
   justify-content: center;
   margin-bottom: 20px;
 }
+
 .filter > * {
   height: 40px;
   border-radius: 5px;
 }
+
 .filter select {
   width: 120px;
   margin-left: 5px;
 }
+
 .filter select:first-child {
   margin: 0;
 }
+
 .filter button {
   width: 70px;
   color: #fff;
   background: darkslategray;
   margin-left: 10px;
+}
+
+.select-wrap{
+  position: relative;
+  height: 100%;
+}
+
+.selected-option {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  font-size: 18px;
+  padding: 0 32px 0 10px;
+  letter-spacing: -0.72px;
+  line-height: 40px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.selected-option::after {
+  content: '';
+  width: 22px;
+  height: 100%;
+  background: url(/img/select-arrow.png) no-repeat #f2f2f2 center;
+  border-left: 1px solid #ccc;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 0 4px 4px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.selected-option.wd-119 {
+  width: 119px;
+}
+.selected-option.wd-201 {
+  width: 201px;
+}
+
+.select {
+  position: absolute;
+  z-index: 1;
+  width: auto;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 4px;
+  left: 0;
+  display: none;
+}
+
+.select.active {
+  display: block;
+}
+
+.select li button {
+  font-size: 18px;
+  height: 40px;
+  line-height: 40px;
+  letter-spacing: -0.72px;
+  border-radius: 2px;
+  padding: 0 50px 0 10px;
+  white-space: pre;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.select li button:hover {
+  background: #664e3d;
+  color: #fff;
+}
+
+.btn {
+  min-width: 100px;
+  height: 40px;
+  font-size: 18px;
+  letter-spacing: -0.72px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.btn-orange {
+  background: #ea7851;
+  color: #fff;
+}
+
+.btn-orange-border {
+  border: 1px solid #ea7851;
+  color: #ea7851;
+}
+
+/*
+  학교학년학기 별 배경색
+  클래스 이름 a_b
+
+  a = 학교 (E = 초등학교 / M = 중학교 / H = 고등학교)
+  b = 학년
+*/
+
+.E_3 {
+  background: #fa4646;
+}
+
+.E_4 {
+  background: #ff7b42;
+}
+
+.E_5 {
+  background: #ffad33;
+}
+
+.E_6 {
+  background: #96cc29;
+}
+
+.M_1 {
+  background: #08ccbf;
+}
+
+.M_2 {
+  background: #00a3cc;
+}
+
+.M_3 {
+  background: #0884cc;
+}
+
+.H_1 {
+  background: #9362f5;
 }
 
 /*# sourceMappingURL=common.css.map */

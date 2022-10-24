@@ -17,6 +17,8 @@ time, mark, audio, video, button, input {
 	font-size: 100%;
 	vertical-align: baseline;
 	box-sizing: border-box;
+	font-family: 'Pretendard-Regular';
+	color: #222;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -54,4 +56,15 @@ button {
 
 button:disabled {
 	cursor: default;
+}
+
+select, option {
+	font-family: 'Pretendard-Regular';
+}
+
+@font-face {
+	font-family: 'Pretendard-Regular';
+	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
 }

@@ -13,125 +13,187 @@
         <div id="root">
             <div class="float-left main-left">
                 <div class="lnb">
-                    <button class="lnb-btn" onclick="hamburgerOn()">=</button>
+                    <button class="lnb-btn" onclick="hamburgerOn()">
+                        <img src="/img/hamburger.png" alt="">
+                    </button>
                     <ul class="lnb-main">
-                        <li class="active"><a href="#">나의 강의실</a></li>
-                        <li><a href="#">나의 교재</a></li>
-                        <li><a href="#">나의 평가</a></li>
-                        <li><a href="#">나의 오답</a></li>
-                        <li><a href="#">학습 달력</a></li>
-                        <li><a href="#">즐겨찾기</a></li>
+                        <li class="active">
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_1_on.png" alt="나의 강의실" class="on">
+                                    <img src="/img/nav_1_off.png" alt="나의 강의실" class="off">
+                                </div>
+                                <span class="long">나의 강의실</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_2_on.png" alt="나의 교재" class="on">
+                                    <img src="/img/nav_2_off.png" alt="나의 교재" class="off">
+                                </div>
+                                <span>나의 교재</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_3_on.png" alt="나의 평가" class="on">
+                                    <img src="/img/nav_3_off.png" alt="나의 평가" class="off">
+                                </div>
+                                <span>나의 평가</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_4_on.png" alt="나의 오답" class="on">
+                                    <img src="/img/nav_4_off.png" alt="나의 오답" class="off">
+                                </div>
+                                <span>나의 오답</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_5_on.png" alt="학습 달력" class="on">
+                                    <img src="/img/nav_5_off.png" alt="학습 달력" class="off">
+                                </div>
+                                <span>학습 달력</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_6_on.png" alt="즐겨찾기" class="on">
+                                    <img src="/img/nav_6_off.png" alt="즐겨찾기" class="off">
+                                </div>
+                                <span class="short">즐겨찾기</span>
+                            </a>
+                        </li>
                     </ul>
+                    <button class="lnb-arrow" onclick="hamburgerOn()">
+                    </button>
                 </div>
             </div>
             <div class="float-left main-right">
                 <div class="gnb">
                     <a href="#">
-                        <img src="" alt="지플럼 로고" />
+                        <img src="/img/logo.png" alt="지플럼 로고" />
                     </a>
                     <div class="timer">
-                        <img src="" alt="타이머" />
-                        <p><span>00</span>:<span>00</span>:<span>00</span></p>
+                        <img src="/img/timer_icon.png" alt="타이머" />
+                        <p><span>00</span> : <span>12</span> : <span>25</span></p>
                     </div>
                     <div class="profile">
-                        <div>
-                            <p class="mem_num">
-                                <button><img src="" alt="캐럿" /></button>
+                        <div class="mem_num">
+                            <button>
+                                <img src="/img/point_icon.png" alt="포인트" />
                                 <span>99,999</span>
-                            </p>
+                            </button>
                         </div>
-                        <div class="alarm">
-                            <button><img src="" alt="알람" /></button>
-                            <span>999</span>
+                        <div class="alarm new">
+                            <button>
+                                <img src="/img/alarm_icon.png" alt="알람" />
+                                <span>999</span>
+                            </button>
                         </div>
                         <div>
                             <p class="name">김수학</p>
-                            <img src="" alt="프로필 사진" />
                         </div>
                     </div>
                 </div>
                 <div class="contents">
                     <div>
                         <div class="contents-title">
-                            <p>나의 강의실</p>
+                            <p>
+                                <span class="img-box">
+                                    <img src="/img/myClass_icon.png" alt="나의 강의실 아이콘">
+                                </span>
+                                나의 강의실
+                            </p>
                             <ul class="contents-tab">
-                                <li class="active"><a href="tab-1">교재 학습</a></li>
-                                <li><a href="tab-2">플러스 학습</a></li>
+                                <li class="active"><a href="#"><span>교재 학습</span></a></li>
+                                <li><a href="#"><span>플러스 학습</span></a></li>
                             </ul>
                         </div>
                         <div class="contents-tabcon">
                             <div class="tabcon active" id="tab-1">
-                                <div class="book-list">
-                                    <img src="" alt="교재">
-                                    <div class="book-info">
-                                        <div class="book-title">
-                                            <p class="info">
-                                                <span class="grade">중학2-1</span><span class="book">개념서</span>
-                                            </p>
-                                            <span>76~82쪽</span>
-                                            <div>
-                                                <p>Ⅱ. 일차부등식</p>
-                                                <p>3. 일차부등식의 활용(2)</p>
+                                <div class="myClass-wrap">
+                                    <div class="book-list">
+                                        <img src="" alt="교재">
+                                        <div class="book-info">
+                                            <div class="book-title">
+                                                <p class="info">
+                                                    <span class="grade M_2">중 2-1</span><span class="book">개념서</span>
+                                                </p>
+                                                <span>76~82쪽</span>
+                                                <div>
+                                                    <p class="unit-title-high">Ⅱ. 일차부등식</p>
+                                                    <p class="unit-title">3. 일차부등식의 활용(2)</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="book-btn">
-                                            <button>학습 목차</button>
-                                            <button onclick="location.href='class.html';">학습하기</button>
+                                            <div class="book-btn">
+                                                <button class="btn btn-orange-border">학습 목차</button>
+                                                <button onclick="location.href='class.html';" class="btn btn-orange">학습하기</button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="book-list">
-                                    <img src="" alt="교재">
-                                    <div class="book-info">
-                                        <div class="book-title">
-                                            <p class="info">
-                                                <span class="grade">중학2-1</span><span class="book">개념서</span>
-                                            </p>
-                                            <span>76~82쪽</span>
-                                            <div>
-                                                <p>Ⅱ. 일차부등식</p>
-                                                <p>3. 일차부등식의 활용(2)</p>
+                                    <div class="book-list">
+                                        <img src="" alt="교재">
+                                        <div class="book-info">
+                                            <div class="book-title">
+                                                <p class="info">
+                                                    <span class="grade M_2">중 2-1</span><span class="book">뜨레스</span>
+                                                </p>
+                                                <span>76~82쪽</span>
+                                                <div>
+                                                    <p class="unit-title-high">Ⅱ. 일차부등식</p>
+                                                    <p class="unit-title">2. 일차부등식의 활용(1)</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="book-btn">
-                                            <button>학습 목차</button>
-                                            <button>학습하기</button>
+                                            <div class="book-btn">
+                                                <button class="btn btn-orange-border">학습 목차</button>
+                                                <button class="btn btn-orange">학습하기</button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="book-list">
-                                    <img src="" alt="교재">
-                                    <div class="book-info">
-                                        <div class="book-title">
-                                            <p class="info">
-                                                <span class="grade">중학2-1</span><span class="book">개념서</span>
-                                            </p>
-                                            <span>76~82쪽</span>
-                                            <div>
-                                                <p>Ⅱ. 일차부등식</p>
-                                                <p>3. 일차부등식의 활용(2)</p>
+                                    <div class="book-list">
+                                        <img src="" alt="교재">
+                                        <div class="book-info">
+                                            <div class="book-title">
+                                                <p class="info">
+                                                    <span class="grade M_2">중 2-1</span><span class="book">아르케 2</span>
+                                                </p>
+                                                <span>76~82쪽</span>
+                                                <div>
+                                                    <p class="unit-title-high">Ⅱ. 문자와 식</p>
+                                                    <p class="unit-title">5. 일차방정식의 활용</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="book-btn">
-                                            <button>학습 목차</button>
-                                            <button>학습하기</button>
+                                            <div class="book-btn">
+                                                <button class="btn btn-orange-border">학습 목차</button>
+                                                <button class="btn btn-orange">학습하기</button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="book-list">
-                                    <img src="" alt="교재">
-                                    <div class="book-info">
-                                        <div class="book-title">
-                                            <p>중2-1 개념서</p>
-                                            <span>76~82쪽</span>
-                                            <div>
-                                                <p>Ⅱ. 일차부등식</p>
-                                                <p>3. 일차부등식의 활용(2)</p>
+                                    <div class="book-list">
+                                        <img src="" alt="교재">
+                                        <div class="book-info">
+                                            <div class="book-title">
+                                                <p class="info">
+                                                    <span class="grade M_2">중 2-1</span><span class="book">개념서</span>
+                                                </p>
+                                                <span>76~82쪽</span>
+                                                <div>
+                                                    <p class="unit-title-high">Ⅱ. 일차부등식</p>
+                                                    <p class="unit-title">3. 일차부등식의 활용(2)</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="book-btn">
-                                            <button>학습 목차</button>
-                                            <button>학습하기</button>
+                                            <div class="book-btn">
+                                                <button class="btn btn-orange-border">학습 목차</button>
+                                                <button class="btn btn-orange">학습하기</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -141,31 +203,48 @@
                                 <div class="plus-top">
                                     <ul class="plus-tab">
                                         <li class="active"><a href="#">서술형 따라잡기</a></li>
-                                        <li><a href="#">교과서 적중문제</a></li>
+                                        <li><a href="#">교과서별 내신적중</a></li>
                                     </ul>
-                                    <div class="plus-search">
-                                        <select name="" id="">
-                                            <option value="" selected>학년-학기</option>
-                                            <option value="">1학년-1학기</option>
-                                            <option value="">1학년-2학기</option>
-                                            <option value="">2학년-1학기</option>
-                                        </select>
-                                        <!-- 교과서 적중문제 -->
-                                        <!-- <select name="" id="" class="">
-                                            <option value="" selected>교과서</option>
-                                            <option value="">1</option>
-                                            <option value="">2</option>
-                                        </select> -->
-                                        <select name="" id="">
-                                            <option value="" selected>대단원</option>
-                                            <option value="">수와 식의 계산</option>
-                                            <option value="">일차부등식</option>
-                                        </select>
+                                    <div class="plus-search active">
+                                        <div class="select-wrap">
+                                            <span class="selected-option wd-119">학년-학기</span>
+                                            <ul class="select">
+                                                <li>
+                                                    <button>학년-학기</button>
+                                                </li>
+                                                <li>
+                                                    <button>1학년-1학기</button>
+                                                </li>
+                                                <li>
+                                                    <button>1학년-2학기</button>
+                                                </li>
+                                                <li>
+                                                    <button>2학년-1학기</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="select-wrap">
+                                            <span class="selected-option wd-201">대단원</span>
+                                            <ul class="select">
+                                                <li>
+                                                    <button>대단원</button>
+                                                </li>
+                                                <li>
+                                                    <button>Ⅰ. 수와 식의 계산</button>
+                                                </li>
+                                                <li>
+                                                    <button>Ⅱ. 일차부등식</button>
+                                                </li>
+                                            </ul>
+                                        </div>
                                         <select name="" id="">
                                             <option value="" selected>현황</option>
                                             <option value="">1</option>
                                             <option value="">2</option>
                                         </select>
+                                        <button type="submit">조회</button>
+                                    </div>
+                                    <div class="plus-search" style="display: none;">
                                         <button type="submit">조회</button>
                                     </div>
                                 </div>
@@ -299,10 +378,8 @@
 
                 tabClick.preventDefault();
 
-                let clickTarget = tabClick.target;
-                let activeTabconId = clickTarget.getAttribute("href");
-                let activeTabcon = document.getElementById(activeTabconId);
-                activeTabcon.classList.add('active')
+                let tabconIndex = Array.from(tabList).indexOf(clickedTab)
+                tabcon[tabconIndex].classList.add('active')
             }
 
             for (i = 0; i < tabBtn.length; i++) {
@@ -326,6 +403,52 @@
             for (i = 0; i < plusBtn.length; i++) {
                 plusBtn[i].addEventListener("click", plusTab);
             }
+
+            //select
+            // const body = document.querySelector('body');
+            // const select = document.querySelector('.select-wrap');
+            // const values = select.querySelector('.selected-option');
+            // const option = select.querySelector('ul');
+            // const opts = option.querySelectorAll('li');
+
+            // function selects(e){
+            //     e.stopPropagation();
+            //     option.setAttribute('style',`top:${select.offsetHeight+4}px`)
+            //     if(!option.classList.contains('active')){
+            //         option.classList.add('active');
+            //     }else{
+            //         option.classList.remove('active');
+            //     }
+            //     selectOpt();
+            // }
+
+            // function selectOpt(){
+            //     opts.forEach(opt=>{
+            //         const innerValue = opt.innerText;
+            //         function changeValue(){
+            //             values.innerHTML = innerValue;
+            //         }
+            //         opt.addEventListener('click',changeValue)
+            //     });
+            // }
+
+            // function hideSelect(){
+            //     if(option.classList.contains('active')){
+            //         option.classList.remove('active');
+            //     }
+            // }
+
+            // function selectFirst(){
+            //     const firstValue = opts[0].innerText;
+            //     values.innerHTML = `${firstValue}`
+            // }
+
+
+            // selectFirst();
+            // for(let i = 0; i < select.length; i++) {
+            //     select[i].addEventListener('click',selects);
+            // }
+            // body.addEventListener('click',hideSelect);
 
         </script>
     </body>
