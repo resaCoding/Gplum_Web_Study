@@ -363,9 +363,17 @@ body {
   display: block;
 }
 
-.tabcon > p {
-  text-align: center;
-  line-height: 69vh;
+.notice-sentence {
+  display: flex;
+  height: 100%;
+  font-size: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.notice-sentence p {
+  margin: 6px 0;
 }
 
 .class-title {
@@ -646,10 +654,12 @@ body {
   font-size: 18px;
   padding: 0 32px 0 10px;
   letter-spacing: -0.72px;
-  line-height: 40px;
+  line-height: 38px;
   position: relative;
   display: block;
   cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .selected-option::after {
@@ -662,16 +672,19 @@ body {
   right: 0;
   top: 0;
   border-radius: 0 4px 4px 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
+.selected-option.wd-97 {
+  width: 97px;
+}
+.selected-option.wd-112 {
+  width: 112px;
+}
 .selected-option.wd-119 {
   width: 119px;
 }
-.selected-option.wd-201 {
-  width: 201px;
+.selected-option.wd-189 {
+  width: 189px;
 }
 
 .select {
@@ -683,6 +696,7 @@ body {
   border: 1px solid #ccc;
   padding: 4px;
   left: 0;
+  top: 44px;
   display: none;
 }
 
@@ -702,6 +716,7 @@ body {
   border: none;
   width: 100%;
   text-align: left;
+  max-width: 371px;
 }
 
 .select li button:hover {
@@ -721,12 +736,25 @@ body {
 }
 
 .btn-orange {
-  background: #ea7851;
-  color: #fff;
+  background: #ea7851 !important;
+  color: #fff !important;
 }
 
 .btn-orange-border {
-  border: 1px solid #ea7851;
+  border: 1px solid #ea7851 !important;
+  color: #ea7851 !important;
+}
+
+.btn-lightorange {
+  background: #ffe8e0 !important;
+  color: #ea7851 !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.orange {
   color: #ea7851;
 }
 
@@ -739,35 +767,35 @@ body {
 */
 
 .E_3 {
-  background: #fa4646;
+  background: #fa4646 !important;
 }
 
 .E_4 {
-  background: #ff7b42;
+  background: #ff7b42 !important;
 }
 
 .E_5 {
-  background: #ffad33;
+  background: #ffad33 !important;
 }
 
 .E_6 {
-  background: #96cc29;
+  background: #96cc29 !important;
 }
 
 .M_1 {
-  background: #08ccbf;
+  background: #08ccbf !important;
 }
 
 .M_2 {
-  background: #00a3cc;
+  background: #00a3cc !important;
 }
 
 .M_3 {
-  background: #0884cc;
+  background: #0884cc !important;
 }
 
 .H_1 {
-  background: #9362f5;
+  background: #9362f5 !important;
 }
 
 /*# sourceMappingURL=common.css.map */

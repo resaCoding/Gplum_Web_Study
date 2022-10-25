@@ -2,6 +2,7 @@
 .myClass-wrap {
   height: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .myClass-wrap::-webkit-scrollbar {
@@ -259,8 +260,11 @@
   bottom: -4px;
 }
 .plus-search {
-  display: flex;
+  display: none;
   align-items: center;
+}
+.plus-search.active {
+  display: flex;
 }
 .plus-search select {
   height: 100%;
@@ -279,75 +283,108 @@
 .plus-bottom {
   margin-top: 20px;
   height: 469px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  display: none;
+}
+.plus-bottom.active {
+  display: block;
+  position: relative;
 }
 .plus-bottom table {
   width: 100%;
   text-align: center;
 }
-.plus-bottom table thead tr {
+.table-header tr {
   position: sticky;
   top: 0;
+  border-top: 2px solid #664e3d;
+  border-bottom: 2px solid #b9a89c;
 }
-.plus-bottom table th {
+.table-header th {
   height: 40px;
   line-height: 40px;
-  background: #eee;
+  background: #eae0d9;
   position: relative;
-  border-left: 1px solid #eee;
-  color: #666;
+  border-left: 1px solid #d6c2b4;
+  color: #664e3d;
+  font-size: 18px;
+  font-weight: 400;
 }
-.plus-bottom table th::after {
-  content: "";
-  position: absolute;
-  left: -1px;
-  top: 0;
-  width: calc(100% + 1px);
-  height: 100%;
-  border-top: 3px solid #000;
+.table-header th:first-child {
+  border-left: 0;
 }
-.plus-bottom table td {
-  height: 50px;
-  line-height: 1.5;
+
+.table-bottom-wrap {
+  height: calc(100% - 42px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.table-bottom-wrap::-webkit-scrollbar {
+  width: 10px;
+  background: #fff;
+}
+
+.table-bottom-wrap::-webkit-scrollbar-track {
+  margin-top: 10px;
+  background: #eeeeee;
+  border-radius: 5px;
+}
+
+.table-bottom-wrap::-webkit-scrollbar-thumb {
+  background: #aaaaaa;
+  border-radius: 5px;
+}
+
+.table-bottom td {
+  height: 60px;
+  line-height: 1.45;
   border: 1px solid #eee;
-  padding: 0 5px;
+  padding: 9px 5px 10px 10px;
   vertical-align: middle;
   text-align: left;
+  font-size: 20px;
+  letter-spacing: -0.8px;
 }
-.plus-bottom table td > span {
+.table-bottom td .badge {
   display: block;
   text-align: center;
-  width: 70px;
-  border-radius: 5px;
+  width: 64px;
+  line-height: 26px;
+  border-radius: 12px;
   margin: 0 auto;
   color: #fff;
+  font-size: 18px;
 }
-.plus-bottom table td > span.M_1_2 {
-  background: #87cc39;
+.table-bottom td p {
+  font-size: 18px;
+  color: #ea7851;
+  letter-spacing: -0.72px;
 }
-.plus-bottom table td > span.M_2_1 {
-  background: #ff7847;
-}
-.plus-bottom table td:last-child {
+.table-bottom td:first-child, .table-bottom td:last-child {
   padding: 0;
   text-align: center;
 }
-.plus-bottom table td button {
-  width: 120px;
-  height: 40px;
-  border-radius: 5px;
-  line-height: 41px;
-  background: #dff7ff;
+.table-bottom td .btn span {
+  color: inherit;
 }
-.plus-bottom table td button.wait {
-  background: #ffdfdf;
+
+.scroll .table-bottom-wrap {
+  border-right: 4px solid transparent;
 }
-.plus-bottom table td button.study {
-  background: #ff5656;
+.scroll .table-bottom {
+  width: calc(100% + 14px);
 }
-.plus-bottom table td button span {
-  font-weight: bold;
+.scroll .table-bottom td:last-child {
+  padding-right: 14px;
+}
+.scroll.plus-bottom::after {
+  content: '';
+  width: 1px;
+  height: calc(100% - 44px);
+  background: #eee;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .class-video {
