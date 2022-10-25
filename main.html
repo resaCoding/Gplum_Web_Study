@@ -576,6 +576,12 @@
                 clickedTab.classList.add('active')
                 plusSearch[plusIndex].classList.add('active')
                 plusBottom[plusIndex].classList.add('active')
+
+                let tableBottom = plusBottom[plusIndex].querySelector('.table-bottom')
+                if (tableBottom)
+                if(tableBottom.offsetHeight > 427) {
+                    plusBottom[plusIndex].classList.add('scroll')
+                }
             }
 
             for (i = 0; i < plusBtn.length; i++) {

@@ -17,7 +17,7 @@
             <div class="class-header">
                 <div class="class-title">
                     <p class="info">
-                        <span class="grade">중2-1</span><span class="book">개념서</span>
+                        <span class="grade M_1">중 3-1</span><span class="book">개념서</span>
                         <span class="unit">Ⅱ. 일차부등식</span>
                     </p>
                     <h1>3. 일차부등식의 활용(2)</h1>
@@ -27,7 +27,7 @@
                     <ul>
                         <li class="concept">
                             <button>개념 강의 보기</button>
-                            <button class="btn-list">▼</button>
+                            <button class="btn-list"></button>
                             <ul class="class-list">
                                 <li><a href="#">일차부등식의 활용 - 평균/도형 [개념]</a></li>
                                 <li><a href="#">일차부등식의 활용 - 평균/도형 [예제]</a></li>
@@ -451,12 +451,11 @@
             </div>
         </div>
         <script>
+            
             let ListBtn = document.querySelector('.btn-list')
-
-            function listOn() {
-                let list = document.querySelector('.class-list')
-                list.classList.toggle('active')
-                ListBtn.classList.toggle('active')
+            function listOn(){
+                let concept = document.querySelector('.concept')
+                concept.classList.toggle('active')
             }
             ListBtn.addEventListener('click', listOn)
 

@@ -1,5 +1,6 @@
 body {
-  height: 100vh;
+  height: 800px;
+  width: 1280px;
   background: #f7f3f0;
 }
 
@@ -377,31 +378,46 @@ body {
 }
 
 .class-title {
-  background: #0087b8;
+  background:#057064;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 64px;
   padding: 0 20px;
   color: #fff;
 }
 
 .class-title h1 {
   text-align: center;
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 60px;
+  line-height: 64px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  color: #fff;
+  letter-spacing: -1.12px;
+}
+
+.class-title a {
+  display: flex;
+  width: auto;
+  height: 24px;
+  background: url(/img/out_icon.png) no-repeat right;
+  padding-right: 34px;
+  font-size: 18px;
+  letter-spacing: -0.72px;
+  align-items: center;
 }
 
 .class-nav {
-  background: #173e52;
+  background: #eae0d9;
   display: flex;
   justify-content: space-between;
   width: 100%;
+  padding: 0 20px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.24);
 }
 
 .class-nav > ul {
@@ -412,49 +428,92 @@ body {
 }
 
 .class-nav > ul > li button {
-  width: 150px;
-  height: 40px;
-  border: 1px solid #000;
-  background: #0f567a;
+  width: 207px;
+  height: 64px;
+  border-right: 1px solid #b9a89c;
+  background: #a37d62;
   color: #fff;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 22px;
+  letter-spacing: -0.88px;
 }
 
 .class-nav > ul > li.playing button {
-  background: #ff595a;
+  background: #664e3d;
 }
 
 .class-nav > ul > li.lock button {
-  background: #153749;
-  color: #4c6674;
+  background: #d6c2b4;
+  color: #efe8e4;
   cursor: default;
+  position: relative;
+}
+
+.class-nav > ul > li.active button {
+  background: #ea7851;
+}
+
+.class-nav > ul > li.lock button::after {
+  content: '';
+  width: 19px;
+  height: 24px;
+  background: url(/img/lock_icon.png) no-repeat;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .class-list {
   position: absolute;
   left: 0;
-  top: 40px;
+  top: 64px;
   background: #666;
   z-index: 2;
-  border-bottom: 1px solid #fff;
+  border-top: 2px solid #ea7851;
   display: none;
-  width: 420px;
+  width: 500px;
+  background: #fff;
+  border-radius: 0 0 7px 7px;
+  overflow: hidden;
 }
 
-.class-list.active {
+.active .class-list {
   display: block;
 }
 
 .class-list li a {
-  display: block;
-  padding: 10px 30px 10px 10px;
-  color: #fff;
-  border: 1px solid #fff;
-  border-bottom: none;
+  display: flex;
+  height: 60px;
+  padding-left: 20px;
+  align-items: center;
+  font-size: 20px;
+  letter-spacing: -0.8px;
+  border-bottom: 1px solid #eee;
 }
 
 .class-list li.lock a {
   cursor: default;
-  background: #969696;
+  background: #f9f9f9;
+  color: #aaa;
+  position: relative;
+}
+
+.class-list li.lock a::after {
+  content: '';
+  width: 32px;
+  height: 32px;
+  background: url(/img/lock_icon_s.png) no-repeat center #aaa;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+.class-list li:last-child a {
+  border-bottom: 0;
 }
 
 .text-left {
@@ -479,16 +538,18 @@ body {
 }
 
 .btn-list {
-  width: 30px !important;
-  height: 30px !important;
+  width: 17px !important;
+  height: 9px !important;
   position: absolute;
-  border-radius: 50%;
-  right: 5px;
-  top: 5px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none !important;
+  background: url(/img/open_class.png) no-repeat !important;
 }
 
-.btn-list.active {
-  transform: rotate(180deg);
+.active .btn-list {
+  transform: rotate(180deg) translateY(50%);
 }
 
 .btn-next {
@@ -502,11 +563,7 @@ body {
 
 .concept {
   position: relative;
-}
-
-.concept button:not(.btn-list) {
-  width: 170px !important;
-  padding-right: 20px;
+  border-left: 1px solid #b9a89c;
 }
 
 .popup {
@@ -595,6 +652,11 @@ body {
   border: 1px solid #000;
 }
 
+.info {
+  display: flex;
+  align-items: center;
+}
+
 .info span:not(.unit) {
   display: inline-block;
   padding: 0 10px;
@@ -613,6 +675,14 @@ body {
   /*나의 강의실 교재 학습 교재 뱃지 배경색*/
   background: #034037;
   /*-----------------------------------*/
+}
+
+.info .unit {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.8px;
+  margin-left: 10px;
 }
 
 .filter {
@@ -724,6 +794,29 @@ body {
   color: #fff;
 }
 
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label {
+  border: 0;
+  background: url(/img/checkbox.png) no-repeat center #ea7851 !important;
+}
+
+input[type="checkbox"]:disabled + label {
+  background: #eee;
+  cursor: default;
+}
+
 .btn {
   min-width: 100px;
   height: 40px;
@@ -738,6 +831,12 @@ body {
 .btn-orange {
   background: #ea7851 !important;
   color: #fff !important;
+}
+
+.btn-orange:disabled {
+  background: #ea7851 !important;
+  color: rgba(255, 255, 255, 0.4) !important;
+  cursor: default;
 }
 
 .btn-orange-border {

@@ -12,53 +12,21 @@
     </head>
     <body>
         <div id="root">
-            <div class="modal modal-bookmark">
-                <div class="bookmark-header">
-                    북마크 저장하기
-                    <button>X</button>
-                </div>
-                <div class="bookmark-contents">
-                    <p>시간 <input type="text"></p>
-                    <p>내용 <input type="text" placeholder="내용을 입력하세요. (최대 20자까지 가능)" maxlength="20"></p>
-                </div>
-                <div class="bookmark-footer">
-                    <button>저장하기</button>
-                </div>
-            </div>
-            <div class="modal modal-wrap">
-                <div class="modal modal-quiz">
-                    <div class="quiz-header">
-                        <img src="" alt="퀴즈로고">
-                        <button>X</button>
-                    </div>
-                    <div class="quiz-content">
-                        <img src="" alt="이미지 문제">
-                        <!-- <p>텍스트 문제</p> -->
-                        <div class="quiz-answer">
-                            <button>O</button>
-                            <button>X</button>
-                            <!-- <div>
-                                <input type="text"><span>단위</span>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             <div class="class-header">
                 <div class="class-title">
                     <p class="info">
-                        <span class="grade">중2-1</span><span class="book">개념서</span>
+                        <span class="grade M_1">중 3-1</span><span class="book">개념서</span>
                         <span class="unit">Ⅱ. 일차부등식</span>
                     </p>
                     <h1>3. 일차부등식의 활용(2)</h1>
                     <a href="main.html">나가기</a>
                 </div>
-        
                 <div class="class-nav">
                     <ul>
                         <li class="playing concept">
                             <button>개념 강의 보기</button>
-                            <button class="btn-list">▼</button>
+                            <button class="btn-list"></button>
                             <ul class="class-list">
                                 <li><a href="#">일차부등식의 활용 - 평균/도형 [개념]</a></li>
                                 <li><a href="#">일차부등식의 활용 - 평균/도형 [예제]</a></li>
@@ -76,8 +44,7 @@
                 </div>
             </div>
             <div class="class-video">
-                <p>영상 제목</p>
-                <button>▶</button>
+                <button class="play"></button>
                 <video src=""></video>
                 <div class="class-control">
                     <div class="control-top">
@@ -89,91 +56,133 @@
                     </div>
                     <div class="control-bottom">
                         <div>
-                            <button class="btn-play">play</button>
+                            <button class="btn-play">
+                                <img src="/img/control_play.png" alt="재생 버튼">
+                            </button>
+                            <button class="btn-volume">
+                                <img src="/img/control_volume.png" alt="볼륨 버튼">
+                            </button>
                             <div>
-                                <button>볼륨</button>
-                                <input type="range">
+                                <input type="range" class="volune-range">
+                                <span></span>
                             </div>
-                            <p>
-                                <span>0:57</span>/<span>3:35</span>
+                            <p class="control-time">
+                                <span>0:57</span> / <span>3:35</span>
                             </p>
                             <button class="btn-speed">
-                                재생속도 <span>1</span>x
+                                재생속도 <span>x1</span>
                             </button>
-                            <div class="control-speed">
-                                <p>재생속도</p>
-                                <div>
-                                    <div class="dot"></div>
-                                    <p>0.8x</p>
+                            <div class="control-speed active">
+                                <div class="head">재생속도</div>
+                                <div class="body">
+                                    <p>0.8 x</p>
+                                    <p class="active">1.0 x (기본)</p>
+                                    <p>1.2 x</p>
+                                    <p>1.5 x</p>
                                 </div>
-                                <div>
-                                    <div class="dot active"></div>
-                                    <p>1x(기본)</p>
-                                </div>
-                                <div>
-                                    <div class="dot"></div>
-                                    <p>1.2x</p>
-                                </div>
-                                <div>
-                                    <div class="dot"></div>
-                                    <p>1.5x</p>
-                                </div>
-                                <span class="line"></span>
                             </div>
                         </div>
                         <div>
-                            <button class="btn-favorite">즐겨찾기</button>
-                            <button class="btn-bookmark">북마크</button>
-                            <button class="btn-full">전체화면</button>
-                            <button class="btn-next">다음 단계</button>
+                            <button class="btn-favorite">
+                                <img src="/img/control_fav.png" alt="즐겨찾기">
+                            </button>
+                            <button class="btn-bookmark">
+                                <img src="/img/control_bookmark.png" alt="북마크">
+                            </button>
+                            <button class="btn-full">
+                                <img src="/img/control_full.png" alt="전체화면">
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="class-bookmark">
                 <button>
-                    <span>◀</span>
+                    <span>
+                        <img src="/img/nav_arrow.png" alt="북마크 열기">
+                    </span>
                 </button>
-                <h1>
-                    북마크 목록
+                <div class="bookmark-top">
                     <div>
-                        <input type="checkbox">
-                        <span>전체선택</span>
+                        <img src="/img/class_bookmark.png" alt="북마크">
+                        <p>북마크</p>
                     </div>
-                </h1>
+                    <div class="bookmark-top-check">
+                        <input type="checkbox" id="checkAll">
+                        <label for="checkAll"></label>
+                        <span>전체 선택</span>
+                    </div>
+                </div>
                 <div class="bookmark-list">
                     <div class="bookmark-item">
                         <p class="bookmark-title">일차부등식의 활용 - 평균/도형 [개념]
                         </p>
                         <p class="bookmark-content">
-                            <input type="checkbox">
+                            <input type="checkbox" id="bookmark1">
+                            <label for="bookmark1"></label>
                             <button class="bookmark-time">[01:14]</button>
                             <span>평균</span>
                         </p>
                         <p class="bookmark-content">
-                            <input type="checkbox">
+                            <input type="checkbox" id="bookmark2">
+                            <label for="bookmark2"></label>
                             <button class="bookmark-time">[01:14]</button>
-                            <span>평균</span>
+                            <span>도형</span>
+                        </p>
+                        <p class="bookmark-content">
+                            <input type="checkbox" id="bookmark3">
+                            <label for="bookmark3"></label>
+                            <button class="bookmark-time">[01:14]</button>
+                            <span>예제 02</span>
                         </p>
                     </div>
                     <div class="bookmark-item">
-                        <p class="bookmark-title">일차부등식의 활용 - 평균/도형 [개념]
+                        <p class="bookmark-title">일차부등식의 활용 - 최대 개수/유리한 방법 [개념]
                         </p>
                         <p class="bookmark-content">
-                            <input type="checkbox">
+                            <input type="checkbox" id="bookmark1">
+                            <label for="bookmark1"></label>
                             <button class="bookmark-time">[01:14]</button>
                             <span>평균</span>
                         </p>
                         <p class="bookmark-content">
-                            <input type="checkbox">
+                            <input type="checkbox" id="bookmark2">
+                            <label for="bookmark2"></label>
+                            <button class="bookmark-time">[01:14]</button>
+                            <span>도형</span>
+                        </p>
+                        <p class="bookmark-content">
+                            <input type="checkbox" id="bookmark3">
+                            <label for="bookmark3"></label>
+                            <button class="bookmark-time">[01:14]</button>
+                            <span>예제 02</span>
+                        </p>
+                    </div>
+                    <div class="bookmark-item">
+                        <p class="bookmark-title">일차부등식의 활용 - 최대 개수/유리한 방법 [예제]
+                        </p>
+                        <p class="bookmark-content">
+                            <input type="checkbox" id="bookmark1">
+                            <label for="bookmark1"></label>
                             <button class="bookmark-time">[01:14]</button>
                             <span>평균</span>
+                        </p>
+                        <p class="bookmark-content">
+                            <input type="checkbox" id="bookmark2">
+                            <label for="bookmark2"></label>
+                            <button class="bookmark-time">[01:14]</button>
+                            <span>도형</span>
+                        </p>
+                        <p class="bookmark-content">
+                            <input type="checkbox" id="bookmark3">
+                            <label for="bookmark3"></label>
+                            <button class="bookmark-time">[01:14]</button>
+                            <span>예제 02</span>
                         </p>
                     </div>
                 </div>
                 <div class="bookmark-bottom">
-                    <button class="reset">북마크 초기화</button>
-                    <button class="delete disabled" disabled>선택 항목 삭제</button>
+                    <button class="btn-orange" disabled>선택 항목 삭제</button>
                 </div>
             </div>
         </div>
@@ -181,9 +190,8 @@
 
             let ListBtn = document.querySelector('.btn-list')
             function listOn(){
-                let list = document.querySelector('.class-list')
-                list.classList.toggle('active')
-                ListBtn.classList.toggle('active')
+                let concept = document.querySelector('.concept')
+                concept.classList.toggle('active')
             }
             ListBtn.addEventListener('click', listOn)
 
@@ -193,18 +201,6 @@
                 list.classList.toggle('active')
             }
             speedBtn.addEventListener('click', speedOn)
-
-            let speedDot = document.querySelectorAll('.dot')
-            function dotOn(dotClick){
-                let clickedDot = dotClick.currentTarget;
-                for (let i = 0; i < speedDot.length; i++) {
-                    speedDot[i].classList.remove('active');
-                }
-                clickedDot.classList.add('active')
-            }
-            for(i=0; i<speedDot.length; i++) {
-                speedDot[i].addEventListener('click', dotOn)
-            }
 
             //북마크 열기
             let bookBtn = document.querySelector('.class-bookmark>button')
