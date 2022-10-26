@@ -536,11 +536,11 @@
   bottom: 10px;
 }
 .class-concept {
-  padding: 30px;
-  height: calc(100% - 100px);
+  padding: 20px;
+  height: calc(100% - 128px);
   position: relative;
   overflow: hidden;
-  background: #0f2029;
+  background: #3d362f;
 }
 .class-concept .btn-next {
   position: absolute;
@@ -592,7 +592,7 @@
 
 .bookmark-item {
   margin-bottom: 7px;
-  padding: 20px 20px 0;
+  padding: 20px 10px 0 20px;
 }
 
 .bookmark-title {
@@ -625,34 +625,67 @@
   color: #888;
   margin: 0 6px 0 10px;
 }
+
 .bookmark-header {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
-  background: yellowgreen;
+  align-items: center;
+  padding: 0 15px;
+  height: 55px;
+  border-bottom: 2px solid #eee;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.8px;
+}
+
+.bookmark-header button {
+  background: url(/img/bookmark_close.png) no-repeat;
+  width: 15px;
+  height: 15px;
 }
 
 .bookmark-contents {
-  text-align: center;
-  padding: 20px 0 10px;
+  padding: 0 20px 30px;
+  height: 201px;
 }
+
 .bookmark-contents p {
-  margin: 10px 0;
+  font-size: 16px;
+  letter-spacing: -0.64px;
+  color: #666;
+  padding-top: 20px;
+  line-height: 1.32;
 }
+
 .bookmark-contents p input {
-  width: 250px;
-  height: 30px;
-  border: 1px solid #ccc;
+  display: block;
+  width: 100%;
+  margin-top: 5px;
 }
+
 .bookmark-footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  height: 30px;
-  background: yellowgreen;
-  margin: 0 auto;
+  width: 100%;
+  height: 56px;
 }
+
+.bookmark-footer button {
+  width: 100%;
+  height: 100%;
+  background: #ea7851;
+  color: #fff;
+  border-top: 2px solid #e85632;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.8px;
+}
+
+.bookmark-footer button:disabled {
+  color: rgba(255, 255, 255, 0.4);
+}
+
 .bookmark-bottom {
   width: 100%;
   height: 80px;
@@ -766,10 +799,25 @@
   color: inherit;
 }
 
-.control-bottom > div > div {
+.control-bottom > div > div:not(.control-speed) {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.control-bottom > div > div span {
+  height: 8px;
+  border-radius: 5px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.control-bottom .btn-next {
+  margin-right: -10px !important;
 }
 
 .btn-volume {
@@ -822,11 +870,11 @@
   text-align: left;
   line-height: 21px;
   letter-spacing: -0.72px;
-  display: none !important;
+  display: none;
 }
 
 .control-speed.active {
-  display: flex !important;
+  display: flex;
 }
 
 .control-speed .head {
@@ -873,16 +921,20 @@
   background: rgba(0, 0, 0, 0.5);
 }
 .modal-bookmark {
-  width: 400px;
-  height: 200px;
+  width: 360px;
+  height: 312px;
   background: #fff;
+  border-radius: 7px;
+  overflow: hidden;
 }
 .modal-quiz {
-  width: 500px;
-  height: 420px;
-  background: #94d6db;
+  width: auto;
+  height: auto;
+  background: #ffe8e0;
   padding: 10px;
-  border-radius: 30px;
+  border-radius: 24px;
+  left: calc(50% - 3px);
+  top: calc(50% + 25px);
 }
 .modal-message {
   background: #fff;
@@ -893,13 +945,19 @@
 
 .quiz-header > * {
   position: absolute;
-  top: 0;
 }
 .quiz-header img {
-  left: 0;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 .quiz-header button {
-  right: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: url(/img/quiz_close.png) no-repeat center #ea7851;
+  right: -10px;
+  top: -10px;
 }
 .quiz-content {
   width: 100%;
@@ -907,41 +965,138 @@
   background: #fff;
   margin: 0 auto;
   overflow: hidden;
-  border: 2px dashed rgba(0, 185, 168, 0.8196078431);
+  border: 3px dashed #ea7851;
   border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 15px;
+  padding: 47px 27px 17px;
 }
+
+.quiz-content > p {
+  width: 547px;
+  min-height: 240px;
+}
+
+.quiz-content > img {
+  display: block;
+  width: 547px;
+  height: 240px;
+  background: rgba(255, 0, 0, 0.3);
+}
+
 .quiz-answer {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 20px;
   width: 100%;
+  position: relative;
 }
+
 .quiz-answer button {
-  width: 49%;
+  width: 174px;
+  height: 64px;
+  border-radius: 8px;
+  background: #f6f6f6;
+  border: 2px solid #ccc;
+  margin: 0 2px;
+}
+
+.quiz-answer button .correct, .quiz-answer button .wrong {
+  display: none;
+}
+
+.quiz-answer button.correct {
+  border-color: #00a3cc;
+  background: #dcf4fa;
+}
+
+.quiz-answer button.correct .correct {
+  display: inline-block;
+}
+
+.quiz-answer button.wrong {
+  border-color: #fa4646;
+  background: #ffe0e0;
+}
+
+.quiz-answer button.wrong .wrong {
+  display: inline-block;
+}
+
+.quiz-answer button.correct .common, .quiz-answer button.wrong .common {
+  display: none;
+}
+
+.quiz-answer .answer {
+  height: 52px;
+  position: absolute;
+  top: -42px;
+  font-size: 24px;
+  letter-spacing: -0.96px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  line-height: 40px;
+  display: none;
+}
+
+.quiz-answer .answer.active {
+  display: block;
+}
+
+.quiz-answer .answer span {
+  position: absolute;
+  width: 93px;
   height: 40px;
-  border-radius: 10px;
-  background: #66f;
-  font-size: 30px;
+  border-radius: 20px;
+  border: 2px solid #ddd;
+  background: #fff;
+  right: -97px;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #00a3cc;
+  letter-spacing: -0.48px;
+}
+
+.quiz-answer .answer span img {
+  margin-right: 6px;
+}
+
+.quiz-answer .answer.correct {
+  width: 140px;
+  background: url(/img/quiz_correct.png) no-repeat;
+}
+
+.quiz-answer .answer.wrong {
+  width: 180px;
+  background: url(/img/quiz_wrong.png) no-repeat;
+}
+
+.quiz-answer input { 
+  width: 240px;
+  height: 64px;
+  border: 2px solid #ccc;
+  font-size: 24px;
+  letter-spacing: -0.96px;
+  padding-left: 20px;
 }
 
 .concept-left {
-  width: 400px;
+  width: 420px;
   text-align: center;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 .concept-left .scroll-y {
   width: 100%;
-  height: auto;
-  margin-bottom: 30px;
+  height: calc(100% - 130px);
+  border-right: 5px solid #fff;
 }
 .concept-left .scroll-y > p {
   margin-top: 20px;
@@ -964,7 +1119,14 @@
   font-size: 20px;
   background: #fff;
 }
-.concept-left table thead tr {
+
+.header-table {
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+}
+
+.header-table tr {
   position: sticky;
   top: 0;
   z-index: 1;
@@ -976,71 +1138,103 @@
   height: 100%;
 }
 .concept-left table tr.checked {
-  background: #e6f7fa;
-}
-.concept-left table tr.wrong {
-  background: #ffe0e0;
-}
-.concept-left table tr.wrong td:first-child button {
-  position: relative;
+  background: #ffe8e0;
 }
 .concept-left table tr.wrong td:first-child button::after {
-  content: "✔";
-  position: absolute;
-  top: 0;
-  left: 14px;
-  font-size: 40px;
-  color: red;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.concept-left table tr.correct td:first-child button {
-  position: relative;
-}
-.concept-left table tr.correct td:first-child button::after {
-  content: "○";
-  position: absolute;
-  top: 2px;
-  left: 4px;
-  font-size: 78px;
-  color: red;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.concept-left table tr th {
-  padding: 15px 0;
-  background: #2dd6e2;
-  position: relative;
-}
-.concept-left table tr th:first-child {
-  width: 56px;
-}
-.concept-left table tr th::after {
   content: "";
   position: absolute;
-  left: -1px;
-  top: 0;
-  width: calc(100% - 1px);
-  height: calc(100% - 1px);
-  border: 1px solid #000;
+  top: 50%;
+  left: 50%;
+  width: 45px;
+  height: 32px;
+  background: url(/img/check_wrong.png) no-repeat;
+  transform: translate(-50%, -50%);
+}
+.concept-left table tr.correct td:first-child button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  background: url(/img/check_correct.png) no-repeat;
+  transform: translate(-50%, -50%);
+}
+.header-table th {
+  height: 50px;
+  line-height: 48px;
+  background: #ea7851;
+  position: relative;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: -0.72px;
+  border-bottom: 2px solid #e85632;
+}
+.concept-left table tr th:first-child:after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.4);
 }
 .concept-left table tr td {
-  padding: 10px 15px;
-  border: 1px solid #000;
+  border-bottom: 1px solid #eee;
+  height: 50px;
+  padding: 5px 0;
+  vertical-align: middle;
 }
+
+.concept-left table tr td:first-child {
+  border-right: 1px solid #ddd;
+  height: 100%;
+  padding: 0;
+  font-weight: 600;
+}
+
+.concept-left table tr td:first-child button {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 18px;
+  color: #222;
+  font-weight: 600;
+  position: relative;
+}
+
+.concept-left table tr td:last-child {
+  padding-right: 5px;
+}
+
 .concept-left table tr td button {
-  margin: 0 5px;
-  font-size: 25px;
-  line-height: 25px;
+  margin: 0 15px;
+  font-size: 18px;
+  line-height: 1;
+  color: #aaa;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .concept-left table tr td button.checked {
-  color: red;
+  color: #fa4646;
+  font-weight: 600;
+  background: #fedada;
 }
-.concept-left table tr td button.watch {
+
+.concept-left table tr td button:first-child {
+  margin-left: 0;
+}
+
+.concept-left table tr td button:last-child {
+  margin-right: 0;
+}
+
+/* .concept-left table tr td button.watch {
   width: 100px;
   height: 30px;
   background: #ffcfc9;
@@ -1067,97 +1261,132 @@
 }
 .concept-left table tr td .regist + input[type=file] {
   display: none;
-}
+} */
 .concept-left table tr td input {
-  border: 1px solid #000;
-  margin-right: 5px;
-  width: 150px;
-  height: 30px;
-  text-align: center;
+  margin-right: 6px;
+  width: 200px;
 }
-.concept-left table tr td:first-child {
-  height: 100%;
-  padding: 0;
+
+.concept-left table tr td input + span {
+  color: #666;
+  font-size: 18px;
 }
-.concept-left table tr td:first-child button {
+
+.concept-footer {
+  height: 80px;
+  background: #eee;
   width: 100%;
-  height: 100%;
-  margin: 0;
-}
-.concept-submit {
-  width: 150px;
-  height: 30px;
-  background: crimson;
-  color: #fff;
-  flex-shrink: 0;
-}
-.concept-right {
-  margin-left: 90px;
-  width: calc(100% - 530px);
-  height: 100%;
-  position: relative;
-  padding: 20px;
-  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top: 1px solid #ddd;
+  border-radius: 0 0 16px 16px;
 }
-.concept-right.answer {
-  background: #f0f7fa;
+
+.concept-submit {
+  width: 110px;
+  height: 48px;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 500;
 }
-.concept-right.answer > div {
-  width: 100%;
+.concept-right {
+  margin-left: 20px;
+  width: 800px;
   height: 100%;
+  border-radius: 16px;
+  position: relative;
+  background: #fff;
 }
+
 .concept-right > div {
-  display: flex;
-  flex-direction: column;
+  width: 800px;
+  height: 100%;
+  padding: 30px 121.5px 20px 126.5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-right: 5px solid #fff;
+  border-radius: 16px;
 }
+
+.concept-right > div::-webkit-scrollbar {
+  width: 10px;
+  background: transparent;
+}
+
+.concept-right > div::-webkit-scrollbar-thumb {
+  background: #aaaaaa;
+  border-radius: 5px;
+}
+
+.concept-right > div::-webkit-scrollbar-track {
+  margin: 10px 0;
+  background: #eeeeee;
+  border-radius: 5px;
+}
+
+
 .concept-right > button {
-  font-size: 50px;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  line-height: 0;
-  padding-bottom: 7px;
-  background: #fff;
+  width: 48px;
+  height: 48px;
+  background: url(/img/check_arrow.png);
   border-radius: 50%;
+  transform: translateY(-50%);
 }
 .concept-right > button:first-child {
-  left: -40px;
-  padding-right: 2px;
+  left: 20px;
 }
 .concept-right > button:nth-child(2) {
-  right: -40px;
-  padding-left: 3px;
+  right: 20px;
+  transform: rotate(180deg) translateY(50%);
 }
 .concept-header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 30px;
+  align-items: center;
+  margin-bottom: 18px;
 }
-.concept-header .mutiple {
+.concept-header .multiple {
   flex-shrink: 0;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.96px;
+  color: #664e3d;
+  line-height: 1.25;
 }
+
 .concept-header div {
   display: flex;
   align-items: flex-end;
 }
+
 .concept-header div span {
   margin-right: 50px;
 }
+
 .concept-header .num {
-  font-size: 30px;
+  font-size: 36px;
   font-weight: bold;
   margin-right: 5px;
-  color: darkolivegreen;
+  color:#057064;
+  letter-spacing: -1.44px;
 }
+
+.concept-header .unit {
+  font-size: 20px;
+  letter-spacing: -0.8px;
+  color: #444;
+  line-height: 1.5;
+}
+
 .concept-content {
   width: 100%;
   height: auto;
@@ -1169,33 +1398,45 @@
 .concept-answer {
   margin-top: 20px;
 }
-.concept-answer ul {
-  margin-left: 10px;
-}
 .concept-answer ul li {
   margin: 15px 0;
 }
 .concept-answer button {
-  font-size: 20px;
-  display: flex;
+  min-height: 26px;
+  border-radius: 50%;
+  display: inline-flex;
   align-items: center;
+  justify-content: flex-start;
+}
+.concept-answer button span {
+  color: #aaa;
+  line-height: 1;
+  font-size: 18px;
+  z-index: 1;
+  margin-right: 5px;
+  flex-shrink: 0;
 }
 .concept-answer button.checked {
   position: relative;
 }
+
+.concept-answer button.checked span {
+  color: #fa4646;
+  font-weight: 600;
+}
+
 .concept-answer button.checked::before {
-  content: "✔";
+  content: '';
+  width: 26px;
+  height: 26px;
+  background: #fedada;
+  border-radius: 50%;
   position: absolute;
-  color: red;
-  font-size: 30px;
-  top: -11px;
-  left: 0px;
+  left: -1px;
+  top: 0;
 }
 .concept-answer div {
   text-align: right;
-}
-.concept-answer div input {
-  border: 1px solid #000;
 }
 .concept-answer div.concept-explain {
   text-align: left;
@@ -1263,11 +1504,6 @@
 .concept-OX button.checked {
   background: skyblue;
   color: #fff;
-}
-.concept-top {
-  background: #fff;
-  padding: 10px;
-  overflow-y: auto;
 }
 
 .fraction {
@@ -1811,9 +2047,7 @@
   height: 520px;
 }
 .message-contents table input {
-  border: 1px solid #ccc;
   width: 100%;
-  padding: 5px;
 }
 .message-contents table select {
   padding: 5px;
@@ -1897,5 +2131,3 @@
 .display-block {
   display: block !important;
 }
-
-/*# sourceMappingURL=style.css.map */

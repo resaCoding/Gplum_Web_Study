@@ -14,7 +14,19 @@ body {
 }
 
 .scroll-y::-webkit-scrollbar {
-  display: none;
+  width: 10px;
+  background: #fff;
+}
+
+.scroll-y::-webkit-scrollbar-thumb {
+  background: #aaaaaa;
+  border-radius: 5px;
+}
+
+.scroll-y::-webkit-scrollbar-track {
+  margin: 10px 0;
+  background: #eeeeee;
+  border-radius: 5px;
 }
 
 .main-left {
@@ -430,7 +442,7 @@ body {
 .class-nav > ul > li button {
   width: 207px;
   height: 64px;
-  border-right: 1px solid #b9a89c;
+  border-right: 1px solid #84654f;
   background: #a37d62;
   color: #fff;
   text-align: left;
@@ -448,10 +460,12 @@ body {
   color: #efe8e4;
   cursor: default;
   position: relative;
+  border-color: #b9a89c;
 }
 
 .class-nav > ul > li.active button {
   background: #ea7851;
+  border: 0;
 }
 
 .class-nav > ul > li.lock button::after {
@@ -553,12 +567,21 @@ body {
 }
 
 .btn-next {
-  width: 120px !important;
-  height: 50px !important;
-  background: #ff5656 !important;
-  border: 2px solid red !important;
+  width: auto !important;
+  height: 48px !important;
+  background: #ea7851 !important;
   color: #fff !important;
-  border-radius: 5px !important;
+  border-radius: 4px !important;
+  font-size: 20px;
+  letter-spacing: -0.8px;
+  padding: 0 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-next img {
+  margin-left: 10px;
 }
 
 .concept {
@@ -649,7 +672,6 @@ body {
 
 .date input {
   margin-left: 5px;
-  border: 1px solid #000;
 }
 
 .info {
@@ -817,6 +839,26 @@ input[type="checkbox"]:disabled + label {
   cursor: default;
 }
 
+input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 18px;
+  letter-spacing: -0.72px;
+  color: #444;
+}
+
+input[type="text"]:focus {
+  border-color: #ea7851;
+  outline: none !important;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
 .btn {
   min-width: 100px;
   height: 40px;
@@ -896,5 +938,3 @@ input[type="checkbox"]:disabled + label {
 .H_1 {
   background: #9362f5 !important;
 }
-
-/*# sourceMappingURL=common.css.map */

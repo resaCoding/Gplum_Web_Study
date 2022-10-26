@@ -58,19 +58,32 @@
                         <button class="checked">전체 O</button>
                         <button>전체 X</button>
                     </div> -->
-
-                    <div class="scroll-y">
+                    <div class="header-table">
                         <table>
+                            <colgroup>
+                                <col style="width: 70px;">
+                                <col style="width: auto;">
+                            </colgroup>
                             <thead>
                                 <tr>
                                     <th>번호</th>
                                     <th>나의 답</th>
                                 </tr>
                             </thead>
+                        </table>
+                    </div>
+                    <div class="scroll-y">
+                        <table>
+                            <colgroup>
+                                <col style="width: 70px;">
+                                <col style="width: auto;">
+                            </colgroup>
+                            <thead>
+                            </thead>
                             <tbody>
                                 <tr>
                                     <td>
-                                        <button class="number" value="01">01</button>
+                                        <button class="number" value="01">1</button>
                                     </td>
                                     <td>
                                         <button class="checked">①</button>
@@ -82,25 +95,31 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <button class="number" value="02">02</button>
+                                        <button class="number" value="02">2</button>
                                     </td>
                                     <td>
-                                        <button class="watch">보기</button>
-                                        <button class="fix">수정</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <button class="number" value="03">03</button>
-                                    </td>
-                                    <td>
-                                        <label class="regist" for="answer-register">답안 등록</label>
-                                        <input type="file" accept="image/*" capture="camera" id="answer-register">
+                                        <button>①</button>
+                                        <button>②</button>
+                                        <button>③</button>
+                                        <button>④</button>
+                                        <button>⑤</button>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <button class="number" value="04">04</button>
+                                        <button class="number" value="03">3</button>
+                                    </td>
+                                    <td>
+                                        <button>①</button>
+                                        <button>②</button>
+                                        <button>③</button>
+                                        <button>④</button>
+                                        <button>⑤</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button class="number" value="04">4</button>
                                     </td>
                                     <td>
                                         <button>①</button>
@@ -113,7 +132,7 @@
                                 <!-- 문제 틀렸을 때 -->
                                 <tr class="wrong">
                                     <td>
-                                        <button class="number" value="05">05</button>
+                                        <button class="number" value="05">5</button>
                                     </td>
                                     <td>
                                         <button>①</button>
@@ -126,7 +145,7 @@
                                 <!-- 문제 맞혔을 때 -->
                                 <tr class="correct">
                                     <td>
-                                        <button class="number" value="06">06</button>
+                                        <button class="number" value="06">6</button>
                                     </td>
                                     <td>
                                         <button>①</button>
@@ -138,7 +157,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <button class="number" value="07">07</button>
+                                        <button class="number" value="07">7</button>
                                     </td>
                                     <td>
                                         <button>①</button>
@@ -151,7 +170,7 @@
                                 <!-- 현재 문제 표시 -->
                                 <tr class="checked">
                                     <td>
-                                        <button class="number" value="08">08</button>
+                                        <button class="number" value="08">8</button>
                                     </td>
                                     <td>
                                         <button>①</button>
@@ -163,10 +182,10 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <button class="number" value="09">09</button>
+                                        <button class="number" value="09">9</button>
                                     </td>
                                     <td>
-                                        <input type="text"><span>(m²)</span>
+                                        <input type="text"><span>(m)</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -208,122 +227,22 @@
                                 </tr>
                             </tbody>
                         </table>
-
-                        <!-- 정답 확인 테이블 -->
-                        <!-- <table>
-                            <thead>
-                                <tr>
-                                    <th>번호</th>
-                                    <th>나의 답</th>
-                                    <th>정답</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <button>01</button>
-                                    </td>
-                                    <td>
-                                        <button class="checked">①</button>
-                                    </td>
-                                    <td><button>②</button></td>
-                                </tr>
-                            </tbody>
-                        </table> -->
-
-                        <!-- OX 테이블 -->
-                        <!-- <table>
-                            <thead>
-                                <tr>
-                                    <th>번호</th>
-                                    <th>채점 결과</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <button>01</button>
-                                    </td>
-                                    <td>
-                                        <button class="checked">O</button>
-                                        <button>X</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table> -->
-
-                        <!-- 플러스 학습 - 서술형 따라잡기 - 결과보기 -->
-                        <!-- <table>
-                            <colgroup>
-                                <col style="width: 16%"/>
-                                <col style="width: 28%"/>
-                                <col style="width: 28%"/>
-                                <col style="width: 28%"/>
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th>번호</th>
-                                    <th>나의 답</th>
-                                    <th>모범 답안</th>
-                                    <th>채점 결과</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <button>01</button>
-                                    </td>
-                                    <td>
-                                        <button class="watch">보기</button>
-                                    </td>
-                                    <td>
-                                        <button class="watch">보기</button>
-                                    </td>
-                                    <td>
-                                        <button>4</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table> -->
-
-                        <!-- 플러스 학습 - 서술형 따라잡기 - 결과보기 -->
-                        <!-- <div>
-                            <div class="narrative-add">
-                                <div class="narrative-title">
-                                    선생님 의견 <button>+</button>
-                                </div>
-                                <div class="narrative-box">
-                                    <p>의견~~</p>
-                                </div>
-                            </div>
-                            <div class="narrative-add">
-                                <div class="narrative-title">
-                                    첨부 파일 <button>+</button>
-                                </div>
-                                <ul class="narrative-box">
-                                    <li><button>강수학_서술형01.jpg</button></li>
-                                </ul>
-                            </div>
-                        </div> -->
-
-                        <!-- 플러스 학습 - 서술형 따라잡기 - 채점대기, 결과보기 -->
-                        <!-- <p>* 선생님이 채점을 완료하시면 모범 답안 및 채점 결과를 확인할 수 있습니다.</p> -->
                     </div>
-                    <button type="submit" class="concept-submit">답안 제출</button>
+                    <div class="concept-footer">
+                        <button type="submit" class="concept-submit btn-orange">답안 제출</button>
+                    </div>
                 </div>
-                <div class="float-left concept-right answer">
-                    <button>‹</button>
-                    <button>›</button>
+                <div class="float-left concept-right">
+                    <button></button>
+                    <button></button>
                     <div>
                         <div class="concept-top">
                             <div class="concept-header">
-                                <!-- 문제 여러개일 때 지문 -->
-                                <!-- <p class="mutiple"><img src="" alt=""></p> -->
+                                <p class="multiple">다음을 계산하시오.</p>
                                 <div>
-                                    <p class="num">08</p>
-                                    <span>문항 연계 정보</span>
+                                    <p class="num">12</p>
                                 </div>
-                                <p>일차부등식의 활용-유리한 방법</p>
+                                <p class="unit">덧셈의 계산 법칙</p>
                             </div>
                             <div class="concept-content">
                                 <img src="" alt="문제">
@@ -332,30 +251,30 @@
                                 <ul>
                                     <li>
                                         <button>
-                                            ①<img src="" alt="1번 선지">
+                                            <span>①</span><img src="" alt="1번 선지">
                                         </button>
 
                                     </li>
                                     <li>
                                         <button class="checked">
-                                            ②<img src="" alt="2번 선지">
+                                            <span>②</span><img src="" alt="2번 선지">
                                         </button>
 
                                     </li>
                                     <li>
                                         <button>
-                                            ③<img src="" alt="3번 선지">
+                                            <span>③</span><img src="" alt="3번 선지">
                                         </button>
                                     </li>
                                     <li>
                                         <button>
-                                            ④<img src="" alt="4번 선지">
+                                            <span>④</span><img src="" alt="4번 선지">
                                         </button>
 
                                     </li>
                                     <li>
                                         <button>
-                                            ⑤<img src="" alt="5번 선지">
+                                            <span>⑤</span><img src="" alt="5번 선지">
                                         </button>
 
                                     </li>

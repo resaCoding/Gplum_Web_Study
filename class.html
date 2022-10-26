@@ -12,7 +12,61 @@
     </head>
     <body>
         <div id="root">
-            
+            <div class="modal modal-wrap">
+                <div class="modal modal-bookmark">
+                    <div class="bookmark-header">
+                        북마크 저장하기
+                        <button></button>
+                    </div>
+                    <div class="bookmark-contents">
+                        <p>시간 <input type="text" class="time" disabled value="03:15"></p>
+                        <p>내용 <input type="text" placeholder="내용을 입력하세요. (최대 20자)" maxlength="20"></p>
+                    </div>
+                    <div class="bookmark-footer">
+                        <button disabled>저장하기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal modal-wrap">
+                <div class="modal modal-quiz">
+                    <div class="quiz-header">
+                        <img src="/img/quiz_logo.png" alt="퀴즈로고">
+                        <button></button>
+                    </div>
+                    <div class="quiz-content">
+                        <img src="" alt="이미지 문제">
+                        <!-- <p>텍스트 문제</p> -->
+                        <div class="quiz-answer">
+                            <!-- 정오답 표시 active로 활성화 -->
+                            <div class="answer correct active">
+                                정답입니다
+                                <span>
+                                    <img src="/img/mineral.png" alt="미네랄">
+                                    <!-- <img src="/img/carrot.png" alt="캐럿"> -->
+                                    +1
+                                </span>
+                            </div>
+                            <div class="answer wrong">
+                                정답이 아닙니다
+                            </div>
+                            <!-- 정답일 시 버튼에 correct 추가 / 오답일 시 wrong 추가 -->
+                            <button>
+                                <img src="/img/quiz_o.png" alt="퀴즈 보기 O" class="common">
+                                <img src="/img/quiz_o_correct.png" alt="퀴즈 보기 O 정답" class="correct">
+                                <img src="/img/quiz_o_wrong.png" alt="퀴즈 보기 O 오답" class="wrong">
+                            </button>
+                            <button>
+                                <img src="/img/quiz_x.png" alt="퀴즈 보기 X" class="common">
+                                <img src="/img/quiz_x_correct.png" alt="퀴즈 보기 X 정답" class="correct">
+                                <img src="/img/quiz_x_wrong.png" alt="퀴즈 보기 X 오답" class="wrong">
+                            </button>
+                            <!-- <div>
+                                <input type="text" placeholder="정답을 입력하세요"><span>단위</span>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="class-header">
                 <div class="class-title">
                     <p class="info">
@@ -92,6 +146,7 @@
                             <button class="btn-full">
                                 <img src="/img/control_full.png" alt="전체화면">
                             </button>
+                            <button class="btn-next">다음 단계 <img src="/img/class_next.png" alt="다음 단계로 넘어가기"></button>
                         </div>
                     </div>
                 </div>
@@ -213,14 +268,14 @@
             //북마크 추가 여닫기
             let bookCloseBtn = document.querySelector('.bookmark-header>button')
             function bookmarkOut(){
-                let bookmark = document.querySelector('.modal-bookmark')
+                let bookmark = bookCloseBtn.parentNode.parentNode.parentNode;
                 bookmark.style.display = 'none';
             }
             bookCloseBtn.addEventListener("click", bookmarkOut);
 
             let bookOpenBtn = document.querySelector('.btn-bookmark')
             function bookmarkOn(){
-                let bookmark = document.querySelector('.modal-bookmark')
+                let bookmark = bookCloseBtn.parentNode.parentNode.parentNode;
                 bookmark.style.display = 'block';
             }
             bookOpenBtn.addEventListener("click", bookmarkOn);
@@ -228,14 +283,14 @@
             //팝업퀴즈 여닫기
             let quizCloseBtn = document.querySelector('.quiz-header>button')
             function quizkOut(){
-                let quiz = document.querySelector('.modal-wrap')
+                let quiz = quizCloseBtn.parentNode.parentNode.parentNode;
                 quiz.style.display = 'none';
             }
             quizCloseBtn.addEventListener("click", quizkOut);
 
             let quizOpenBtn = document.querySelector('.btn-next')
             function quizOn(){
-                let quiz = document.querySelector('.modal-wrap')
+                let quiz = quizCloseBtn.parentNode.parentNode.parentNode;
                 quiz.style.display = 'block';
             }
             quizOpenBtn.addEventListener("click", quizOn);
