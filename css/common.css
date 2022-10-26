@@ -15,7 +15,7 @@ body {
 
 .scroll-y::-webkit-scrollbar {
   width: 10px;
-  background: #fff;
+  background: transparent;
 }
 
 .scroll-y::-webkit-scrollbar-thumb {
