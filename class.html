@@ -98,6 +98,7 @@
                 </div>
             </div>
             <div class="class-video">
+                <!-- 일시정지 pause / 정지 stop -->
                 <button class="play"></button>
                 <video src=""></video>
                 <div class="class-control">
@@ -113,8 +114,14 @@
                             <button class="btn-play">
                                 <img src="/img/control_play.png" alt="재생 버튼">
                             </button>
-                            <button class="btn-volume">
-                                <img src="/img/control_volume.png" alt="볼륨 버튼">
+                            <!-- <button class="btn-pause">
+                                <img src="/img/control_pause.png" alt="일시정지 버튼">
+                            </button> -->
+                            <button class="btn-stop">
+                                <img src="/img/control_stop.png" alt="일시정지 버튼">
+                            </button>
+                            <!--음소거 시 off 클래스 추가-->
+                            <button class="btn-volume" onclick="volumeBtn()">
                             </button>
                             <div>
                                 <input type="range" class="volune-range">
@@ -303,6 +310,12 @@
             }
             fullBtn.addEventListener("click", fullToggle);
 
+            //볼륨 버튼
+            
+            const volumeBtn = (e)=> {
+                let btn = document.querySelector('.btn-volume')
+                btn.classList.toggle('off')
+            }
         </script>
     </body>
 </html>

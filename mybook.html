@@ -11,601 +11,246 @@
     </head>
     <body>
         <div id="root">
+            <div class="left-menu">
+                <div class="top">
+                    <button class="close" onclick="leftMenuOut()"></button>
+                    <p>
+                        <span>홍길동님</span>
+                        <span>안녕하세요!</span>
+                    </p>
+                    <button class="logout">
+                        로그아웃
+                    </button>
+                </div>
+                <div class="middle">
+                    <ul>
+                        <li>
+                            <button>
+                                <div class="point"></div>
+                                <p>학습 포인트</p>
+                                <span>999</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <div class="alarm"></div>
+                                <p>학습 알림</p>
+                                <span>+99</span>
+                            </button>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="/img/menu_1.png" alt="프로그램 소개 바로가기">프로그램 소개
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="/img/menu_2.png" alt="이용안내 바로가기">이용안내
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="/img/menu_3.png" alt="바탕화면에 바로가기 만들기">바탕화면에 바로가기 만들기
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="/img/menu_4.png" alt="지앤비 영어 바로가기">지앤비 영어
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom">
+                    <button>패럴랙스 홈페이지</button>
+                    <button>지앤비 홈페이지</button>
+                </div>
+            </div>
+            <div class="modal modal-wrap left"></div>
             <div class="float-left main-left">
                 <div class="lnb">
-                    <button class="lnb-btn" onclick="hamburgerOn()">=</button>
+                    <button class="lnb-btn" onclick="leftMenuOn()">
+                        <img src="/img/hamburger.png" alt="">
+                    </button>
                     <ul class="lnb-main">
-                        <li><a href="#">나의 강의실</a></li>
-                        <li class="active"><a href="#">나의 교재</a></li>
-                        <li><a href="#">나의 평가</a></li>
-                        <li><a href="#">나의 오답</a></li>
-                        <li><a href="#">학습 달력</a></li>
-                        <li><a href="#">즐겨찾기</a></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_1_on.png" alt="나의 강의실" class="on">
+                                    <img src="/img/nav_1_off.png" alt="나의 강의실" class="off">
+                                </div>
+                                <span class="long">나의 강의실</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_2_on.png" alt="나의 교재" class="on">
+                                    <img src="/img/nav_2_off.png" alt="나의 교재" class="off">
+                                </div>
+                                <span>나의 교재</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_3_on.png" alt="나의 평가" class="on">
+                                    <img src="/img/nav_3_off.png" alt="나의 평가" class="off">
+                                </div>
+                                <span>나의 평가</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_4_on.png" alt="나의 오답" class="on">
+                                    <img src="/img/nav_4_off.png" alt="나의 오답" class="off">
+                                </div>
+                                <span>나의 오답</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_5_on.png" alt="학습 달력" class="on">
+                                    <img src="/img/nav_5_off.png" alt="학습 달력" class="off">
+                                </div>
+                                <span>학습 달력</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_6_on.png" alt="즐겨찾기" class="on">
+                                    <img src="/img/nav_6_off.png" alt="즐겨찾기" class="off">
+                                </div>
+                                <span class="short">즐겨찾기</span>
+                            </a>
+                        </li>
                     </ul>
+                    <button class="lnb-arrow" onclick="hamburgerOn()">
+                    </button>
                 </div>
             </div>
             <div class="float-left main-right">
                 <div class="gnb">
                     <a href="#">
-                        <img src="" alt="지플럼 로고" />
+                        <img src="/img/logo.png" alt="지플럼 로고" />
                     </a>
                     <div class="timer">
-                        <img src="" alt="타이머" />
-                        <p><span>00</span>:<span>00</span>:<span>00</span></p>
+                        <img src="/img/timer_icon.png" alt="타이머" />
+                        <p><span>00</span> : <span>12</span> : <span>25</span></p>
                     </div>
                     <div class="profile">
-                        <div>
-                            <p class="mem_num">
-                                <button><img src="" alt="캐럿" /></button>
+                        <div class="mem_num">
+                            <button>
+                                <img src="/img/point_icon.png" alt="포인트" />
                                 <span>99,999</span>
-                            </p>
+                            </button>
                         </div>
-                        <div class="alarm">
-                            <button><img src="" alt="알람" /></button>
-                            <span>999</span>
+                        <div class="alarm new">
+                            <button>
+                                <img src="/img/alarm_icon.png" alt="알람" />
+                                <span>999</span>
+                            </button>
                         </div>
                         <div>
                             <p class="name">김수학</p>
-                            <img src="" alt="프로필 사진" />
                         </div>
                     </div>
                 </div>
                 <div class="contents">
                     <div>
                         <div class="contents-title">
-                            <p>나의 교재</p>
+                            <p>
+                                <span class="img-box">
+                                    <img src="/img/myBook_icon.png" alt="나의 교재 아이콘">
+                                </span>
+                                나의 교재
+                            </p>
                         </div>
                         <div class="contents-wrap">
                             <div class="filter">
-                                <select name="" id="">
-                                    <option value="">학년-학기</option>
-                                    <option value="">1학년-1학기</option>
-                                    <option value="">1학년-2학기</option>
-                                </select>
+                                <div class="select-wrap">
+                                    <span class="selected-option wd-119">학년-학기</span>
+                                    <ul class="select">
+                                        <li>
+                                            <button>학년-학기</button>
+                                        </li>
+                                        <li>
+                                            <button>1학년-1학기</button>
+                                        </li>
+                                        <li>
+                                            <button>1학년-2학기</button>
+                                        </li>
+                                        <li>
+                                            <button>2학년-1학기</button>
+                                        </li>
+                                    </ul>
+                                </div>
                                 <button>조회</button>
                             </div>
                             <div class="scroll-y book-contents">
                                 <div class="book-item">
                                     <a href="">
-                                        <span class="M2_1">중학 2-1</span>
                                         <img src="" alt="교재 표지">
                                         <p>중2-1 노벰</p>
                                     </a>
-                                    <span>2022.05.01~2023.02.28</span>
+                                    <span>2022.05. 01~2023.02.28</span>
                                 </div>
                                 <div class="book-item">
                                     <a href="">
-                                        <span class="M2_1">중학 2-1</span>
                                         <img src="" alt="교재 표지">
                                         <p>중2-1 뜨레스</p>
                                     </a>
-                                    <span>2022.05.01~2023.02.28</span>
+                                    <span>2022.05. 01~2023.02.28</span>
                                 </div>
                                 <div class="book-item">
                                     <a href="">
-                                        <span class="M2_1">중학 2-1</span>
                                         <img src="" alt="교재 표지">
                                         <p>중2-1 개념서</p>
                                     </a>
-                                    <span>2022.05.01~2023.02.28</span>
+                                    <span>2022.05. 01~2023.02.28</span>
                                 </div>
-                                <div class="book-item">
+                                <div class="book-item end">
                                     <a href="">
-                                        <span class="M1_2">중학 1-2</span>
                                         <img src="" alt="교재 표지">
                                         <p>중1-2 엑사스</p>
                                     </a>
-                                    <span>2021.11.01~2022.08.31</span>
+                                    <span>2022.05. 01~2023.02.28</span>
                                 </div>
                                 <div class="book-item">
                                     <a href="">
-                                        <span class="M1_2">중학 1-2</span>
                                         <img src="" alt="교재 표지">
                                         <p>중1-2 뜨레스</p>
                                     </a>
-                                    <span>2021.09.01~2022.08.31</span>
+                                    <span>2022.05. 01~2023.02.28</span>
                                 </div>
                                 <div class="book-item">
                                     <a href="">
-                                        <span class="M1_2">중학 1-2</span>
                                         <img src="" alt="교재 표지">
                                         <p>중1-2 개념서</p>
                                     </a>
-                                    <span>2021.09.01~2022.08.31</span>
+                                    <span>2022.05. 01~2023.02.28</span>
                                 </div>
                                 <div class="book-item">
                                     <a href="">
-                                        <span class="M1_1">중학 1-1</span>
                                         <img src="" alt="교재 표지">
                                         <p>중1-1 아르케3</p>
                                     </a>
-                                    <span>2021.03.01~2022.02.28</span>
+                                    <span>2022.05. 01~2023.02.28</span>
                                 </div>
-                                <div class="book-item">
+                                <div class="book-item end">
                                     <a href="">
-                                        <span class="M1_1">중학 1-1</span>
                                         <img src="" alt="교재 표지">
-                                        <p class="end">중1-1 아르케2</p>
+                                        <p>중1-1 아르케2</p>
                                     </a>
-                                    <span>2021.03.01~2022.02.28</span>
+                                    <span>2022.05. 01~2023.02.28</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- 교재별 학습 목차(개념서) -->
-                    <!-- <div>
-                        <h1 class="contents-title">
-                            <p>나의 교재</p>
-                        </h1>
-                        <div class="contents-wrap book-wrap">
-                            <div class="book-index">
-                                <div>
-                                    <img src="" alt="교재">
-                                    <p>중1-1 아르케2</p>
-                                    <span>2021.03.01~2022.02.28</span>
-                                </div>
-                                <button>교재 목록</button>
-                            </div>
-                            <div class="scroll-y">
-                                <table>
-                                    <colgroup>
-                                        <col style="width: 50%"/>
-                                        <col style="width: 20%"/>
-                                        <col style="width: 20%"/>
-                                        <col style="width: 10%"/>
-                                    </colgroup>
-                                    <thead>
-                                        <tr class="position-sticky">
-                                            <th>단원명</th>
-                                            <th>개념 강의</th>
-                                            <th>개념 확인하기</th>
-                                            <th>학습하기</th>
-                                            </tr>
-                                    </thead>
-                                    <tbody class="active">
-                                        <tr class="unit">
-                                            <td colspan="4">
-                                                Ⅰ. 수와 식의 계산
-                                                <button>▽</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span>1</span>
-                                                유한소수와 무한소수
-                                            </td>
-                                            <td class="skyblue">
-                                                <div class="gauge-bg">
-                                                    <p>100%</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td class="blue">
-                                                <div class="gauge-bg">
-                                                    <p>10 / 12</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button>학습하기</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span>2</span>
-                                                유리수와 순환소수
-                                            </td>
-                                            <td class="skyblue">
-                                                <div class="gauge-bg">
-                                                    <p>95%</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td class="blue">
-                                                <div class="gauge-bg">
-                                                    <p>12 / 12</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button>학습하기</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span>3</span>
-                                                단항식의 곱셈과 나눗셈
-                                            </td>
-                                            <td class="skyblue">
-                                                <div class="gauge-bg">
-                                                    <p>95%</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td class="blue">
-                                                <div class="gauge-bg">
-                                                    <p>10 / 12</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button class="end" disabled>학습하기</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span>4</span>
-                                                다항식의 덧셈과 뺄셈
-                                            </td>
-                                            <td class="skyblue">
-                                                <div class="gauge-bg">
-                                                    <p>92%</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td class="blue">
-                                                <div class="gauge-bg">
-                                                    <p>8 / 12</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button>학습하기</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span>5</span>
-                                                단항식과 다항식의 곱셈과 나눗셈
-                                            </td>
-                                            <td class="skyblue">
-                                                <div class="gauge-bg">
-                                                    <p>100%</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td class="blue">
-                                                <div class="gauge-bg">
-                                                    <p>12 / 12</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button>학습하기</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Ⅰ단원 마무리
-                                            </td>
-                                            <td colspan="2" class="blue">
-                                                <div class="gauge-bg">
-                                                    <p>28 / 30</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button>학습하기</button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                    <tbody class="active">
-                                        <tr class="unit">
-                                            <td colspan="4">
-                                                Ⅱ. 일차부등식
-                                                <button>▽</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span>1</span>
-                                                일차부등식의 풀이
-                                            </td>
-                                            <td class="skyblue">
-                                                <div class="gauge-bg">
-                                                    <p>-</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td class="blue">
-                                                <div class="gauge-bg">
-                                                    <p>- / 12</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button>학습하기</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span>2</span>
-                                                일차부등식의 활용(1)
-                                            </td>
-                                            <td class="skyblue">
-                                                <div class="gauge-bg">
-                                                    <p>-</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td class="blue">
-                                                <div class="gauge-bg">
-                                                    <p>- / 12</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button>학습하기</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span>3</span>
-                                                일차부등식의 활용(2)
-                                            </td>
-                                            <td class="skyblue">
-                                                <div class="gauge-bg">
-                                                    <p>-</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td class="blue">
-                                                <div class="gauge-bg">
-                                                    <p>- / 12</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button>학습하기</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span>4</span>
-                                                일차부등식의 활용(3)
-                                            </td>
-                                            <td class="skyblue">
-                                                <div class="gauge-bg">
-                                                    <p>-</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td class="blue">
-                                                <div class="gauge-bg">
-                                                    <p>- / 12</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button>학습하기</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span>5</span>
-                                                단항식과 다항식의 곱셈과 나눗셈
-                                            </td>
-                                            <td class="skyblue">
-                                                <div class="gauge-bg">
-                                                    <p>-</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td class="blue">
-                                                <div class="gauge-bg">
-                                                    <p>- / 12</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button>학습하기</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Ⅱ단원 마무리
-                                            </td>
-                                            <td colspan="2" class="blue">
-                                                <div class="gauge-bg">
-                                                    <p>- / 30</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button>학습하기</button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table> -->
-
-                                <!-- 초등학생 테이블 -->
-                                <!--
-                                <table>
-                                    <colgroup>
-                                        <col style="width: 45%"/>
-                                        <col style="width: 15%"/>
-                                        <col style="width: 15%"/>
-                                        <col style="width: 15%"/>
-                                        <col style="width: 10%"/>
-                                    </colgroup>
-                                    <thead>
-                                        <tr class="position-sticky">
-                                            <th>단원명</th>
-                                            <th>개념 강의</th>
-                                            <th>기본기 다지기</th>
-                                            <th>기본기 강화하기</th>
-                                            <th>학습하기</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="unit">
-                                            <td colspan="5">4. 비례식과 비례배분</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span>1</span>
-                                                비의 성질
-                                            </td>
-                                            <td class="skyblue">
-                                                <div class="gauge-bg">
-                                                    <p>100%</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td class="blue">
-                                                <div class="gauge-bg">
-                                                    <p>20 / 22</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td class="blue">
-                                                <div class="gauge-bg">
-                                                    <p>18 / 21</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button>학습하기</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span>1</span>
-                                                비례식
-                                            </td>
-                                            <td class="skyblue">
-                                                <div class="gauge-bg">
-                                                    <p>95%</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td class="blue">
-                                                <div class="gauge-bg">
-                                                    <p>22 / 21</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td class="blue">
-                                                <div class="gauge-bg">
-                                                    <p>19 / 20</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button>학습하기</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span>1</span>
-                                                비례배분
-                                            </td>
-                                            <td class="skyblue">
-                                                <div class="gauge-bg">
-                                                    <p>100%</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td class="blue">
-                                                <div class="gauge-bg">
-                                                    <p>15 / 15</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td class="blue">
-                                                <div class="gauge-bg">
-                                                    <p>- / 21</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button>학습하기</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                Ⅰ단원 마무리
-                                            </td>
-                                            <td colspan="3" class="blue">
-                                                <div class="gauge-bg">
-                                                    <p>- / 21</p>
-                                                </div>
-                                                <div class="gauge-wrap">
-                                                    <div class="gauge"></div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button>학습하기</button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -645,6 +290,59 @@
             for (i = 0; i < unitBtn.length; i++) {
                 unitBtn[i].addEventListener("click", unitToggle);
             }
+
+            //select
+            const select = document.querySelectorAll('.selected-option')
+            const li = document.querySelectorAll('.select-wrap ul li')
+            const ulAll = document.querySelectorAll('.select-wrap ul')
+
+            const selectOn = (e)=> {
+                const selectWrap = e.currentTarget.parentNode;
+                const ul = selectWrap.querySelector('ul')
+                
+                for (i = 0; i < ulAll.length; i++) {
+                    if(ulAll[i] != ul) {
+                        ulAll[i].classList.remove('active');
+                    }
+                }
+                ul.classList.toggle('active')
+            }
+
+            const selectValue = (e)=> {
+                const text = e.currentTarget.innerText;
+                const textBox = e.currentTarget.parentNode.parentNode.querySelector('.selected-option')
+
+                textBox.innerText = text;
+                for (i = 0; i < ulAll.length; i++) {
+                    ulAll[i].classList.remove('active');
+                }
+            }
+
+            for (i = 0; i < li.length; i++) {
+                li[i].addEventListener("click", selectValue);
+            }
+            for (i = 0; i < select.length; i++) {
+                select[i].addEventListener("click", selectOn);
+            }
+
+            //왼쪽 메뉴 여닫기
+
+            const leftMenuOn = ()=> {
+                let menu = document.querySelector('.left-menu')
+                let wrap = document.querySelector('.modal-wrap')
+
+                menu.style.left = "0";
+                wrap.style.display = "block"
+            }
+
+            const leftMenuOut = ()=> {
+                let menu = document.querySelector('.left-menu')
+                let wrap = document.querySelector('.modal-wrap')
+
+                menu.style.left = "-320px";
+                wrap.style.display = "none"
+            }
+            
         </script>
     </body>
 </html>

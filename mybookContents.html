@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gplum</title>
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/css/common.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <div id="root">
+            <div class="left-menu">
+                <div class="top">
+                    <button class="close" onclick="leftMenuOut()"></button>
+                    <p>
+                        <span>홍길동님</span>
+                        <span>안녕하세요!</span>
+                    </p>
+                    <button class="logout">
+                        로그아웃
+                    </button>
+                </div>
+                <div class="middle">
+                    <ul>
+                        <li>
+                            <button>
+                                <div class="point"></div>
+                                <p>학습 포인트</p>
+                                <span>999</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <div class="alarm"></div>
+                                <p>학습 알림</p>
+                                <span>+99</span>
+                            </button>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="/img/menu_1.png" alt="프로그램 소개 바로가기">프로그램 소개
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="/img/menu_2.png" alt="이용안내 바로가기">이용안내
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="/img/menu_3.png" alt="바탕화면에 바로가기 만들기">바탕화면에 바로가기 만들기
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="/img/menu_4.png" alt="지앤비 영어 바로가기">지앤비 영어
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom">
+                    <button>패럴랙스 홈페이지</button>
+                    <button>지앤비 홈페이지</button>
+                </div>
+            </div>
+            <div class="modal modal-wrap left"></div>
+            <div class="float-left main-left">
+                <div class="lnb">
+                    <button class="lnb-btn" onclick="leftMenuOn()">
+                        <img src="/img/hamburger.png" alt="">
+                    </button>
+                    <ul class="lnb-main">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_1_on.png" alt="나의 강의실" class="on">
+                                    <img src="/img/nav_1_off.png" alt="나의 강의실" class="off">
+                                </div>
+                                <span class="long">나의 강의실</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_2_on.png" alt="나의 교재" class="on">
+                                    <img src="/img/nav_2_off.png" alt="나의 교재" class="off">
+                                </div>
+                                <span>나의 교재</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_3_on.png" alt="나의 평가" class="on">
+                                    <img src="/img/nav_3_off.png" alt="나의 평가" class="off">
+                                </div>
+                                <span>나의 평가</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_4_on.png" alt="나의 오답" class="on">
+                                    <img src="/img/nav_4_off.png" alt="나의 오답" class="off">
+                                </div>
+                                <span>나의 오답</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_5_on.png" alt="학습 달력" class="on">
+                                    <img src="/img/nav_5_off.png" alt="학습 달력" class="off">
+                                </div>
+                                <span>학습 달력</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_6_on.png" alt="즐겨찾기" class="on">
+                                    <img src="/img/nav_6_off.png" alt="즐겨찾기" class="off">
+                                </div>
+                                <span class="short">즐겨찾기</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="lnb-arrow" onclick="hamburgerOn()">
+                    </button>
+                </div>
+            </div>
+            <div class="float-left main-right">
+                <div class="gnb">
+                    <a href="#">
+                        <img src="/img/logo.png" alt="지플럼 로고" />
+                    </a>
+                    <div class="timer">
+                        <img src="/img/timer_icon.png" alt="타이머" />
+                        <p><span>00</span> : <span>12</span> : <span>25</span></p>
+                    </div>
+                    <div class="profile">
+                        <div class="mem_num">
+                            <button>
+                                <img src="/img/point_icon.png" alt="포인트" />
+                                <span>99,999</span>
+                            </button>
+                        </div>
+                        <div class="alarm new">
+                            <button>
+                                <img src="/img/alarm_icon.png" alt="알람" />
+                                <span>999</span>
+                            </button>
+                        </div>
+                        <div>
+                            <p class="name">김수학</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents">
+                    <!-- 교재별 학습 목차(개념서) -->
+                    <div>
+                        <div class="contents-title">
+                            <p>
+                                <span class="img-box">
+                                    <img src="/img/myBook_icon.png" alt="나의 교재 아이콘">
+                                </span>
+                                나의 교재
+                            </p>
+                        </div>
+                        <div class="contents-wrap book-wrap">
+                            <div class="book-index">
+                                <div>
+                                    <p>중2-1 개념서</p>
+                                    <span>2022.03. 01~2023.02.28</span>
+                                </div>
+                                <button class="btn btn-gray">교재 목록</button>
+                            </div>
+                            <!-- 테이블 높이 428px 이상이면 scroll 클래스 추가 -->
+                            <div class="book-content scroll">
+                                <table class="table-header">
+                                    <colgroup>
+                                        <col style="width: auto"/>
+                                        <col style="width: 150px"/>
+                                        <col style="width: 150px"/>
+                                        <col style="width: 160px"/>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>단원명</th>
+                                            <th>개념 강의</th>
+                                            <th>개념 확인하기</th>
+                                            <th>학습하기</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <div class="scroll-y">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width: auto"/>
+                                            <col style="width: 150px"/>
+                                            <col style="width: 150px"/>
+                                            <col style="width: 160px"/>
+                                        </colgroup>
+                                        <thead>
+                                        </thead>
+                                        <tbody class="active">
+                                            <tr class="unit">
+                                                <td colspan="4">
+                                                    <span>Ⅰ.</span>수와 식의 계산
+                                                    <button></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span>1.</span>
+                                                    유한소수와 무한소수
+                                                </td>
+                                                <td class="beige">
+                                                    <div class="gauge-bg">
+                                                        <p class="white">100%</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td class="brown">
+                                                    <div class="gauge-bg">
+                                                        <p><span class="white">10 /</span> 12</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-orange">학습하기</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span>2.</span>
+                                                    유리수와 순환소수
+                                                </td>
+                                                <td class="beige">
+                                                    <div class="gauge-bg">
+                                                        <p>95%</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td class="pass">
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-orange-border">복습하기</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span>3.</span>
+                                                    단항식의 곱셈과 나눗셈
+                                                </td>
+                                                <td class="beige">
+                                                    <div class="gauge-bg">
+                                                        <p>95%</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td class="brown">
+                                                    <div class="gauge-bg">
+                                                        <p>10 / 12</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-orange-border" disabled>복습하기</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span>4.</span>
+                                                    다항식의 덧셈과 뺄셈
+                                                </td>
+                                                <td class="beige">
+                                                    <div class="gauge-bg">
+                                                        <p>92%</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td class="brown">
+                                                    <div class="gauge-bg">
+                                                        <p>8 / 12</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-orange-border">복습하기</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span>5.</span>
+                                                    단항식과 다항식의 곱셈과 나눗셈
+                                                </td>
+                                                <td class="beige">
+                                                    <div class="gauge-bg">
+                                                        <p>100%</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td class="brown">
+                                                    <div class="gauge-bg">
+                                                        <p>12 / 12</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-orange-border">복습하기</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    단원 마무리
+                                                </td>
+                                                <td colspan="2" class="brown">
+                                                    <div class="gauge-bg long">
+                                                        <p>28 / 30</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-orange-border">복습하기</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody class="active">
+                                            <tr class="unit">
+                                                <td colspan="4">
+                                                    Ⅱ. 일차부등식
+                                                    <button></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span>1.</span>
+                                                    일차부등식의 풀이
+                                                </td>
+                                                <td class="beige">
+                                                    <div class="gauge-bg">
+                                                        <p>-</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td class="brown">
+                                                    <div class="gauge-bg">
+                                                        <p>- / 12</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-orange-border">복습하기</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span>2.</span>
+                                                    일차부등식의 활용(1)
+                                                </td>
+                                                <td class="beige">
+                                                    <div class="gauge-bg">
+                                                        <p>-</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td class="brown">
+                                                    <div class="gauge-bg">
+                                                        <p>- / 12</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-orange-border">복습하기</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span>3.</span>
+                                                    일차부등식의 활용(2)
+                                                </td>
+                                                <td class="beige">
+                                                    <div class="gauge-bg">
+                                                        <p>-</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td class="brown">
+                                                    <div class="gauge-bg">
+                                                        <p>- / 12</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-orange-border">복습하기</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span>4.</span>
+                                                    일차부등식의 활용(3)
+                                                </td>
+                                                <td class="beige">
+                                                    <div class="gauge-bg">
+                                                        <p>-</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td class="brown">
+                                                    <div class="gauge-bg">
+                                                        <p>- / 12</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-orange-border">복습하기</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span>5.</span>
+                                                    단항식과 다항식의 곱셈과 나눗셈
+                                                </td>
+                                                <td class="beige">
+                                                    <div class="gauge-bg">
+                                                        <p>-</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td class="brown">
+                                                    <div class="gauge-bg">
+                                                        <p>- / 12</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-orange-border">복습하기</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    단원 마무리
+                                                </td>
+                                                <td colspan="2" class="brown">
+                                                    <div class="gauge-bg long">
+                                                        <p>- / 30</p>
+                                                    </div>
+                                                    <div class="gauge-wrap">
+                                                        <div class="gauge"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-orange-border">복습하기</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            // 사이드메뉴 슬라이드
+            let lnb = document.querySelectorAll('#root>.float-left');
+
+            function hamburgerOn() {
+                for(let i = 0; i < lnb.length; i++) {
+                    lnb[i].classList.toggle('none');
+                }
+            }
+
+            // 사이드메뉴 클릭
+            let lnbBtn = document.querySelectorAll('.lnb-main li a')
+
+            function lnbOn(tabClick){
+                let clicklnb = tabClick.currentTarget.parentNode
+                for(let i = 0; i < lnbBtn.length; i++) {
+                    lnbBtn[i].parentNode.classList.remove('active')
+                }
+                clicklnb.classList.add('active')
+            }
+
+            for (i = 0; i < lnbBtn.length; i++) {
+                lnbBtn[i].addEventListener("click", lnbOn);
+            }
+
+            // 테이블 접기
+            let unitBtn = document.querySelectorAll('.unit td button')
+
+            function unitToggle(tabClick){
+                let unit = tabClick.currentTarget.parentNode.parentNode.parentNode;
+                unit.classList.toggle('active')
+
+                let table = document.querySelector('.scroll-y table')
+                let bookContent = document.querySelector('.book-content')
+                if(table.clientHeight > 428) {
+                    bookContent.classList.add('scroll')
+                } else {
+                    bookContent.classList.remove('scroll')
+                }
+            }
+
+            for (i = 0; i < unitBtn.length; i++) {
+                unitBtn[i].addEventListener("click", unitToggle);
+            }
+
+            //select
+            const select = document.querySelectorAll('.selected-option')
+            const li = document.querySelectorAll('.select-wrap ul li')
+            const ulAll = document.querySelectorAll('.select-wrap ul')
+
+            const selectOn = (e)=> {
+                const selectWrap = e.currentTarget.parentNode;
+                const ul = selectWrap.querySelector('ul')
+                
+                for (i = 0; i < ulAll.length; i++) {
+                    if(ulAll[i] != ul) {
+                        ulAll[i].classList.remove('active');
+                    }
+                }
+                ul.classList.toggle('active')
+            }
+
+            const selectValue = (e)=> {
+                const text = e.currentTarget.innerText;
+                const textBox = e.currentTarget.parentNode.parentNode.querySelector('.selected-option')
+
+                textBox.innerText = text;
+                for (i = 0; i < ulAll.length; i++) {
+                    ulAll[i].classList.remove('active');
+                }
+            }
+
+            for (i = 0; i < li.length; i++) {
+                li[i].addEventListener("click", selectValue);
+            }
+            for (i = 0; i < select.length; i++) {
+                select[i].addEventListener("click", selectOn);
+            }
+
+            //왼쪽 메뉴 여닫기
+
+            const leftMenuOn = ()=> {
+                let menu = document.querySelector('.left-menu')
+                let wrap = document.querySelector('.modal-wrap')
+
+                menu.style.left = "0";
+                wrap.style.display = "block"
+            }
+
+            const leftMenuOut = ()=> {
+                let menu = document.querySelector('.left-menu')
+                let wrap = document.querySelector('.modal-wrap')
+
+                menu.style.left = "-320px";
+                wrap.style.display = "none"
+            }
+
+        </script>
+    </body>
+</html>

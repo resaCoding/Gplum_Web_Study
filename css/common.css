@@ -24,7 +24,7 @@ body {
 }
 
 .scroll-y::-webkit-scrollbar-track {
-  margin: 10px 0;
+  margin: 10px 0 0;
   background: #eeeeee;
   border-radius: 5px;
 }
@@ -34,7 +34,7 @@ body {
   height: 100%;
   background:#be9e7f;
   flex-shrink: 0;
-  transition: 0.2s;
+  transition: 0.1s;
   border-radius: 0 43px 43px 0;
   box-shadow: 0 0 8px rgba(20, 0, 0, 0.2);
 }
@@ -99,7 +99,7 @@ body {
 .main-right {
   height: 100%;
   width: calc(100% - 240px);
-  transition: 0.2s;
+  transition: 0.1s;
 }
 
 .main-right.none {
@@ -432,9 +432,9 @@ body {
 }
 
 .contents-wrap {
-  height: 616px;
+  height: 592px;
   background: #fff;
-  padding: 30px;
+  padding: 30px 20px;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -793,30 +793,6 @@ body {
   color: red;
 }
 
-.position-sticky {
-  position: sticky;
-  top: 0;
-  z-index: 3;
-}
-.position-sticky th {
-  height: 40px;
-  line-height: 40px;
-  color: #fff;
-  background: #77933c;
-  position: relative;
-}
-
-.position-sticky th::after {
-  content: "";
-  position: absolute;
-  left: -1px;
-  top: 0;
-  width: calc(100% - 1px);
-  height: calc(100% - 1px);
-  border: 1px solid #fff;
-  border-right: 0;
-}
-
 .date input {
   margin-left: 5px;
 }
@@ -856,29 +832,22 @@ body {
 
 .filter {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   margin-bottom: 20px;
+  height: 40px;
 }
 
 .filter > * {
-  height: 40px;
-  border-radius: 5px;
-}
-
-.filter select {
-  width: 120px;
-  margin-left: 5px;
-}
-
-.filter select:first-child {
-  margin: 0;
+  margin-left: 4px;
 }
 
 .filter button {
   width: 70px;
-  color: #fff;
-  background: darkslategray;
-  margin-left: 10px;
+  height: 40px;
+  color: #444;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 .select-wrap{
@@ -903,7 +872,7 @@ body {
 
 .selected-option::after {
   content: '';
-  width: 22px;
+  width: 20px;
   height: 100%;
   background: url(/img/select-arrow.png) no-repeat #f2f2f2 center;
   border-left: 1px solid #ccc;
@@ -1028,6 +997,10 @@ input::placeholder {
   cursor: default;
 }
 
+.btn-orange:hover {
+  background: #e85632 !important;
+}
+
 .btn-orange-border {
   border: 1px solid #ea7851 !important;
   color: #ea7851 !important;
@@ -1044,16 +1017,44 @@ input::placeholder {
   color: #444 !important;
 }
 
+.btn-gray {
+  background: #eee !important;
+  color: #444 !important;
+  border: 1px solid #ccc !important;
+}
+
+.btn-gray:hover {
+  background: #e5e5e5 !important;
+  border-color: #aaa !important;
+}
+
+.btn-brown {
+  background: #664e3d !important;
+  color: #fff !important;
+}
+
+.btn-brown:disabled {
+  color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.btn-brown:hover {
+  background: #3d2416 !important;
+}
+
 .bold {
-  font-weight: bold;
+  font-weight: bold !important;
 }
 
 .orange {
-  color: #ea7851;
+  color: #ea7851 !important;
 }
 
 .red {
-  color: #fa4646;
+  color: #fa4646 !important;
+}
+
+.white {
+  color: #fff !important;
 }
 
 /*
