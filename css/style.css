@@ -1265,6 +1265,36 @@
   margin-right: 0;
 }
 
+.concept-left table tr td button.o {
+  width: 24px;
+  height: 24px;
+  background: url(/img/class_o.png) no-repeat center;
+  margin: 0 40px;
+}
+
+.concept-left table tr td button.x {
+  width: 24px;
+  height: 24px;
+  background: url(/img/class_x.png) no-repeat center;
+  margin: 0 40px;
+}
+
+.concept-left table tr td button.o.checked {
+  background-image: url(/img/class_o_checked.png);
+}
+
+.concept-left table tr td button.x.checked {
+  background-image: url(/img/class_x_checked.png);
+}
+
+.concept-left table tr td button.o.unchecked {
+  background-image: url(/img/class_o_unchecked.png);
+}
+
+.concept-left table tr td button.x.unchecked {
+  background-image: url(/img/class_x_unchecked.png);
+}
+
 /* .concept-left table tr td button.watch {
   width: 100px;
   height: 30px;
@@ -1323,7 +1353,9 @@
   border-radius: 4px;
   font-size: 20px;
   font-weight: 500;
+  margin: 0 2px;
 }
+
 .concept-right {
   margin-left: 20px;
   width: 800px;
@@ -1373,13 +1405,20 @@
   transform: translateY(-50%);
   z-index: 1;
 }
+
+.concept-right .arrow:disabled {
+  background-image: url(/img/check_arrow_disabled.png);
+}
+
 .concept-right .arrow:first-child {
   left: 20px;
 }
+
 .concept-right .arrow:nth-child(2) {
   right: 20px;
   transform: rotate(180deg) translateY(50%);
 }
+
 .concept-header {
   display: flex;
   flex-wrap: wrap;
@@ -1427,10 +1466,11 @@
 .concept-content {
   width: 100%;
   height: auto;
-  border: 1px solid #000;
 }
 .concept-content img {
   width: 100%;
+  background: #ff6;
+  display: block;
 }
 
 .concept-play {
@@ -1566,20 +1606,6 @@
 .concept-video.full .title {
   height: 50px;
   padding: 0 20px;
-}
-.concept-OX {
-  width: 100%;
-  text-align: left;
-  margin-bottom: 5px;
-}
-.concept-OX button {
-  width: 120px;
-  height: 30px;
-  border: 3px solid skyblue;
-}
-.concept-OX button.checked {
-  background: skyblue;
-  color: #fff;
 }
 
 .fraction {

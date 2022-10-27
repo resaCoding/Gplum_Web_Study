@@ -14,6 +14,19 @@
 
     <body>
         <div id="root">
+            <div class="modal popup-wrap">
+                <div class="popup">
+                    <p>
+                        <span>답안을 입력하지 않은 문항이 있습니다.</span>
+                        <!-- <span>답안을 <em class="bold">입력하지 않은</em> <em class="red bold">문항</em>이 있습니다.</span> -->
+                        <span>이대로 답안을 제출하시겠습니까?</span>
+                    </p>
+                    <div>
+                        <button>확인</button>
+                        <button>취소</button>
+                    </div>
+                </div>
+            </div>
             <div class="class-header">
                 <div class="class-title">
                     <p class="info">
@@ -310,6 +323,25 @@
                 numberBtn[i].style.height = numberBtn[i].parentElement.clientHeight + 'px';
             }
 
+            const omrHeight = ()=> {
+                const tableWrap = document.querySelector('.concept-left .scroll-y')
+                const table = tableWrap.querySelector('table')
+
+                if (table.clientHeight < 501) {
+                    tableWrap.style.height = "auto"
+                }
+            }
+
+            omrHeight();
+
+            let popupBtn = document.querySelectorAll('.popup div button')
+            let popup = document.querySelector('.popup-wrap')
+            function popupOut(){
+                popup.style.display = 'none';
+            }
+            for(i=0; i<popupBtn.length; i++) {
+                popupBtn[i].addEventListener('click', popupOut)
+            }
 
         </script>
     </body>

@@ -11,9 +11,66 @@
     </head>
     <body>
         <div id="root">
+            <div class="left-menu">
+                <div class="top">
+                    <button class="close" onclick="leftMenuOut()"></button>
+                    <p>
+                        <span>홍길동님</span>
+                        <span>안녕하세요!</span>
+                    </p>
+                    <button class="logout">
+                        로그아웃
+                    </button>
+                </div>
+                <div class="middle">
+                    <ul>
+                        <li>
+                            <button>
+                                <div class="point"></div>
+                                <p>학습 포인트</p>
+                                <span>999</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <div class="alarm"></div>
+                                <p>학습 알림</p>
+                                <span>+99</span>
+                            </button>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="/img/menu_1.png" alt="프로그램 소개 바로가기">프로그램 소개
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="/img/menu_2.png" alt="이용안내 바로가기">이용안내
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="/img/menu_3.png" alt="바탕화면에 바로가기 만들기">바탕화면에 바로가기 만들기
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="/img/menu_4.png" alt="지앤비 영어 바로가기">지앤비 영어
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom">
+                    <button>패럴랙스 홈페이지</button>
+                    <button>지앤비 홈페이지</button>
+                </div>
+            </div>
+            <div class="modal modal-wrap left"></div>
             <div class="float-left main-left">
                 <div class="lnb">
-                    <button class="lnb-btn" onclick="hamburgerOn()">
+                    <button class="lnb-btn" onclick="leftMenuOn()">
                         <img src="/img/hamburger.png" alt="">
                     </button>
                     <ul class="lnb-main">
@@ -624,6 +681,24 @@
             }
             for (i = 0; i < select.length; i++) {
                 select[i].addEventListener("click", selectOn);
+            }
+
+            //왼쪽 메뉴 여닫기
+
+            const leftMenuOn = ()=> {
+                let menu = document.querySelector('.left-menu')
+                let wrap = document.querySelector('.modal-wrap')
+
+                menu.style.left = "0";
+                wrap.style.display = "block"
+            }
+
+            const leftMenuOut = ()=> {
+                let menu = document.querySelector('.left-menu')
+                let wrap = document.querySelector('.modal-wrap')
+
+                menu.style.left = "-320px";
+                wrap.style.display = "none"
             }
 
         </script>

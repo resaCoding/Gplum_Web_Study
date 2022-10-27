@@ -102,8 +102,8 @@
                         <span>녹음을 취소하시겠습니까?</span>
                     </p>
                     <div>
-                        <button>아니오</button>
-                        <button>예</button>
+                        <button>확인</button>
+                        <button>취소</button>
                     </div>
                 </div>
             </div>
@@ -112,9 +112,8 @@
 
             let ListBtn = document.querySelector('.btn-list')
             function listOn(){
-                let list = document.querySelector('.class-list')
-                list.classList.toggle('active')
-                ListBtn.classList.toggle('active')
+                let concept = document.querySelector('.concept')
+                concept.classList.toggle('active')
             }
             ListBtn.addEventListener('click', listOn)
 

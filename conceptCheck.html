@@ -118,7 +118,7 @@
                                     </td>
                                 </tr>
                                 <!-- 문제 틀렸을 때 -->
-                                <tr class="wrong">
+                                <tr class="wrong checked">
                                     <td>
                                         <button class="number" value="05">5</button>
                                     </td>
@@ -155,8 +155,7 @@
                                         <button>⑤</button>
                                     </td>
                                 </tr>
-                                <!-- 현재 문제 표시 -->
-                                <tr class="checked">
+                                <tr>
                                     <td>
                                         <button class="number" value="08">8</button>
                                     </td>
@@ -205,24 +204,150 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="checked">
                                     <td>
                                         <button class="number" value="12">12</button>
                                     </td>
                                     <td>
-                                        <input type="text"><span>(km)</span>
+                                        <button>①</button>
+                                        <button>②</button>
+                                        <button>③</button>
+                                        <button>④</button>
+                                        <button>⑤</button>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
+
+                        <!-- OX퀴즈 OMR -->
+                        <!-- <table>
+                            <colgroup>
+                                <col style="width: 70px;">
+                                <col style="width: auto;">
+                            </colgroup>
+                            <thead>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <button class="number" value="01">1</button>
+                                    </td>
+                                    <td>
+                                        <button class="checked o"></button>
+                                        <button class="x unchecked"></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button class="number" value="02">2</button>
+                                    </td>
+                                    <td>
+                                        <button class="o checked"></button>
+                                        <button class="x unchecked"></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button class="number" value="03">3</button>
+                                    </td>
+                                    <td>
+                                        <button class="o checked"></button>
+                                        <button class="x unchecked"></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button class="number" value="04">4</button>
+                                    </td>
+                                    <td>
+                                        <button class="o unchecked"></button>
+                                        <button class="x checked"></button>
+                                    </td>
+                                </tr>
+                                <tr class="checked">
+                                    <td>
+                                        <button class="number" value="05">5</button>
+                                    </td>
+                                    <td>
+                                        <button class="o checked"></button>
+                                        <button class="x unchecked"></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button class="number" value="06">6</button>
+                                    </td>
+                                    <td>
+                                        <button class="o"></button>
+                                        <button class="x"></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button class="number" value="07">7</button>
+                                    </td>
+                                    <td>
+                                        <button class="o"></button>
+                                        <button class="x"></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button class="number" value="08">8</button>
+                                    </td>
+                                    <td>
+                                        <button class="o"></button>
+                                        <button class="x"></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button class="number" value="09">9</button>
+                                    </td>
+                                    <td>
+                                        <button class="o"></button>
+                                        <button class="x"></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button class="number" value="10">10</button>
+                                    </td>
+                                    <td>
+                                        <button class="o"></button>
+                                        <button class="x"></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button class="number" value="11">11</button>
+                                    </td>
+                                    <td>
+                                        <button class="o"></button>
+                                        <button class="x"></button>
+                                    </td>
+                                </tr>
+                                <tr class="checked">
+                                    <td>
+                                        <button class="number" value="12">12</button>
+                                    </td>
+                                    <td>
+                                        <button class="o"></button>
+                                        <button class="x"></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table> -->
                     </div>
                     <div class="concept-footer">
+                        <!-- <button type="submit" class="concept-submit btn-white-border">모두 정답</button>
+                        <button type="submit" class="concept-submit btn-white-border">모두 오답</button> -->
                         <button type="submit" class="concept-submit btn-orange">답안 제출</button>
                     </div>
                 </div>
                 <div class="float-left concept-right">
                     <button class="arrow"></button>
-                    <button class="arrow"></button>
+                    <button class="arrow" disabled></button>
                     <div>
                         <div class="concept-top">
                             <div class="concept-header">
@@ -282,26 +407,8 @@
                                     </div> -->
                             </div>
                         </div>
-
-                        <!-- 서술형 따라잡기 - 학습하기, 채점대기, 결과 보기 / .timer 없이 -->
-                        <!-- 교과서 적중문제 - 학습하기 / .timer 추가 -->
-                        <!-- <div class="narrative">
-                            <p>
-                                선생님께 받은 <span class="blue">단원 평가 시험지</span>를 풀고<br/>
-                                <span>답안을 입력</span>하세요.<br/><br/>
-                            </p>
-                            <span>선생님께 시험지를 제출해도 됩니다.</span>
-                            <div class="timer">
-                                <p>
-                                    <span>00</span>:<span>00</span>
-                                </p>
-                            </div>
-                            <button>학습지 보기</button>
-                        </div> -->
                     </div>
                 </div>
-                <!-- 해설 후 다음 단계 버튼 -->
-                <!-- <button class="btn-next">다음 단계</button> -->
             </div>
         </div>
         <script>
@@ -326,10 +433,19 @@
                 let tr = btn.parentNode.parentNode;
                 let sibBtn = tr.querySelectorAll('button')
                 if(!btn.classList.contains('watch') && !btn.classList.contains('fix') && !btn.classList.contains('number')) {
-                    for(let i = 0; i < sibBtn.length; i++) {
-                        sibBtn[i].classList.remove('checked')
+                    if(btn.classList.contains('o')||btn.classList.contains('x')) {
+                        for(let i = 0; i < sibBtn.length; i++) {
+                            sibBtn[i].classList.remove('checked')
+                            sibBtn[i].classList.add('unchecked')
+                        }
+                        btn.classList.remove('unchecked')
+                        btn.classList.add('checked')
+                    } else {
+                        for(let i = 0; i < sibBtn.length; i++) {
+                            sibBtn[i].classList.remove('checked')
+                        }
+                        btn.classList.add('checked')
                     }
-                    btn.classList.add('checked')
                 }
 
                 leftToRight(clicked);
@@ -401,6 +517,17 @@
             for(let i = 0; i < numberBtn.length; i++) {
                 numberBtn[i].style.height = numberBtn[i].parentElement.clientHeight + 'px';
             }
+
+            const omrHeight = ()=> {
+                const tableWrap = document.querySelector('.concept-left .scroll-y')
+                const table = tableWrap.querySelector('table')
+
+                if (table.clientHeight < 501) {
+                    tableWrap.style.height = "auto"
+                }
+            }
+
+            omrHeight();
 
 
         </script>
