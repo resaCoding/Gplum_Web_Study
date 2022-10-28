@@ -267,7 +267,7 @@
                                             </td>
                                             <td>
                                                 <button class="score">
-                                                    <span>83</span>점(<span>25</span>/30)
+                                                    83점(25/30)
                                                 </button>
                                                 <button class="btn btn-brown">성적표</button>
                                             </td>
@@ -287,7 +287,7 @@
                                             </td>
                                             <td>
                                                 <button class="score">
-                                                    <span>93</span>점(<span>28</span>/30)
+                                                    83점(25/30)
                                                 </button>
                                                 <button class="btn btn-brown">성적표</button>
                                             </td>
@@ -307,7 +307,7 @@
                                             </td>
                                             <td>
                                                 <button class="score">
-                                                    <span>100</span>점(<span>30</span>/30)
+                                                    83점(25/30)
                                                 </button>
                                                 <button class="btn btn-brown">성적표</button>
                                             </td>
@@ -327,7 +327,7 @@
                                             </td>
                                             <td>
                                                 <button class="score">
-                                                    <span>90</span>점(<span>27</span>/30)
+                                                    83점(25/30)
                                                 </button>
                                                 <button class="btn btn-brown">성적표</button>
                                             </td>
@@ -347,7 +347,7 @@
                                             </td>
                                             <td>
                                                 <button class="score">
-                                                    <span>97</span>점(<span>29</span>/30)
+                                                    83점(25/30)
                                                 </button>
                                                 <button class="btn btn-brown">성적표</button>
                                             </td>
@@ -367,7 +367,7 @@
                                             </td>
                                             <td>
                                                 <button class="score">
-                                                    <span>80</span>점(<span>24</span>/30)
+                                                    83점(25/30)
                                                 </button>
                                                 <button class="btn btn-brown">성적표</button>
                                             </td>
@@ -387,7 +387,7 @@
                                             </td>
                                             <td>
                                                 <button class="score">
-                                                    <span>93</span>점(<span>28</span>/30)
+                                                    83점(25/30)
                                                 </button>
                                                 <button class="btn btn-brown">성적표</button>
                                             </td>
@@ -407,7 +407,7 @@
                                             </td>
                                             <td>
                                                 <button class="score">
-                                                    <span>83</span>점(<span>25</span>/30)
+                                                    83점(25/30)
                                                 </button>
                                                 <button class="btn btn-brown">성적표</button>
                                             </td>
@@ -427,7 +427,7 @@
                                             </td>
                                             <td>
                                                 <button class="score">
-                                                    <span>87</span>점(<span>26</span>/30)
+                                                    83점(25/30)
                                                 </button>
                                                 <button class="btn btn-brown">성적표</button>
                                             </td>
@@ -447,7 +447,7 @@
                                             </td>
                                             <td>
                                                 <button class="score">
-                                                    <span>90</span>점(<span>27</span>/30)
+                                                    83점(25/30)
                                                 </button>
                                                 <button class="btn btn-brown">성적표</button>
                                             </td>
@@ -484,6 +484,73 @@
             for (i = 0; i < lnbBtn.length; i++) {
                 lnbBtn[i].addEventListener("click", lnbOn);
             }
+
+            //select
+            const select = document.querySelectorAll('.selected-option')
+            const li = document.querySelectorAll('.select-wrap ul li')
+            const ulAll = document.querySelectorAll('.select-wrap ul')
+
+            const selectOn = (e)=> {
+                const selectWrap = e.currentTarget.parentNode;
+                const ul = selectWrap.querySelector('ul')
+                
+                for (i = 0; i < ulAll.length; i++) {
+                    if(ulAll[i] != ul) {
+                        ulAll[i].classList.remove('active');
+                    }
+                }
+                ul.classList.toggle('active')
+            }
+
+            const selectValue = (e)=> {
+                const text = e.currentTarget.innerText;
+                const textBox = e.currentTarget.parentNode.parentNode.querySelector('.selected-option')
+
+                textBox.innerText = text;
+                for (i = 0; i < ulAll.length; i++) {
+                    ulAll[i].classList.remove('active');
+                }
+            }
+
+            for (i = 0; i < li.length; i++) {
+                li[i].addEventListener("click", selectValue);
+            }
+            for (i = 0; i < select.length; i++) {
+                select[i].addEventListener("click", selectOn);
+            }
+
+            //왼쪽 메뉴 여닫기
+
+            const leftMenuOn = ()=> {
+                let menu = document.querySelector('.left-menu')
+                let wrap = document.querySelector('.modal-wrap')
+
+                menu.style.left = "0";
+                wrap.style.display = "block"
+            }
+
+            const leftMenuOut = ()=> {
+                let menu = document.querySelector('.left-menu')
+                let wrap = document.querySelector('.modal-wrap')
+
+                menu.style.left = "-320px";
+                wrap.style.display = "none"
+            }
+
+            //scroll 추가
+
+            const scrollAdd = ()=> {
+                let table = document.querySelector('.table-bottom')
+                let bookContent = document.querySelector('.contents-wrap')
+                if(table.clientHeight > 428) {
+                    bookContent.classList.add('scroll')
+                } else {
+                    bookContent.classList.remove('scroll')
+                }
+            }
+
+            scrollAdd();
+
         </script>
     </body>
 </html>

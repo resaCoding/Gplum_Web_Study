@@ -11,71 +11,209 @@
     </head>
     <body>
         <div id="root">
+            <div class="left-menu">
+                <div class="top">
+                    <button class="close" onclick="leftMenuOut()"></button>
+                    <p>
+                        <span>홍길동님</span>
+                        <span>안녕하세요!</span>
+                    </p>
+                    <button class="logout">
+                        로그아웃
+                    </button>
+                </div>
+                <div class="middle">
+                    <ul>
+                        <li>
+                            <button>
+                                <div class="point"></div>
+                                <p>학습 포인트</p>
+                                <span>999</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <div class="alarm"></div>
+                                <p>학습 알림</p>
+                                <span>+99</span>
+                            </button>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="/img/menu_1.png" alt="프로그램 소개 바로가기">프로그램 소개
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="/img/menu_2.png" alt="이용안내 바로가기">이용안내
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="/img/menu_3.png" alt="바탕화면에 바로가기 만들기">바탕화면에 바로가기 만들기
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="/img/menu_4.png" alt="지앤비 영어 바로가기">지앤비 영어
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom">
+                    <button>패럴랙스 홈페이지</button>
+                    <button>지앤비 홈페이지</button>
+                </div>
+            </div>
+            <div class="modal modal-wrap left"></div>
             <div class="float-left main-left">
                 <div class="lnb">
-                    <button class="lnb-btn" onclick="hamburgerOn()">=</button>
+                    <button class="lnb-btn" onclick="leftMenuOn()">
+                        <img src="/img/hamburger.png" alt="">
+                    </button>
                     <ul class="lnb-main">
-                        <li><a href="#">나의 강의실</a></li>
-                        <li><a href="#">나의 교재</a></li>
-                        <li><a href="#">나의 평가</a></li>
-                        <li class="active"><a href="#">나의 오답</a></li>
-                        <li><a href="#">학습 달력</a></li>
-                        <li><a href="#">즐겨찾기</a></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_1_on.png" alt="나의 강의실" class="on">
+                                    <img src="/img/nav_1_off.png" alt="나의 강의실" class="off">
+                                </div>
+                                <span class="long">나의 강의실</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_2_on.png" alt="나의 교재" class="on">
+                                    <img src="/img/nav_2_off.png" alt="나의 교재" class="off">
+                                </div>
+                                <span>나의 교재</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_3_on.png" alt="나의 평가" class="on">
+                                    <img src="/img/nav_3_off.png" alt="나의 평가" class="off">
+                                </div>
+                                <span>나의 평가</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_4_on.png" alt="나의 오답" class="on">
+                                    <img src="/img/nav_4_off.png" alt="나의 오답" class="off">
+                                </div>
+                                <span>나의 오답</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_5_on.png" alt="학습 달력" class="on">
+                                    <img src="/img/nav_5_off.png" alt="학습 달력" class="off">
+                                </div>
+                                <span>학습 달력</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <img src="/img/nav_6_on.png" alt="즐겨찾기" class="on">
+                                    <img src="/img/nav_6_off.png" alt="즐겨찾기" class="off">
+                                </div>
+                                <span class="short">즐겨찾기</span>
+                            </a>
+                        </li>
                     </ul>
+                    <button class="lnb-arrow" onclick="hamburgerOn()">
+                    </button>
                 </div>
             </div>
             <div class="float-left main-right">
                 <div class="gnb">
                     <a href="#">
-                        <img src="" alt="지플럼 로고" />
+                        <img src="/img/logo.png" alt="지플럼 로고" />
                     </a>
                     <div class="timer">
-                        <img src="" alt="타이머" />
-                        <p><span>00</span>:<span>00</span>:<span>00</span></p>
+                        <img src="/img/timer_icon.png" alt="타이머" />
+                        <p><span>00</span> : <span>12</span> : <span>25</span></p>
                     </div>
                     <div class="profile">
-                        <div>
-                            <p class="mem_num">
-                                <button><img src="" alt="캐럿" /></button>
+                        <div class="mem_num">
+                            <button>
+                                <img src="/img/point_icon.png" alt="포인트" />
                                 <span>99,999</span>
-                            </p>
+                            </button>
                         </div>
-                        <div class="alarm">
-                            <button><img src="" alt="알람" /></button>
-                            <span>999</span>
+                        <div class="alarm new">
+                            <button>
+                                <img src="/img/alarm_icon.png" alt="알람" />
+                                <span>999</span>
+                            </button>
                         </div>
                         <div>
                             <p class="name">김수학</p>
-                            <img src="" alt="프로필 사진" />
                         </div>
                     </div>
                 </div>
                 <div class="contents">
                     <div>
                         <div class="contents-title">
-                            <p>나의 오답</p>
+                            <p>
+                                <span class="img-box">
+                                    <img src="/img/wrong_icon.png" alt="나의 오답 아이콘">
+                                </span>
+                                나의 오답
+                                <span>선생님께 받은 오답 정복하기 학습지로 틀렸던 문제를 다시 풀면서 약점을 정복합니다.</span>
+                            </p>
                         </div>
                         <div class="contents-wrap">
                             <div class="filter">
-                                <select name="" id="">
-                                    <option value="">학년-학기</option>
-                                    <option value="">1학년-1학기</option>
-                                    <option value="">1학년-2학기</option>
-                                    <option value="">2학년-1학기</option>
-                                </select>
-                                <select name="" id="">
-                                    <option value="">교재</option>
-                                    <option value="">개념서</option>
-                                    <option value="">유형서</option>
-                                </select>
+                                <div class="select-wrap">
+                                    <span class="selected-option wd-119">학년-학기</span>
+                                    <ul class="select">
+                                        <li>
+                                            <button>학년-학기</button>
+                                        </li>
+                                        <li>
+                                            <button>1학년-1학기</button>
+                                        </li>
+                                        <li>
+                                            <button>1학년-2학기</button>
+                                        </li>
+                                        <li>
+                                            <button>2학년-1학기</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="select-wrap">
+                                    <span class="selected-option wd-112">교재</span>
+                                    <ul class="select">
+                                        <li>
+                                            <button>교재</button>
+                                        </li>
+                                        <li>
+                                            <button>노벰</button>
+                                        </li>
+                                        <li>
+                                            <button>뜨레스</button>
+                                        </li>
+                                    </ul>
+                                </div>
                                 <button>조회</button>
                             </div>
-                            <div class="scroll-y">
+                            <div class="scroll-y book-contents">
                                 <div class="wrong-item">
-                                    <p class="info">
-                                        <span class="grade">중학 2-1</span><span class="book">개념서</span>
-                                    </p>
-                                    <h1>중2-1뜨레스_오답정복하기_220510</h1>
+                                    <div>
+                                        <p class="info">
+                                            <span class="grade M_2">중 2-1</span><span class="book">뜨레스</span>
+                                        </p>
+                                        <h1>중2-1뜨레스_오답정복하기_220510</h1>
+                                    </div>
                                     <ul>
                                         <li>
                                             <p>범위</p>
@@ -85,35 +223,38 @@
                                         </li>
                                         <li>
                                             <p>문항수</p>
-                                            <span>25문항</span>
+                                            <span>25</span>
                                         </li>
                                     </ul>
-                                    <button class="complete">학습 완료</button>
+                                    <button class="btn complete">학습 완료</button>
                                 </div>
                                 <div class="wrong-item">
-                                    <p class="info">
-                                        <span class="grade">중학 2-1</span><span class="book">개념서</span>
-                                    </p>
-                                    <h1>중2-1노벰_김수학 오답정복하기</h1>
+                                    <div>
+                                        <p class="info">
+                                            <span class="grade M_2">중 2-1</span><span class="book">노벰</span>
+                                        </p>
+                                        <h1>중2-1노벰_김수학 오답정복하기</h1>
+                                    </div>
                                     <ul>
                                         <li>
                                             <p>범위</p>
-                                            <span>Ⅳ-1. 줄기와 잎그림, 도수분포표</span>
-                                            <span>Ⅳ-2. 히스토그램과 도수분포다각형</span>
-                                            <span>Ⅳ-3. 상대도수와 그 그래프</span>
+                                            <span>I-2. 최대공약수</span>
+                                            <span>I-3. 최소공배수</span>
                                         </li>
                                         <li>
                                             <p>문항수</p>
-                                            <span>25문항</span>
+                                            <span>25</span>
                                         </li>
                                     </ul>
-                                    <button class="complete">학습 완료</button>
+                                    <button class="btn complete">학습 완료</button>
                                 </div>
                                 <div class="wrong-item">
-                                    <p class="info">
-                                        <span class="grade">중학 2-1</span><span class="book">개념서</span>
-                                    </p>
-                                    <h1>중2-1뜨레스_김수학220404 오답정복</h1>
+                                    <div>
+                                        <p class="info">
+                                            <span class="grade M_2">중 2-1</span><span class="book">뜨레스</span>
+                                        </p>
+                                        <h1>중2-1뜨레스_김수학220404 오답정복</h1>
+                                    </div>
                                     <ul>
                                         <li>
                                             <p>범위</p>
@@ -123,10 +264,31 @@
                                         </li>
                                         <li>
                                             <p>문항수</p>
-                                            <span>25문항</span>
+                                            <span>25</span>
                                         </li>
                                     </ul>
-                                    <button class="learning">학습 중</button>
+                                    <button class="btn learning">학습 중</button>
+                                </div>
+                                <div class="wrong-item">
+                                    <div>
+                                        <p class="info">
+                                            <span class="grade M_2">중 2-1</span><span class="book">노벰</span>
+                                        </p>
+                                        <h1>중2-1뜨레스_오답정복하기_220510</h1>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <p>범위</p>
+                                            <span>Ⅰ-1. 소인수분해</span>
+                                            <span>Ⅰ-2. 최대공약수</span>
+                                            <span>Ⅰ-3. 최소공배수</span>
+                                        </li>
+                                        <li>
+                                            <p>문항수</p>
+                                            <span>25</span>
+                                        </li>
+                                    </ul>
+                                    <button class="btn complete">학습 완료</button>
                                 </div>
                             </div>
                         </div>
@@ -135,6 +297,7 @@
             </div>
         </div>
         <script>
+            
             // 사이드메뉴 슬라이드
             let lnb = document.querySelectorAll('#root>.float-left');
 
@@ -157,6 +320,58 @@
 
             for (i = 0; i < lnbBtn.length; i++) {
                 lnbBtn[i].addEventListener("click", lnbOn);
+            }
+
+            //select
+            const select = document.querySelectorAll('.selected-option')
+            const li = document.querySelectorAll('.select-wrap ul li')
+            const ulAll = document.querySelectorAll('.select-wrap ul')
+
+            const selectOn = (e)=> {
+                const selectWrap = e.currentTarget.parentNode;
+                const ul = selectWrap.querySelector('ul')
+                
+                for (i = 0; i < ulAll.length; i++) {
+                    if(ulAll[i] != ul) {
+                        ulAll[i].classList.remove('active');
+                    }
+                }
+                ul.classList.toggle('active')
+            }
+
+            const selectValue = (e)=> {
+                const text = e.currentTarget.innerText;
+                const textBox = e.currentTarget.parentNode.parentNode.querySelector('.selected-option')
+
+                textBox.innerText = text;
+                for (i = 0; i < ulAll.length; i++) {
+                    ulAll[i].classList.remove('active');
+                }
+            }
+
+            for (i = 0; i < li.length; i++) {
+                li[i].addEventListener("click", selectValue);
+            }
+            for (i = 0; i < select.length; i++) {
+                select[i].addEventListener("click", selectOn);
+            }
+
+            //왼쪽 메뉴 여닫기
+
+            const leftMenuOn = ()=> {
+                let menu = document.querySelector('.left-menu')
+                let wrap = document.querySelector('.modal-wrap')
+
+                menu.style.left = "0";
+                wrap.style.display = "block"
+            }
+
+            const leftMenuOut = ()=> {
+                let menu = document.querySelector('.left-menu')
+                let wrap = document.querySelector('.modal-wrap')
+
+                menu.style.left = "-320px";
+                wrap.style.display = "none"
             }
         </script>
     </body>
